@@ -12,10 +12,8 @@ void OnTriggerEnter(Collider other) {
 }
 {% endhighlight %}
 
-このとき「Player」を自分で打ちこむのはタイプミスの危険があるので、  
-嫌だと思っている人は多いかと思います。  
-以前それを回避するために、[NameCreator](https://github.com/anchan828/namecreator)というのを利用させてもらって、  
-静的クラスを生成する方法を取ってみました。
+このとき「Player」を自分で打ちこむのはタイプミスの危険があるので、嫌だと思っている人は多いかと思います。  
+以前それを回避するために、[NameCreator](https://github.com/anchan828/namecreator)というのを利用させてもらって、静的クラスを生成する方法を取ってみました。
 
 {% highlight csharp %}
 void OnTriggerEnter(Collider other) {
@@ -68,9 +66,7 @@ void OnTriggerEnter(Collider other) {
 ![ss1](https://dl.dropboxusercontent.com/u/18856747/Screenshot/20141226_1_ss.png)
 ![ss2](https://dl.dropboxusercontent.com/u/18856747/Screenshot/20141226_2_ss.png)
 
-静的クラス生成方式は結構大掛かりなので、  
-TagとLayerのみでいい、Inspectorで入力するからコード補完もいらない、  
-という場合はこれだけでいいかもしれません。
+静的クラス生成方式は結構大掛かりなので、TagとLayerのみでいい、Inspectorで入力するからコード補完もいらない、という場合はこれだけでいいかもしれません。
 
 
 * * *
