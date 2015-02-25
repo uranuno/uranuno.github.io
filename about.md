@@ -1,6 +1,6 @@
 ---
 layout: page
-title: uranuno
+title: "@uranuno"
 ---
 
 [Twitter](https://twitter.com/uranuno)
