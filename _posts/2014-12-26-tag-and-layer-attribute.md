@@ -71,6 +71,5 @@ void OnTriggerEnter(Collider other) {
 
 * * *
 ## 便利なPropertyDrawer
-[property-drawer-collection](https://github.com/anchan828/property-drawer-collection)
-
-[【Unity】正規表現を使用してstring型の値を制限する「RegexAttribute」](http://baba-s.hatenablog.com/entry/2014/03/06/131112)
+- [property-drawer-collection](https://github.com/anchan828/property-drawer-collection)
+- [【Unity】正規表現を使用してstring型の値を制限する「RegexAttribute」](http://baba-s.hatenablog.com/entry/2014/03/06/131112)

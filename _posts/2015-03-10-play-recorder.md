@@ -18,9 +18,6 @@ ImageMagick をつかって、キャプチャでGifアニメをつくりたい�
 - - -
 
 ## 参考
-[Unity の画面を Animated GIF に変換して Tumblr にアップする](https://gist.github.com/keijiro/3330732)
-
-[QuickTime PlayerでスクリーンキャプチャしたMOVからベターなアニメーションGIFを作る](http://genjiapp.com/blog/2014/06/04/generating-better-animated-gif-from-mov-recorded-by-quicktime-player.html)
-
-[Unity - Scripting API: EditorWindow.Update()](http://docs.unity3d.com/ScriptReference/EditorWindow.Update.html)
-
+- [Unity の画面を Animated GIF に変換して Tumblr にアップする](https://gist.github.com/keijiro/3330732)
+- [QuickTime PlayerでスクリーンキャプチャしたMOVからベターなアニメーションGIFを作る](http://genjiapp.com/blog/2014/06/04/generating-better-animated-gif-from-mov-recorded-by-quicktime-player.html)
+- [Unity - Scripting API: EditorWindow.Update()](http://docs.unity3d.com/ScriptReference/EditorWindow.Update.html)
