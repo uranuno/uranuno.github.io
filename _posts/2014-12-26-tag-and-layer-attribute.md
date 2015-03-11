@@ -12,7 +12,10 @@ void OnTriggerEnter(Collider other) {
 }
 {% endhighlight %}
 
-このとき「Player」を自分で打ちこむのはタイプミスの危険があるので、嫌だと思っている人は多いかと思います。  
+このとき「Player」を自分で打ちこむのはタイプミスの危険があるので、嫌だと思っている人は多いかと思います。
+
+<!-- more -->
+
 以前それを回避するために、[NameCreator](https://github.com/anchan828/namecreator)というのを利用させてもらって、静的クラスを生成する方法を取ってみました。
 
 {% highlight csharp %}

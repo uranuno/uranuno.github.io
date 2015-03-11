@@ -8,6 +8,8 @@ layout: post
 
 Unity の画面キャプチャを撮るクラスをつくりました。
 
+<!-- more -->
+
 1枚でも撮れますが、メインは再生しながらの連写機能です。  
 連写したキャプチャはImageMagick を使って、Gifアニメにする想定です。  
 Delay はImageMagick に設定する値と同じものを入れればOK。  
