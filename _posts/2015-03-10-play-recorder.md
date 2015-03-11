@@ -6,14 +6,19 @@ layout: post
 
 [https://github.com/uranuno/PlayRecorder](https://github.com/uranuno/PlayRecorder)
 
-Unity の画面キャプチャを撮るクラスをつくりました。  
-1枚撮るのもよし、delay を指定して連写するのもよし。  
-連写は再生中のみ動きます。
+Unity の画面キャプチャを撮るクラスをつくりました。
 
-撮る瞬間フレームレート落ちますが、delayをフレームカウントに換算しているのでフレーム落ちしないはず・・・  
-ファイル名は連番付けるのが面倒だったので、DateTimeのミリ秒部分まで含めて重複しないようにしています。（フォーマットは変えられます）  
+1枚でも撮れますが、メインは再生しながらの連写機能です。  
+連写したキャプチャはImageMagick を使って、Gifアニメにする想定です。  
+Delay はImageMagick に設定する値と同じものを入れればOK。  
+フレーム落ち対策で、フレームカウントに換算して撮るようにしています。
 
-ImageMagick + キャプチャでGifアニメをつくりたいときに便利。
+ファイル名はDateTime をフォーマットするようになっています。  
+連番をつける機能はサボって入れてませんが、ミリ秒まで含めれば重複しないしいいか、と思いました。
+
+PlayRecorder プレハブをシーンに置いて使います。  
+いちいち置かないといけないのがちょっと面倒。  
+本当は[EditorWindow 版を先につくった](https://gist.github.com/uranuno/f558aade1b3ab1f4e3b8)のですが、EditorWindow のフレームレートとGameView 内のフレームレートが違っていて、いまいちでした…
 
 - - -
 
