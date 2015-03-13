@@ -16,7 +16,7 @@ title: Home
     {% if post.content contains "<!-- more -->" %}
       {{ post.content | split:"<!-- more -->" | first % }}
       <a href="{{ post.url }}">
-        つづきをよむ
+        つづきをよむ...
       </a>
     {% else %}
       {{ post.content }}
