@@ -1,0 +1,26 @@
+/*
+ * nunomemo.css
+ */
+
+html {
+	font-family: "PT Sans", Helvetica, Arial, "游ゴシック", "YuGothic", sans-serif;
+}
+
+/* Sidebar image */
+.sidebar img {
+	display: inline-block;
+}
+
+/* Sidebar nav */
+.sidebar-nav {
+	font-size: 1.25rem;
+}
+
+/* My theme */
+.theme-nunomemo .sidebar {
+	background-color: #d8d8d8;
+}
+.theme-nunomemo .sidebar,
+.theme-nunomemo .sidebar a {
+	color: rgba(0,0,0,0.5);
+}

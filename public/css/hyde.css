@@ -32,7 +32,7 @@
  */
 
 html {
-  font-family: "PT Sans", Helvetica, Arial, "游ゴシック", "YuGothic", sans-serif;
+  font-family: "PT Sans", Helvetica, Arial, sans-serif;
 }
 @media (min-width: 48em) {
   html {
@@ -75,11 +75,6 @@ html {
   color: #fff;
 }
 
-/* Sidebar image */
-.sidebar img {
-  display: inline-block;
-}
-
 /* About section */
 .sidebar-about h1 {
   color: #fff;
@@ -91,7 +86,6 @@ html {
 /* Sidebar nav */
 .sidebar-nav {
   margin-bottom: 1rem;
-  font-size: 1.25rem;
 }
 .sidebar-nav-item {
   display: block;
@@ -253,13 +247,4 @@ a.sidebar-nav-item:focus {
 .theme-base-0f .content a,
 .theme-base-0f .related-posts li a:hover {
   color: #8f5536;
-}
-
-/* Gray */
-.theme-base-05 .sidebar {
-  background-color: #d8d8d8;
-}
-.theme-base-05 .sidebar,
-.theme-base-05 .sidebar a {
-  color: rgba(0,0,0,.5);
 }
