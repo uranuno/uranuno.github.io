@@ -1,5 +1,6 @@
 ---
 layout: post
+tag: [unity]
 ---
 
 ![PlayRecorder](http://uranuno.github.io/PlayRecorder/playrecorder.png)
