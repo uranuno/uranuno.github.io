@@ -16,6 +16,15 @@ html {
 	font-size: 1.25rem;
 }
 
+/* Tag */
+.post-tags {
+	margin-left: 0.5em;
+}
+
+.post-tags a {
+	color: #9a9a9a;
+}
+
 /* My theme */
 .theme-nunomemo .sidebar {
 	background-color: #d8d8d8;
