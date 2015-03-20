@@ -8,6 +8,7 @@ relative_permalinks: true
 
 # Setup
 title:            nunomemo
+description:      開発メモです。
 url:              http://uranuno.github.io/
 baseurl:          /
 
