@@ -20,14 +20,10 @@ title: Home
         {% endfor %}
       </span>
     </span>
-    {% if post.content contains "<!-- more -->" %}
-      {{ post.content | split:"<!-- more -->" | first % }}
-      <a href="{{ post.url }}">
-        つづきをよむ...
-      </a>
-    {% else %}
-      {{ post.content }}
-    {% endif %}
+    {{ post.excerpt }}
+    <a href="{{ post.url }}">
+      つづきをよむ...
+    </a>
   </div>
   {% endfor %}
 </div>
