@@ -1,5 +1,6 @@
 ---
 layout: post
+title: Unity のスクリーンショットを連写で撮る
 tag: [unity]
 ---
 
@@ -7,11 +8,11 @@ tag: [unity]
 
 [https://github.com/uranuno/PlayRecorder](https://github.com/uranuno/PlayRecorder)
 
-Unity の画面キャプチャを撮るクラスをつくりました。
+Unity のスクリーンショットを撮るクラスをつくりました。  
+1枚でも撮れますが、メインは再生しながらの連写機能です。  
 
 <!-- more -->
 
-1枚でも撮れますが、メインは再生しながらの連写機能です。  
 連写したキャプチャはImageMagick を使って、Gifアニメにする想定です。  
 Delay はImageMagick に設定する値と同じものを入れればOK。  
 フレーム落ち対策で、フレームカウントに換算して撮るようにしています。
