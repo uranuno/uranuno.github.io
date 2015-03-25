@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Unity のスクリーンショットを連写する
+title: 連写でUnityのゲーム画面のスクリーンショットを撮る
 tag: [unity]
 ---
 
