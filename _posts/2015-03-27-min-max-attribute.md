@@ -9,14 +9,15 @@ tag: [unity]
 [gist - MinMaxAttribute](https://gist.github.com/uranuno/36d27d9f5d9a5ee389cc)
 
 Unity には、[MinMaxSlider というすてきなEditorGUI](http://docs.unity3d.com/ScriptReference/EditorGUILayout.MinMaxSlider.html) があります。  
-ゲームをつくるとき、一定の値の間でランダムな値を取得したいときがよくあるのですが、
-そのときこのスライダーをつかって調整したいな〜と思っていたので、PropertyDrawer をつくりました。  
+ゲームをつくるとき、一定の値の範囲からランダムな値を取得したいときがよくあるのですが、
+そのときこのスライダーをつかって範囲を調整したいな〜と思っていたので、PropertyDrawer をつくりました。  
 
 <!-- more -->
 
-{% gist 36d27d9f5d9a5ee389cc MinMaxAttributeTest.cs %}
+使い方は下記のようになります。
 
-使い方は上記のような感じです。  
+{% gist 36d27d9f5d9a5ee389cc MinMaxAttributeTest.cs %}
+ 
 MinMax 的なクラスをつくるか迷ったのですが、気軽に使いたいので（この属性がなくても動く）とりあえずVector2 をつかってます。
 
 - - -
