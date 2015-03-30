@@ -29,3 +29,7 @@ author:
 # Layout
 paginate:         5
 excerpt_separator: <!-- more -->
+
+# Sitemap
+gems:
+  - jekyll-sitemap
