@@ -22,6 +22,10 @@ h3, h4, h5, h6 {
 }
 
 /* Sidebar image */
+.sidebar-about h1 {
+  font-size: 1.5rem;
+  line-height: 1;
+}
 .sidebar img {
   display: inline-block;
 }
@@ -29,6 +33,16 @@ h3, h4, h5, h6 {
 /* Sidebar nav */
 .sidebar-nav {
   font-size: 1.25rem;
+  margin-bottom: 0.5rem;
+}
+
+/* Author links */
+.author-links {
+  font-size: 1.25rem;
+  margin-bottom: 0.5rem;
+}
+.author-links a {
+  display: inline-block;
 }
 
 /* Date and Tag */

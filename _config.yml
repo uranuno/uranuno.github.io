@@ -11,7 +11,20 @@ title:            nunomemo
 description:      開発メモです。
 url:              http://uranuno.github.io/
 baseurl:          /
-author:           'yumi nunoura'
+
+# Author
+author:
+  name:           'yumi nunoura'
+  links:
+    github:
+      url:        https://github.com/uranuno
+      icon:       github-alt
+    twitter:
+      url:        https://twitter.com/uranuno
+      icon:       twitter
+    pinterest:
+      url:        https://jp.pinterest.com/uranuno/
+      icon:       pinterest
 
 # Layout
 paginate:         5
