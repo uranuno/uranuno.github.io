@@ -20,8 +20,8 @@ Unity には、[MinMaxSlider というすてきなEditorGUI](http://docs.unity3d
  
 MinMax 的なクラスをつくるか迷ったのですが、気軽に使いたいので（この属性がなくても動く）とりあえずVector2 をつかってます。
 
-- - -
 
-### 参考
+参考
+-----
 - [Unity - Manual: Property Drawers](http://docs.unity3d.com/Manual/editor-PropertyDrawers.html)
 - [Unity - Property Drawers & Custom Inspectors](https://unity3d.com/learn/tutorials/modules/intermediate/live-training-archive/property-drawers-custom-inspectors)

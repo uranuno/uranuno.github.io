@@ -60,6 +60,9 @@ h3, h4, h5, h6 {
 .post-tags {
   margin-left: 0.25em;
 }
+.share {
+  padding-top: 1rem;
+}
 
 /* My theme */
 .theme-nunomemo .sidebar {

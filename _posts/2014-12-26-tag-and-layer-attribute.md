@@ -74,7 +74,7 @@ void OnTriggerEnter(Collider other) {
 静的クラス生成方式は結構大掛かりなので、TagとLayerのみでいい、Inspectorで入力するからコード補完もいらない、という場合はこれだけでいいかもしれません。
 
 
-* * *
-## 便利なPropertyDrawer
+便利なPropertyDrawer
+--------------------
 - [property-drawer-collection](https://github.com/anchan828/property-drawer-collection)
 - [【Unity】正規表現を使用してstring型の値を制限する「RegexAttribute」](http://baba-s.hatenablog.com/entry/2014/03/06/131112)
