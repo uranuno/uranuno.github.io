@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Unity で最小値と最大値をスライダーで入力するPropertyDrawer
-tag: [unity]
+tag: [unity3d]
 ---
 
 ![Image](https://dl.dropboxusercontent.com/u/18856747/Screenshot/20150327_1.png)

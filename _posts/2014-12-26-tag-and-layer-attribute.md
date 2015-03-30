@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Tag とLayer をInspector 上で楽に入力するPropertyDrawer
-tag: [unity]
+tag: [unity3d]
 ---
 
 UnityでTagを利用するとき、単純に書くとこんな感じになります。

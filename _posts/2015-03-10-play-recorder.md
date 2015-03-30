@@ -1,7 +1,7 @@
 ---
 layout: post
 title: 連写でUnityのゲーム画面のスクリーンショットを撮る
-tag: [unity]
+tag: [unity3d]
 ---
 
 ![PlayRecorder](http://uranuno.github.io/PlayRecorder/playrecorder.png)
