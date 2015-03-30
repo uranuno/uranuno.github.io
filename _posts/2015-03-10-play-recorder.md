@@ -1,6 +1,6 @@
 ---
 layout: post
-title: 連写でUnityのゲーム画面のスクリーンショットを撮る
+title: Unity のゲーム画面のキャプチャを連写で撮る
 tag: [unity3d]
 ---
 
@@ -8,7 +8,7 @@ tag: [unity3d]
 
 [https://github.com/uranuno/PlayRecorder](https://github.com/uranuno/PlayRecorder)
 
-Unity のスクリーンショットを撮るクラスをつくりました。  
+Unity のゲーム画面のキャプチャを撮るクラスをつくりました。  
 1枚でも撮れますが、メインは再生しながらの連写機能です。  
 
 <!-- more -->
