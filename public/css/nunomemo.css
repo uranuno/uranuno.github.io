@@ -32,12 +32,13 @@ h3, h4, h5, h6 {
 
 /* Sidebar nav */
 .sidebar-nav {
+  font-size: 1.25rem;
   margin-bottom: 0.5rem;
 }
 
 /* Author links */
 .author-links {
-  font-size: 1.25rem;
+  font-size: 1.5rem;
   margin-bottom: 0.5rem;
 }
 .author-links a {
@@ -46,7 +47,7 @@ h3, h4, h5, h6 {
 
 /* copy */
 .copy {
-  font-size: 0.75rem;
+  font-size: 1rem;
 }
 
 /* Date and Tag */
