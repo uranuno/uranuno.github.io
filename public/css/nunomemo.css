@@ -3,29 +3,48 @@
  */
 
 html {
-	font-family: "PT Sans", Helvetica, Arial, "游ゴシック", "YuGothic", sans-serif;
+  font-family: "PT Sans", Helvetica, Arial, "游ゴシック", "YuGothic", sans-serif;
+}
+
+/* Headings */
+h1, h2, h3, h4, h5, h6 {
+  line-height: 1.5;
+  margin-bottom: 1rem;
+}
+h1 {
+  font-size: 1.5rem;
+}
+h2 {
+  font-size: 1.25rem;
+}
+h3, h4, h5, h6 {
+  font-size: 1rem;
 }
 
 /* Sidebar image */
 .sidebar img {
-	display: inline-block;
+  display: inline-block;
 }
 
 /* Sidebar nav */
 .sidebar-nav {
-	font-size: 1.25rem;
+  font-size: 1.25rem;
 }
 
-/* Tag */
+/* Date and Tag */
+.post-date {
+  margin-bottom: 1.5rem;
+}
+
 .post-tags {
-	margin-left: 0.25em;
+  margin-left: 0.25em;
 }
 
 /* My theme */
 .theme-nunomemo .sidebar {
-	background-color: #d8d8d8;
+  background-color: #d8d8d8;
 }
 .theme-nunomemo .sidebar,
 .theme-nunomemo .sidebar a {
-	color: rgba(0,0,0,0.5);
+  color: rgba(0,0,0,0.5);
 }
