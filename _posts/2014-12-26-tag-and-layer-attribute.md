@@ -68,8 +68,8 @@ void OnTriggerEnter(Collider other) {
 }
 {% endhighlight %}
 
-![ss1](https://dl.dropboxusercontent.com/u/18856747/Screenshot/20141226_1_ss.png)
-![ss2](https://dl.dropboxusercontent.com/u/18856747/Screenshot/20141226_2_ss.png)
+![ss1]({{ site.data.imageurl }}20141226_1_ss.png)
+![ss2]({{ site.data.imageurl }}20141226_2_ss.png)
 
 静的クラス生成方式は結構大掛かりなので、TagとLayerのみでいい、Inspectorで入力するからコード補完もいらない、という場合はこれだけでいいかもしれません。
 

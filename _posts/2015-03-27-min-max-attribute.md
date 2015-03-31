@@ -4,7 +4,7 @@ title: Unity で最小値と最大値をスライダーで入力できるよう�
 tag: [unity3d]
 ---
 
-![Image](https://dl.dropboxusercontent.com/u/18856747/Screenshot/20150327_1.png)
+![Image]({{ site.data.imageurl }}20150327_1.jpg)
 
 [gist - MinMaxRangeAttribute](https://gist.github.com/uranuno/36d27d9f5d9a5ee389cc)
 
@@ -22,7 +22,7 @@ MinMax 的なクラスをつくるか迷ったのですが、気軽に使いた�
 
 あとはしぬほど地味ですが、元から用意されている`[Range(0, 10f)]` のような属性をつけた値と並べたときにきれいになるよう大きさを揃えました・・・
 
-![Image](https://dl.dropboxusercontent.com/u/18856747/Screenshot/20150330_1.png)
+![Image]({{ site.data.imageurl }}20150330_1.png)
 
 
 参考
