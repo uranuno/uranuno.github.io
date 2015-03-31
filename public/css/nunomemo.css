@@ -60,8 +60,16 @@ h3, h4, h5, h6 {
 .post-tags {
   margin-left: 0.25em;
 }
+
+/* Share */
 .share {
   padding-top: 1rem;
+  padding-left: 0;
+  margin-bottom: 0;
+}
+.share li {
+  display: inline-block;
+  list-style-type: none;
 }
 
 /* My theme */
