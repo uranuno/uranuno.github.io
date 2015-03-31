@@ -1,0 +1,15 @@
+- name:   Github
+  url:    https://github.com/uranuno
+  icon:   github-alt
+
+- name:   Twitter
+  url:    https://twitter.com/uranuno
+  icon:   twitter
+
+# - name:   Pinterest
+#   url:    https://jp.pinterest.com/uranuno/
+#   icon:   pinterest
+
+- name:   Facebook
+  url:    https://www.facebook.com/uranuno
+  icon:   facebook

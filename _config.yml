@@ -13,18 +13,7 @@ url:              http://uranuno.github.io/
 baseurl:          /
 
 # Author
-author:
-  name:           'yumi nunoura'
-  links:
-    github:
-      url:        https://github.com/uranuno
-      icon:       github-alt
-    twitter:
-      url:        https://twitter.com/uranuno
-      icon:       twitter
-    pinterest:
-      url:        https://jp.pinterest.com/uranuno/
-      icon:       pinterest
+author:           'yumi nunoura'
 
 # Layout
 paginate:         5

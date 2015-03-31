@@ -26,10 +26,9 @@
 
     </nav>
 
-    <div class="author-links">
-      {% assign link_list = site.author.links %}
-      {% for link in link_list %}
-        <a href="{{ link[1].url }}" target="_blank"><i class="fa fa-{{ link[1].icon }} fa-fw" alt="{{ link[0] }}"></i></a>
+    <div class="accounts">
+      {% for account in site.data.accounts %}
+        <a href="{{ account.url }}" target="_blank"><i class="fa fa-{{ account.icon }} fa-fw" alt="{{ account.name }}"></i></a>
       {% endfor %}
     </div>
 

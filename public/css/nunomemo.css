@@ -36,12 +36,12 @@ h3, h4, h5, h6 {
   margin-bottom: 0.5rem;
 }
 
-/* Author links */
-.author-links {
+/* Accounts */
+.accounts {
   font-size: 1.5rem;
   margin-bottom: 0.5rem;
 }
-.author-links a {
+.accounts a {
   display: inline-block;
 }
 
