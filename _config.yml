@@ -13,11 +13,11 @@ url:              http://uranuno.github.io/
 baseurl:          /
 
 # Author
-author:           'yumi nunoura'
+author:           "yumi nunoura"
 
 # Layout
 paginate:         5
-excerpt_separator: <!-- more -->
+excerpt_separator: "<!-- more -->"
 
 # Sitemap
 gems:

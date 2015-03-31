@@ -21,9 +21,11 @@ title: Home
       </span>
     </span>
     {{ post.excerpt }}
-    <a href="{{ post.url }}">
-      つづきをよむ...
+    {% if post.content contains site.excerpt_separator %}
+    <a href="{{ post.url }}" class="readmore">
+      <i class="fa fa-caret-down fa-fw"></i>つづき
     </a>
+    {% endif %}
   </div>
   {% endfor %}
 </div>
