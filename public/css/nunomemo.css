@@ -61,7 +61,10 @@ h3, h4, h5, h6 {
 .accounts li {
   list-style-type: none;
   display: inline-block;
-  margin-right: 0.25em;
+  margin-left: 0.5em;
+}
+.accounts li:first-child {
+  margin-left: 0;
 }
 
 /* copy */
