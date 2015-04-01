@@ -5,6 +5,7 @@
 html {
   font-family: "PT Sans", Helvetica, Arial, "游ゴシック", "YuGothic", sans-serif;
   font-size: 14px;
+  line-height: 1.75;
 }
 @media (min-width: 58em) {
   html {
