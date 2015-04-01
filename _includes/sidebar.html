@@ -3,7 +3,7 @@
     <div class="sidebar-about">
       <h1>
         <a href="{{ site.baseurl }}">
-          <img src="{{ site.baseurl }}public/logo@2x.gif" alt="{{ site.title }}" width="72" height="72">
+          <img src="{{ site.baseurl }}public/logo@2x.gif" alt="{{ site.title }}" width="64" height="64">
         </a>
       </h1>
     </div>
@@ -26,12 +26,12 @@
 
     </nav>
 
+    <p class="copy">&copy; {{ site.time | date: '%Y' }}. all rights reserved.</p>
+
     <div class="accounts">
       {% for account in site.data.accounts %}
         <a href="{{ account.url }}" target="_blank"><i class="fa fa-{{ account.icon }} fa-fw" alt="{{ account.name }}"></i></a>
       {% endfor %}
     </div>
-
-    <p class="copy">&copy; {{ site.time | date: '%Y' }}. all rights reserved.</p>
   </div>
 </div>

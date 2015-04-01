@@ -4,6 +4,22 @@
 
 html {
   font-family: "PT Sans", Helvetica, Arial, "游ゴシック", "YuGothic", sans-serif;
+  font-size: 14px;
+}
+@media (min-width: 58em) {
+  html {
+    font-size: 18px;
+  }
+}
+@media (min-width: 48em) {
+  html {
+    font-size: 14px;
+  }
+}
+@media (min-width: 38em) {
+  html {
+    font-size: 18px;
+  }
 }
 
 /* Headings */
@@ -38,7 +54,7 @@ h3, h4, h5, h6 {
 
 /* Accounts */
 .accounts {
-  font-size: 1.5rem;
+  font-size: 1.25rem;
   margin-bottom: 0.5rem;
 }
 .accounts a {
@@ -48,6 +64,11 @@ h3, h4, h5, h6 {
 /* copy */
 .copy {
   font-size: 1rem;
+}
+
+/* Post */
+.post {
+  margin-bottom: 1em;
 }
 
 /* Date and Tag and ReadMore*/
