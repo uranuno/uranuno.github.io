@@ -28,10 +28,10 @@
 
     <p class="copy">&copy; {{ site.time | date: '%Y' }}. all rights reserved.</p>
 
-    <div class="accounts">
+    <ul class="accounts">
       {% for account in site.data.accounts %}
-        <a href="{{ account.url }}" target="_blank"><i class="fa fa-{{ account.icon }} fa-fw" alt="{{ account.name }}"></i></a>
+        <li><a href="{{ account.url }}" target="_blank"><i class="fa fa-{{ account.icon }} fa-fw" alt="{{ account.name }}"></i></a></li>
       {% endfor %}
-    </div>
+    </ul>
   </div>
 </div>

@@ -56,9 +56,12 @@ h3, h4, h5, h6 {
 .accounts {
   font-size: 1.25rem;
   margin-bottom: 0.5rem;
+  padding: 0;
 }
-.accounts a {
+.accounts li {
+  list-style-type: none;
   display: inline-block;
+  margin-right: 0.25em;
 }
 
 /* copy */
@@ -67,7 +70,7 @@ h3, h4, h5, h6 {
 }
 
 /* Post */
-.post {
+.post-detail {
   margin-bottom: 1em;
 }
 
