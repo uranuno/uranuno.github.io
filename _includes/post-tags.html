@@ -1,0 +1,6 @@
+<span class="post-tags">
+  {% assign tags = include.param %}
+  {% for tag in tags %}
+  <i class="fa fa-tag fa-fw"></i><a href="{{ site.baseurl }}tags/{{ tag }}">{{ site.data.tags[tag].name }}</a>&nbsp;
+  {% endfor %}
+</span>
