@@ -1,7 +1,8 @@
 ---
 layout: post
+tag: [unity3d]
 ---
 
 ![Scrolling Stage](http://uranuno.github.io/ScrollingStage/out.gif)
 
-[https://github.com/uranuno/ScrollingStage](https://github.com/uranuno/ScrollingStage)
+[uranuno/ScrollingStage - GitHub](https://github.com/uranuno/ScrollingStage)

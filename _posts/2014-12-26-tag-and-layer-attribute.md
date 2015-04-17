@@ -1,80 +1,99 @@
 ---
 layout: post
-title: Tag とLayer をInspector 上で楽に入力するPropertyDrawer
+title: Tag とLayer をInspector から楽に入力するPropertyDrawer
 tag: [unity3d]
 ---
 
+![Tag and Layer Attribute](http://uranuno.github.io/MyPropertyDrawers/tagandlayer.png)
+
+```csharp
+[Tag]
+public string targetTag;
+
+[Layer]
+public int targetLayer;
+```
+
+Unity で、Tag やLayer をInspector から楽に入力できるように、PropertyDrawer をつくりました。
+
+[uranuno/MyPropertyDrawers #TagAndLayerAttribute - GitHub](https://github.com/uranuno/MyPropertyDrawers#tag-and-layer-attribute)
+
+<!-- more -->
+
+Tag を文字列で手打ちしたくない
+------------------------------
 UnityでTagを利用するとき、単純に書くとこんな感じになります。
 
-{% highlight csharp %}
+```csharp
 void OnTriggerEnter(Collider other) {
+
     if(other.tag == "Player") {
         Debug.Log("Hit!");
     }
 }
-{% endhighlight %}
+```
 
-このとき「Player」を自分で打ちこむのはタイプミスの危険があるので、嫌だと思っている人は多いかと思います。
+このとき「Player」を自分で打ちこむのはタイプミスの危険があるので、嫌です。
 
-<!-- more -->
+以前それを回避するために、[NameCreator](https://github.com/anchan828/namecreator)というのを使わせてもらって、静的クラスを生成する方法を試してみました。
 
-以前それを回避するために、[NameCreator](https://github.com/anchan828/namecreator)というのを利用させてもらって、静的クラスを生成する方法を取ってみました。
-
-{% highlight csharp %}
+```csharp
 void OnTriggerEnter(Collider other) {
+
     // 例えばTagであれば、「TagName」というクラスが自動生成され、
     // コードからタイプセーフに扱えるようになる。便利。
     if(other.tag == TagName.Player) {
         Debug.Log("Hit!");
     }
 }
-{% endhighlight %}
+```
 
-さらに、[PropertyDrawerを自作して](https://gist.github.com/uranuno/8be43847015f5e25cf17)（staticなプロパティの中身はEditorスクリプトから取得可能だった）、Inspector上でも楽に値が入力できるようにしてみたりもしました。
+さらに、[PropertyDrawerを自作して](https://gist.github.com/uranuno/8be43847015f5e25cf17)、Inspector上でも値が入力できるようにしてみたりもしました。
 
-{% highlight csharp %}
+```csharp
 // [Name(typeof(クラス名))]という属性を付けると、Inspector上でPopupで選べるように！
 [Name(typeof(TagName))] public string playerTag;
 
 void OnTriggerEnter(Collider other) {
+
     if(other.tag == playerTag) {
         Debug.Log("Hit!");
     }
 }
-{% endhighlight %}
+```
 
-ところが最近こんなもの（[EditorGUI.TagField](http://docs.unity3d.com/ScriptReference/EditorGUI.TagField.html)）を発見・・・  
-あれ？Editorのクラスに、Tag を表示する関数あったの？
+ところがこんなもの（[EditorGUI.TagField](http://docs.unity3d.com/ScriptReference/EditorGUI.TagField.html)）を発見・・・  
+あれ？Editorのクラスに、Tag を表示する関数あったの？  
+静的クラスつくらなくても、表示できるの？
 
 ・・・
 
 というわけでPropertyDrawerをつくりなおしました。
 
-{% gist 3793dbfcaa023525bdac TagAndLayerAttribute.cs %}
-
 ついでに、[EditorGUI.LayerField](http://docs.unity3d.com/ScriptReference/EditorGUI.LayerField.html) というのもあったので入れました。  
-使い方は下記のようになります。
+下記のように値に属性をつけるだけで、Inspector で楽に入力できるようになります。
 
-{% highlight csharp %}
-[Tag] public string playerTag;
-[Layer] public int escapeLayer;
+```csharp
+[Tag] public string targetTag;
+[Layer] public int targetLayer;
 
 void OnTriggerEnter(Collider other) {
-    if(other.tag == playerTag) {
+
+    if(other.tag == targetTag) {
         Debug.Log("Hit!");
         // 別レイヤーに移動するとか
-        other.gameObject.layer = escapeLayer;
+        other.gameObject.layer = targetLayer;
     }
 }
-{% endhighlight %}
+```
 
-![ss1]({{ site.data.imageurl }}20141226_1_ss.png)
-![ss2]({{ site.data.imageurl }}20141226_2_ss.png)
+![Tag Attribute](http://uranuno.github.io/MyPropertyDrawers/tagandlayer-tag.png)
+![Layer Attribute](http://uranuno.github.io/MyPropertyDrawers/tagandlayer-layer.png)
 
 静的クラス生成方式は結構大掛かりなので、TagとLayerのみでいい、Inspectorで入力するからコード補完もいらない、という場合はこれだけでいいかもしれません。
 
 
-便利なPropertyDrawer
---------------------
-- [property-drawer-collection](https://github.com/anchan828/property-drawer-collection)
-- [【Unity】正規表現を使用してstring型の値を制限する「RegexAttribute」](http://baba-s.hatenablog.com/entry/2014/03/06/131112)
+参考
+-----
+- [anchan828/property-drawer-collection - GitHub](https://github.com/anchan828/property-drawer-collection)
+- [Scripting API: PropertyDrawer - Unity](http://docs.unity3d.com/ScriptReference/PropertyDrawer.html)
