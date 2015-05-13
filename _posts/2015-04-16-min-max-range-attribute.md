@@ -29,7 +29,7 @@ void Update () {
 Unity には、[MinMaxSlider というすてきなEditorGUI](http://docs.unity3d.com/ScriptReference/EditorGUI.MinMaxSlider.html) があります。  
 [一定の値の範囲からランダムな値を取得したいとき](http://docs.unity3d.com/ScriptReference/Random.Range.html)なんかに、このスライダーをつかって範囲を調整できたらいいな〜と思っていたので、PropertyDrawer をつくりました。  
 
-[uranuno/MyPropertyDrawers #MinMaxRangeAttribute - GitHub](https://github.com/uranuno/MyPropertyDrawers#min-max-range-attribute)  
+[uranuno/MyPropertyDrawers #MinMaxRangeAttribute - :octocat:](https://github.com/uranuno/MyPropertyDrawers#min-max-range-attribute)  
 ↑自作のPropertyDrawer をまとめる用のリポジトリをつくってみました。
 
 <!-- more -->
