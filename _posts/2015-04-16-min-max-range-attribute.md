@@ -4,7 +4,7 @@ title: 値の範囲をスライダーで入力できるようにするPropertyDr
 tag: [unity3d]
 ---
 
-![Min Max Range Attribute](http://uranuno.github.io/MyPropertyDrawers/minmaxrange.gif "がんばってつくったGIF")
+![Min Max Range Attribute](http://uranuno.github.io/MyUnityUtils/minmaxrange.gif "がんばってつくったGIF")
 
 ```csharp
 [SerializeField, MinMaxRange(0,10f)]
@@ -29,7 +29,7 @@ void Update () {
 Unity には、[MinMaxSlider というすてきなEditorGUI](http://docs.unity3d.com/ScriptReference/EditorGUI.MinMaxSlider.html) があります。  
 [一定の値の範囲からランダムな値を取得したいとき](http://docs.unity3d.com/ScriptReference/Random.Range.html)なんかに、このスライダーをつかって範囲を調整できたらいいな〜と思っていたので、PropertyDrawer をつくりました。  
 
-[uranuno/MyPropertyDrawers #MinMaxRangeAttribute :octocat:](https://github.com/uranuno/MyPropertyDrawers#min-max-range-attribute)  
+[uranuno/MyUnityUtils #MinMaxRangeAttribute :octocat:](https://github.com/uranuno/MyUnityUtils#min-max-range-attribute)  
 ↑自作のPropertyDrawer をまとめる用のリポジトリをつくってみました。
 
 <!-- more -->
@@ -46,7 +46,7 @@ Vector2 randomDelayRange;
 public float otherValue;
 ```
 
-![With Other Value](http://uranuno.github.io/MyPropertyDrawers/minmaxrange-othervalue.png)
+![With Other Value](http://uranuno.github.io/MyUnityUtils/minmaxrange-othervalue.png)
 
 
 参考

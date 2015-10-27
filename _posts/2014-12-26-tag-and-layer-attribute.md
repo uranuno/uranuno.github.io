@@ -4,7 +4,7 @@ title: Tag とLayer をInspector から楽に入力するPropertyDrawer
 tag: [unity3d]
 ---
 
-![Tag and Layer Attribute](http://uranuno.github.io/MyPropertyDrawers/tagandlayer.png)
+![Tag and Layer Attribute](http://uranuno.github.io/MyUnityUtils/tagandlayer.png)
 
 ```csharp
 [Tag]
@@ -16,7 +16,7 @@ public int targetLayer;
 
 Unity で、Tag やLayer をInspector から楽に入力できるように、PropertyDrawer をつくりました。
 
-[uranuno/MyPropertyDrawers #TagAndLayerAttribute :octocat:](https://github.com/uranuno/MyPropertyDrawers#tag-and-layer-attribute)
+[uranuno/MyUnityUtils #TagAndLayerAttribute :octocat:](https://github.com/uranuno/MyUnityUtils#tag-and-layer-attribute)
 
 <!-- more -->
 
@@ -87,8 +87,8 @@ void OnTriggerEnter(Collider other) {
 }
 ```
 
-![Tag Attribute](http://uranuno.github.io/MyPropertyDrawers/tagandlayer-tag.png)
-![Layer Attribute](http://uranuno.github.io/MyPropertyDrawers/tagandlayer-layer.png)
+![Tag Attribute](http://uranuno.github.io/MyUnityUtils/tagandlayer-tag.png)
+![Layer Attribute](http://uranuno.github.io/MyUnityUtils/tagandlayer-layer.png)
 
 静的クラス生成方式は結構大掛かりなので、TagとLayerのみでいい、Inspectorで入力するからコード補完もいらない、という場合はこれだけでいいかもしれません。
 
