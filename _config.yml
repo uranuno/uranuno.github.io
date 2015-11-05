@@ -1,25 +1,24 @@
-# Dependencies
-markdown:         redcarpet
-highlighter:      pygments
+# Conversion
+markdown: redcarpet
+highlighter: pygments
 
-# Permalinks
-permalink:        pretty
-relative_permalinks: true
+# Serving
+host: 0.0.0.0
+baseurl: /
 
 # Setup
-title:            nunomemo
-description:      開発メモです。
-url:              http://uranuno.github.io/
-baseurl:          /
+url: http://uranuno.github.io/
+title: nunomemo
+description: 開発メモです。
+author: "yumi nunoura"
 
-# Author
-author:           "yumi nunoura"
-
-# Layout
-paginate:         5
+# Outputting
+permalink: pretty
+relative_permalinks: true
 excerpt_separator: "<!-- more -->"
+paginate: 5
 
-# Sitemap
+# Gems
 gems:
   - jekyll-sitemap
   - jemoji
