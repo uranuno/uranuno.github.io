@@ -1,11 +1,11 @@
 ---
 layout: post
-title: 値の範囲をスライダーで入力できるようにするPropertyDrawer
+title: 値の最小値と最大値をセットで扱うための構造体とPropertyDrawer
 tag: [unity3d]
 ---
 
 ### 2015.10.27 Update
-Vector2をやめて最小値と最大値をセットで扱うためのMinMax構造体を定義しました。
+Vector2をやめて、`min`と`max`をプロパティに持つ[MinMax構造体](https://github.com/uranuno/MyUnityUtils/blob/master/Assets/Utils/MinMax.cs)を定義
 
 ***
 
@@ -30,7 +30,7 @@ void Update () {
 ```
 
 Unity には、[MinMaxSlider というすてきなEditorGUI](http://docs.unity3d.com/ScriptReference/EditorGUI.MinMaxSlider.html) があります。  
-[一定の値の範囲からランダムな値を取得したいとき](http://docs.unity3d.com/ScriptReference/Random.Range.html)なんかに、このスライダーをつかって範囲を調整できたらいいな〜と思っていたので、PropertyDrawer をつくりました。  
+[一定の値の範囲からランダムな値を取得したいとき](http://docs.unity3d.com/ScriptReference/Random.Range.html)なんかに、このスライダーをつかって範囲を調整できたらいいな〜と思っていたので、構造体 + PropertyDrawer をつくりました。  
 
 [uranuno/MyUnityUtils #MinMax :octocat:](https://github.com/uranuno/MyUnityUtils#min-max)  
 ↑自作のUtility系をまとめたリポジトリをつくってみました。
@@ -43,7 +43,7 @@ Unity には、[MinMaxSlider というすてきなEditorGUI](http://docs.unity3d
 
 ```csharp
 [SerializeField, MinMaxRange(0,10f)]
-Vector2 randomDelayRange;
+MinMax randomDelayRange;
 
 [Range(0,10f)]
 public float otherValue;
