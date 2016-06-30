@@ -4,8 +4,13 @@
 
 html {
   font-family: "PT Sans", Helvetica, Arial, "游ゴシック", "YuGothic", sans-serif;
+  font-weight: 500;
   font-size: 14px;
   line-height: 1.75;
+}
+.lead,
+.masthead-title small {
+  font-weight: 500;
 }
 @media (min-width: 58em) {
   html {
