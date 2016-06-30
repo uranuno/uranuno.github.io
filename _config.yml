@@ -1,7 +1,3 @@
-# Conversion
-markdown: redcarpet
-highlighter: pygments
-
 # Serving
 host: 0.0.0.0
 baseurl: /
@@ -14,11 +10,11 @@ author: "yumi nunoura"
 
 # Outputting
 permalink: pretty
-relative_permalinks: true
 excerpt_separator: "<!-- more -->"
 paginate: 5
 
 # Gems
 gems:
+  - jekyll-paginate
   - jekyll-sitemap
   - jemoji
