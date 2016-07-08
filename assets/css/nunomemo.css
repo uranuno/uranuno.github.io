@@ -122,9 +122,24 @@ h3, h4, h5, h6 {
 
 /* My theme */
 .theme-nunomemo .sidebar {
-  background-color: #d8d8d8;
+  background-color: #f6f6f6;/*#d8d8d8;*/
 }
 .theme-nunomemo .sidebar,
 .theme-nunomemo .sidebar a {
-  color: rgba(0,0,0,0.5);
+  /*color: rgba(0,0,0,0.5);*/
+  color: #515151;
+}
+
+/* Anim */
+.hoge {
+  display: inline-block;
+  width: 72px;
+  height: 72px;
+  background: url("../moshausa_024.svg") no-repeat;
+  background-size: 72px;
+  animation: moshamosha 0.5s steps(4) infinite;
+}
+
+@keyframes moshamosha {
+  100% { background-position: 0 -288px; }
 }
