@@ -1,0 +1,14 @@
+{% assign posts = include.posts %}
+{% assign limit = include.limit %}
+<ul class="related-posts">
+  {% for post in posts limit:limit %}
+  <li>
+    <h3>
+      <a href="{{ post.url }}">
+        <small>{{ post.date | date: "%Y-%m-%d" }}</small>
+        {{ post.title }}
+      </a>
+    </h3>
+  </li>
+  {% endfor %}
+</ul>
