@@ -51,13 +51,9 @@ h3, h4, h5, h6 {
   font-size: 1rem;
 }
 
-/* Sidebar image */
+/* Sidebar about */
 .sidebar-about h1 {
   line-height: 1;
-}
-.sidebar img {
-  display: inline-block;
-  margin: 0;
 }
 
 /* Sidebar nav */
@@ -122,24 +118,24 @@ h3, h4, h5, h6 {
 
 /* My theme */
 .theme-nunomemo .sidebar {
-  background-color: #f6f6f6;/*#d8d8d8;*/
+  background-color: #f6f6f6;
 }
 .theme-nunomemo .sidebar,
-.theme-nunomemo .sidebar a {
-  /*color: rgba(0,0,0,0.5);*/
+.theme-nunomemo .sidebar a,
+.theme-nunomemo .sidebar-about h1 {
   color: #515151;
 }
 
 /* Anim */
-.hoge {
+.anim {
   display: inline-block;
   width: 72px;
   height: 72px;
-  background: url("../moshausa_024.svg") no-repeat;
+  background: url("../icons/anim.svg") no-repeat;
   background-size: 72px;
-  animation: moshamosha 0.5s steps(4) infinite;
+  animation: all 0.5s steps(4) infinite;
 }
 
-@keyframes moshamosha {
+@keyframes all {
   100% { background-position: 0 -288px; }
 }
