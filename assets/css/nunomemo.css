@@ -36,6 +36,11 @@ img.emoji {
   vertical-align: text-top;
 }
 
+/* Font Awesome */
+.fa-fw {
+  width: 1.5em !important;
+}
+
 /* Headings */
 h1, h2, h3, h4, h5, h6 {
   line-height: 1.5;
@@ -54,7 +59,7 @@ h3, h4, h5, h6 {
 /* Small */
 small {
   margin-right: 0.5em;
-  color: #999;
+  color: #9a9a9a;
   font-size: 75%;
 }
 a:hover small {
@@ -95,10 +100,6 @@ a:hover small {
 .accounts li {
   list-style-type: none;
   display: inline-block;
-  margin-left: 0.25em;
-}
-.accounts li:first-child {
-  margin-left: 0;
 }
 
 /* copy */

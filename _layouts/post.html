@@ -11,7 +11,7 @@ layout: default
   {% if page.commits.size > 0 %}
   <!-- Updates -->
   <aside class="post-updates">
-  <h3>Commits</h3>
+  <h3><i class="fa fa-wrench fa-fw"></i>Commits</h3>
   <dl>
     {% for commit in page.commits %}
     <a href="https://github.com/uranuno/uranuno.github.io/commit/{{ commit.id }}" target="_blank">
@@ -27,7 +27,7 @@ layout: default
   
   {% if page.refs.size > 0 %}
   <!-- References -->
-  <h2>参考</h2>
+  <h2><i class="fa fa-external-link fa-fw"></i>Links</h2>
   <ul>
     {% for reference in page.refs %}
     <li><a href="{{ reference.url }}" target="_blank">{{ reference.title }}</a></li>
@@ -41,7 +41,7 @@ layout: default
 <!-- Related Posts -->
 {% if page.hidden != true %}
 <div class="related">
-  <h2>Related Posts</h2>
+  <h2><i class="fa fa-pencil fa-fw"></i>Related Posts</h2>
   {% include related-posts.html posts = site.related_posts limit = 4 %}
 </div>
 {% endif %}

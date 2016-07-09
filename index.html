@@ -16,9 +16,7 @@ title: Home
     <!-- Post Content -->
     {% if post.content contains separator %}
     {{ post.content | split:separator | first % }}
-    <a href="{{ post.url }}" class="readmore">
-      つづき<i class="fa fa-caret-down fa-fw"></i>
-    </a>
+    <a href="{{ post.url }}" class="readmore"><i class="fa fa-caret-down fa-fw"></i>つづき</a>
     {% else %}
     {{ post.content }}
     {% endif %}
