@@ -10,10 +10,10 @@
     {% if page.title == "Home" %}
       {{ site.title }}
     {% else %}
-      {{ page.title }} &middot; {{ site.title }}
+      {{ page.title }} - {{ site.title }}
     {% endif %}
   </title>
-  <meta name="keywords" content="{% for tag in site.data.tags %}{{ tag[1].name }},{% endfor %}hoge">
+  <meta name="keywords" content="{% for taglabel in site.tag_labels %}{{ taglabel.name }},{% endfor %}hoge">
   <meta name="description" content="{{ site.description }}">
   <meta name="author" content="{{ site.author }}">
 

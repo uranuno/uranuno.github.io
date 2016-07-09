@@ -1,5 +1,4 @@
 ---
-layout: post
 tag: [unity3d]
 ---
 

@@ -54,12 +54,19 @@ h3, h4, h5, h6 {
 /* Sidebar about */
 .sidebar-about h1 {
   line-height: 1;
+  margin-bottom: 0;
 }
 
 /* Sidebar nav */
 .sidebar-nav {
-  font-size: 1.25rem;
+  font-size: 1rem;
   margin-bottom: 0.5rem;
+}
+.sidebar-nav ul {
+  padding-left: 1rem;
+}
+.sidebar-nav-item {
+  line-height: 1;
 }
 
 /* Accounts */

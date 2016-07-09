@@ -1,5 +1,4 @@
 ---
-layout: post
 title: 値の最小値と最大値をセットで扱うための構造体とPropertyDrawer
 tag: [unity3d]
 ---

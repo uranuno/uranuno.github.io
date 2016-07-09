@@ -1,6 +1,8 @@
 <span class="post-tags">
   {% assign tags = include.param %}
-  {% for tag in tags %}
-  <i class="fa fa-tag fa-fw"></i><a href="{{ site.baseurl }}tags/{{ tag }}">{{ site.data.tags[tag].name }}</a>&nbsp;
+  {% for taglabel in site.tag_labels %}
+  {% if tags contains taglabel.name %}
+  <i class="fa fa-tag fa-fw"></i><a href="{{ taglabel.url }}">{{ taglabel.title }}</a>&nbsp;
+  {% endif %}
   {% endfor %}
 </span>

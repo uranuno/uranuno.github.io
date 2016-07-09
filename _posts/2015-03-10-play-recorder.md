@@ -1,5 +1,4 @@
 ---
-layout: post
 title: Unity のゲーム画面からAnimated GIF をつくるための連番キャプチャをサクッと撮る
 tag: [unity3d]
 ---

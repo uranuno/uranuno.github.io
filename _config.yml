@@ -4,8 +4,9 @@ baseurl: /
 
 # Setup
 title: nunomemo
-description: 開発メモです。
+description: 開発などのメモです
 author: "yumi nunoura"
+author_id: uranuno
 
 # Outputting
 permalink: pretty
@@ -17,3 +18,22 @@ gems:
   - jekyll-paginate
   - jekyll-sitemap
   - jemoji
+
+# Collections
+collections:
+  tag_labels:
+    output: true
+    permalink: /tags/:path/
+
+# Defaults
+defaults:
+  - scope:
+      path: ""
+      type: posts
+    values:
+      layout: post
+  - scope:
+      path: ""
+      type: tag_labels
+    values:
+      layout: tag

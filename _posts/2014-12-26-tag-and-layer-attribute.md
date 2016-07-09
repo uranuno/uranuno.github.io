@@ -1,5 +1,4 @@
 ---
-layout: post
 title: Tag とLayer をInspector から楽に入力するPropertyDrawer
 tag: [unity3d]
 ---
