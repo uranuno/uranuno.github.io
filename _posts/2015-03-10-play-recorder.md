@@ -1,5 +1,5 @@
 ---
-title: Unity のゲーム画面からAnimated GIF をつくるための連番キャプチャをサクッと撮る
+title: アニメGIF用の連番キャプチャを撮るエディタ拡張
 tags: [unity]
 ---
 

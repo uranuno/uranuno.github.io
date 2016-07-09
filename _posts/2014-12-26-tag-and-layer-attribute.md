@@ -1,5 +1,5 @@
 ---
-title: Tag とLayer をInspector から楽に入力するPropertyDrawer
+title: Tag とLayer を楽に入力するPropertyDrawer
 tags: [unity]
 ---
 

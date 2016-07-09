@@ -1,5 +1,5 @@
 ---
-title: 値の最小値と最大値をセットで扱うための構造体とPropertyDrawer
+title: 値の最小値と最大値をいい感じに入力するPropertyDrawer
 tags: [unity]
 ---
 
