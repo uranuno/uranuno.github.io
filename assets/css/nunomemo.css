@@ -35,6 +35,16 @@ img.emoji {
   border-radius: 0;
   vertical-align: text-top;
 }
+a[href^="https://github.com/uranuno/"]:not([href*="uranuno.github.io"]):after {
+  content: '';
+  background: url(https://assets.github.com/images/icons/emoji/octocat.png);
+  background-size: contain;
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  vertical-align: sub;
+  margin-left: 0.1em;
+}
 
 /* Font Awesome */
 .fa-fw {
@@ -58,7 +68,7 @@ h3, h4, h5, h6 {
 
 /* Small */
 small {
-  margin-right: 0.5em;
+  margin-right: 0.25rem;
   color: #9a9a9a;
   font-size: 75%;
 }

@@ -20,7 +20,7 @@ public int targetLayer;
 
 Unity で、Tag やLayer をInspector から楽に入力できるように、PropertyDrawer をつくりました。
 
-[uranuno/MyUnityUtils #TagAndLayerAttribute :octocat:](https://github.com/uranuno/MyUnityUtils#tag-and-layer-attribute)
+[uranuno/MyUnityUtils #TagAndLayerAttribute](https://github.com/uranuno/MyUnityUtils#tag-and-layer-attribute)
 
 <!-- more -->
 

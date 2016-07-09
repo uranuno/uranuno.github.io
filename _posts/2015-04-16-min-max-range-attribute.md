@@ -37,7 +37,7 @@ void Update () {
 Unity には、[MinMaxSlider というすてきなEditorGUI](http://docs.unity3d.com/ScriptReference/EditorGUI.MinMaxSlider.html) があります。  
 [一定の値の範囲からランダムな値を取得したいとき](http://docs.unity3d.com/ScriptReference/Random.Range.html)なんかに、このスライダーをつかって範囲を調整できたらいいな〜と思っていたので、構造体 + PropertyDrawer をつくりました。  
 
-[uranuno/MyUnityUtils #MinMax :octocat:](https://github.com/uranuno/MyUnityUtils#min-max)  
+[uranuno/MyUnityUtils #MinMax](https://github.com/uranuno/MyUnityUtils#min-max)  
 ↑自作のUtility系をまとめたリポジトリをつくってみました。
 
 <!-- more -->

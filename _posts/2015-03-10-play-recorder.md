@@ -20,7 +20,7 @@ refs:
 Tumblr じゃないけど、せっかくブログを始めようと思うので、UnityのキャプチャをアニメGIFで載せたりして、それっぽくしたいです。  
 上記に方法が載っているのですが、元になる連番キャプチャをサクッと撮れるように、キャプチャ用スクリプトをつくってみました。
 
-[uranuno/PlayRecorder :octocat:](https://github.com/uranuno/PlayRecorder)
+[uranuno/PlayRecorder](https://github.com/uranuno/PlayRecorder)
 
 ![PlayRecorder](https://uranuno.github.io/PlayRecorder/playrecorder.png)
 
