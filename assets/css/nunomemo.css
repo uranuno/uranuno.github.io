@@ -129,6 +129,9 @@ h3, h4, h5, h6 {
 .related-posts li a:focus {
   text-decoration: underline;
 }
+.related-posts li small {
+  margin-right: 0.5em;
+}
 
 /* My theme */
 .theme-nunomemo .sidebar {

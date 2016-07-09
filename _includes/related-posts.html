@@ -4,11 +4,13 @@
   {% for post in posts limit:limit %}
   <li>
     <h3>
+  {% if post.hidden != true or include.showhidden %}
       <a href="{{ post.url }}">
         <small>{{ post.date | date: "%Y-%m-%d" }}</small>
         {{ post.title }}
       </a>
     </h3>
   </li>
+  {% endif %}
   {% endfor %}
 </ul>
