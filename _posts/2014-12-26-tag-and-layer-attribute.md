@@ -1,6 +1,11 @@
 ---
 title: Tag とLayer を楽に入力するPropertyDrawer
 tags: [unity]
+refs:
+  - title: 'anchan828/property-drawer-collection - GitHub'
+    url  : 'https://github.com/anchan828/property-drawer-collection'
+  - title: 'Scripting API: PropertyDrawer - Unity'
+    url  : 'https://docs.unity3d.com/ScriptReference/PropertyDrawer.html'
 ---
 
 ![Tag and Layer Attribute](https://uranuno.github.io/MyUnityUtils/tagandlayer.png)
@@ -90,9 +95,3 @@ void OnTriggerEnter(Collider other) {
 ![Layer Attribute](https://uranuno.github.io/MyUnityUtils/tagandlayer-layer.png)
 
 静的クラス生成方式は結構大掛かりなので、TagとLayerのみでいい、Inspectorで入力するからコード補完もいらない、という場合はこれだけでいいかもしれません。
-
-
-参考
------
-- [anchan828/property-drawer-collection - GitHub](https://github.com/anchan828/property-drawer-collection)
-- [Scripting API: PropertyDrawer - Unity](http://docs.unity3d.com/ScriptReference/PropertyDrawer.html)

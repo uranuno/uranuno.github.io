@@ -1,12 +1,18 @@
 ---
 title: 値の最小値と最大値をいい感じに入力するPropertyDrawer
 tags: [unity]
+refs:
+  - title: 'Scripting API: EditorGUI.MinMaxSlider - Unity'
+    url  : 'https://docs.unity3d.com/ScriptReference/EditorGUI.MinMaxSlider.html'
+  - title: 'Manual: Property Drawers - Unity'
+    url  : 'https://docs.unity3d.com/Manual/editor-PropertyDrawers.html'
+  - title: 'Tutorial: Property Drawers & Custom Inspectors - Unity'
+    url  : 'https://unity3d.com/learn/tutorials/modules/intermediate/live-training-archive/property-drawers-custom-inspectors'
+commits:
+  - date : 2015-10-27
+    title: 'Vector2 -> MinMax構造体'
+    id   : 0fc6780159e1d1caf6f65a20051acd12bb2a8d1a
 ---
-
-### 2015.10.27 Update
-Vector2をやめて、`min`と`max`をプロパティに持つ[MinMax構造体](https://github.com/uranuno/MyUnityUtils/blob/master/Assets/Utils/MinMax.cs)を定義
-
-***
 
 ![Min Max Range Attribute](https://uranuno.github.io/MyUnityUtils/minmaxrange.gif "がんばってつくったGIF")
 
@@ -49,10 +55,3 @@ public float otherValue;
 ```
 
 ![With Other Value](https://uranuno.github.io/MyUnityUtils/minmaxrange-othervalue.png)
-
-
-参考
------
-- [Scripting API: EditorGUI.MinMaxSlider - Unity](http://docs.unity3d.com/ScriptReference/EditorGUI.MinMaxSlider.html)
-- [Manual: Property Drawers - Unity](http://docs.unity3d.com/Manual/editor-PropertyDrawers.html)
-- [Tutorial: Property Drawers & Custom Inspectors - Unity](https://unity3d.com/learn/tutorials/modules/intermediate/live-training-archive/property-drawers-custom-inspectors)

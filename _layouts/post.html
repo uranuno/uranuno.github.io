@@ -1,14 +1,44 @@
 ---
 layout: default
 ---
-
+<!-- Post Detail -->
 <div class="post post-detail">
+  <!-- Post Title -->
   <h1 class="post-title">{{ page.title }}</h1>
+  <!-- Date and Tags -->
   {% include post-date.html param = page %}
+  
+  {% if page.commits.size > 0 %}
+  <!-- Updates -->
+  <aside class="post-updates">
+  <h3>Commits</h3>
+  <dl>
+    {% for commit in page.commits %}
+    <a href="https://github.com/uranuno/uranuno.github.io/commit/{{ commit.id }}" target="_blank">
+    <dt><small>{{ commit.date }}</small></dt><dd>{{ commit.title }}</dd>
+    </a>
+    {% endfor %}
+  </dl>
+  </aside>
+  {% endif %}
+
+  <!-- Content -->
   {{ content }}
+  
+  {% if page.refs.size > 0 %}
+  <!-- References -->
+  <h2>参考</h2>
+  <ul>
+    {% for reference in page.refs %}
+    <li><a href="{{ reference.url }}" target="_blank">{{ reference.title }}</a></li>
+    {% endfor %}
+  </ul>
+  {% endif %}
+
+  <!-- Share Buttons -->
   {% include sharebuttons.html param = page %}
 </div>
-
+<!-- Related Posts -->
 {% if page.hidden != true %}
 <div class="related">
   <h2>Related Posts</h2>
