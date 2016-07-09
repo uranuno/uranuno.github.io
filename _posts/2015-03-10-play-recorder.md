@@ -1,6 +1,6 @@
 ---
 title: Unity のゲーム画面からAnimated GIF をつくるための連番キャプチャをサクッと撮る
-tag: [unity3d]
+tags: [unity]
 ---
 
 ![PlayRecorder Result](https://uranuno.github.io/PlayRecorder/out.gif "Cubeくん")

@@ -1,4 +1,4 @@
 ---
-name: unity3d
+name: unity
 title: Unityメモ
 ---

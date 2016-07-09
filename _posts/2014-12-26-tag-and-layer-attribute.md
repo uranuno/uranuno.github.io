@@ -1,6 +1,6 @@
 ---
 title: Tag とLayer をInspector から楽に入力するPropertyDrawer
-tag: [unity3d]
+tags: [unity]
 ---
 
 ![Tag and Layer Attribute](https://uranuno.github.io/MyUnityUtils/tagandlayer.png)
