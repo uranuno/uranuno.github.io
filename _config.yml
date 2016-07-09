@@ -3,10 +3,13 @@ host: 0.0.0.0
 baseurl: /
 
 # Setup
+url: https://uranuno.github.io
 title: nunomemo
 description: 開発などのメモです
-author: "yumi nunoura"
-author_id: uranuno
+author:
+  id: uranuno
+  name: "yumi nunoura"
+  email: "uranuno@gmail.com"
 
 # Outputting
 permalink: pretty
