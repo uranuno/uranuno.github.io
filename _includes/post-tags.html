@@ -1,6 +1,6 @@
 <span class="post-tags">
   {% assign tags = include.param %}
-  {% for taglabel in site.tag_labels %}
+  {% for taglabel in site.taglabels %}
   {% if tags contains taglabel.name %}
   <i class="fa fa-tag fa-fw"></i><a href="{{ taglabel.url }}">{{ taglabel.title }}</a>&nbsp;
   {% endif %}

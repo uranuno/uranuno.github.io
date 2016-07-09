@@ -9,7 +9,7 @@
 
     <nav class="sidebar-nav">
     <ul>
-      {% for taglabel in site.tag_labels %}
+      {% for taglabel in site.taglabels %}
       <li><a class="sidebar-nav-item{% if page.url == taglabel.url %} active{% endif %}" href="{{ taglabel.url }}">{{ taglabel.title }}</a></li>
       {% endfor %}
     </ul>

@@ -24,7 +24,7 @@ gems:
 
 # Collections
 collections:
-  tag_labels:
+  taglabels:
     output: true
     permalink: /tags/:path/
 
@@ -37,6 +37,6 @@ defaults:
       layout: post
   - scope:
       path: ""
-      type: tag_labels
+      type: taglabels
     values:
       layout: tag
