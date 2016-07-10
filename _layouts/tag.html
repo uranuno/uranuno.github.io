@@ -6,6 +6,7 @@ layout: default
 <div class="related">
   {% assign tagged-posts = site.tags[page.name] %}
   {% include related-posts.html posts = tagged-posts limit = tagged-posts.size showhidden = true %}
+  {% include related-posts.html posts = tagged-posts showhidden = true %}
 </div>
 
 

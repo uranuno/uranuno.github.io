@@ -1,5 +1,5 @@
 {% assign posts = include.posts %}
-{% assign limit = include.limit %}
+{% assign limit = include.limit | pluralize: include.limit, post.size %}
 <ul class="related-posts">
   {% for post in posts limit:limit %}
   <li>
