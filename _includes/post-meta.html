@@ -1,0 +1,11 @@
+{% assign post = include.param %}
+<span class="post-date">
+  <!-- Date -->
+  <i class="fa fa-clock-o fa-fw"></i>{{ post.date | date: "%Y-%m-%d" }}
+  <!-- Tags -->
+  <span class="post-tags">
+  {% for taglabel in site.taglabels %}{% assign tagid = taglabel.id | split:'/' | last %}
+  {% if post.tags contains tagid %}<i class="fa fa-tag fa-fw"></i><a href="{{ taglabel.url }}">{{ taglabel.title }}</a>&nbsp;{% endif %}
+  {% endfor %}
+  </span>
+</span>

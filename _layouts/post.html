@@ -3,10 +3,10 @@ layout: default
 ---
 <!-- Post Detail -->
 <div class="post post-detail">
-  <!-- Post Title -->
+  <!-- Title -->
   <h1 class="post-title">{{ page.title }}</h1>
-  <!-- Date and Tags -->
-  {% include post-date.html param = page %}
+  <!-- Meta -->
+  {% include post-meta.html param = page %}
   
   {% if page.commits.size > 0 %}
   <!-- Updates -->
