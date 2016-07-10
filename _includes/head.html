@@ -6,14 +6,16 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
 
   <!-- Info -->
+  {% if page.title == "Home" %}
+  <title>{{ site.title }}</title>
+  {% else %}
   <title>
-    {% if page.title == "Home" %}
-      {{ site.title }}
-    {% else %}
-      {% if page.tags.size > 0 %}[{{ page.tags | join:'][' }}]{% endif %}{{ page.title }} - {{ site.title }}
-    {% endif %}
+  {% for taglabel in site.taglabels %}{% if taglabel.name %}
+  {% assign tagid = taglabel.id | split:'/' | last %}{% if page.tags contains tagid %}[{{ taglabel.name }}]{% endif %}
+  {% endif %}{% endfor %}
+  {{ page.title }} - {{ site.title }}
   </title>
-  <meta name="keywords" content="{% for taglabel in site.taglabels %}{{ taglabel.name }},{% endfor %}hoge">
+  {% endif %}
   <meta name="description" content="{{ site.description }}">
   <meta name="author" content="{{ site.author.name }}">
 

@@ -4,8 +4,8 @@ layout: default
 
 <h2 class="post-title"><i class="fa fa-list-ul fa-fw"></i>{{ page.title }}</h2>
 <div class="related">
-  {% assign tagged-posts = site.tags[page.name] %}
-  {% include related-posts.html posts = tagged-posts limit = tagged-posts.size showhidden = true %}
+  {% assign tagid = page.id | split:'/' | last %}
+  {% assign tagged-posts = site.tags[tagid] %}
   {% include related-posts.html posts = tagged-posts showhidden = true %}
 </div>
 
