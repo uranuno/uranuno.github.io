@@ -23,7 +23,7 @@ layout: default
   {% endif %}
 
   <!-- Content -->
-  {{ content }}
+  {{ content | replace:site.excerpt_separator, '<p><i class="fa fa-ellipsis-h fa-fw" id="more"></i></p>' }}
   
   {% if page.refs.size > 0 %}
   <!-- References -->
