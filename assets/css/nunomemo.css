@@ -35,6 +35,9 @@ img.emoji {
   border-radius: 0;
   vertical-align: text-top;
 }
+.page-title img.emoji {
+  vertical-align: baseline;
+}
 a[href^="https://github.com/uranuno/"]:not([href*="uranuno.github.io"]):after {
   content: '';
   background: url(https://assets.github.com/images/icons/emoji/octocat.png);
