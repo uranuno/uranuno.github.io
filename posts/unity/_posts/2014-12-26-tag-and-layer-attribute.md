@@ -38,7 +38,7 @@ void OnTriggerEnter(Collider other) {
 
 このとき「Player」を自分で打ちこむのはタイプミスの危険があるので、嫌です。
 
-以前それを回避するために、[NameCreator](https://github.com/anchan828/namecreator)というのを使わせてもらって、静的クラスを生成する方法を試してみました。
+以前それを回避するために、[NameCreator](https://github.com/anchan828/namecreator)というのを使って、静的クラスを生成する方法を試してみました。
 
 ```csharp
 void OnTriggerEnter(Collider other) {
