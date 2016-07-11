@@ -12,7 +12,7 @@ author:
   email: "uranuno@gmail.com"
 
 # Outputting
-permalink: pretty
+permalink: /:year/:month/:day/:title/
 excerpt_separator: "<!-- more -->"
 paginate: 5
 
@@ -24,9 +24,9 @@ gems:
 
 # Collections
 collections:
-  taglabels:
+  lists:
     output: true
-    permalink: /tags/:path/
+    permalink: /:path/
 
 # Defaults
 defaults:
@@ -37,6 +37,11 @@ defaults:
       layout: post
   - scope:
       path: ""
-      type: taglabels
+      type: lists
     values:
-      layout: tag
+      layout: list
+  - scope:
+      path: "posts/misc"
+      type: posts
+    values:
+      hidden: true

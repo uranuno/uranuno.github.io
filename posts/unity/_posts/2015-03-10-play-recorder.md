@@ -1,6 +1,5 @@
 ---
 title: アニメGIF用の連番キャプチャを撮るエディタ拡張
-tags: [unity]
 refs:
   - title: "Unity の画面を Animated GIF に変換して Tumblr にアップする - keijiro's Gists"
     url  : 'https://gist.github.com/keijiro/3330732'

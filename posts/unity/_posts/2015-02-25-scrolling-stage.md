@@ -1,5 +1,4 @@
 ---
-tags: [unity]
 ---
 
 ![Scrolling Stage](https://uranuno.github.io/ScrollingStage/out.gif)

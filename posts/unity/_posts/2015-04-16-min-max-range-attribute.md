@@ -1,6 +1,5 @@
 ---
 title: 値の最小値と最大値をいい感じに入力するPropertyDrawer
-tags: [unity]
 refs:
   - title: 'Scripting API: EditorGUI.MinMaxSlider - Unity'
     url  : 'https://docs.unity3d.com/ScriptReference/EditorGUI.MinMaxSlider.html'

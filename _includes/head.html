@@ -10,10 +10,9 @@
   <title>{{ site.title }}</title>
   {% else %}
   <title>
-  {% for taglabel in site.taglabels %}{% if taglabel.name %}
-  {% assign tagid = taglabel.id | split:'/' | last %}{% if page.tags contains tagid %}[{{ taglabel.name }}]{% endif %}
-  {% endif %}{% endfor %}
-  {{ page.title }} - {{ site.title }}
+  {% assign list-id = "/" | append: page.categories[1] %}
+  {% assign list = site.lists | where:"id", list-id | first %}
+  {% if list and list.head %}[{{ list.head }}]{% endif %}{{ page.title }} - {{ site.title }}
   </title>
   {% endif %}
   <meta name="description" content="{{ site.description }}">

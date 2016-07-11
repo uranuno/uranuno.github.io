@@ -1,6 +1,5 @@
 ---
 title: Tag とLayer を楽に入力するPropertyDrawer
-tags: [unity]
 refs:
   - title: 'anchan828/property-drawer-collection - GitHub'
     url  : 'https://github.com/anchan828/property-drawer-collection'
