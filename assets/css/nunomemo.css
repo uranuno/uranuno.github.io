@@ -51,7 +51,7 @@ a[href^="https://github.com/uranuno/"]:not([href*="uranuno.github.io"]):after {
 
 /* Font Awesome */
 .fa-fw {
-  width: 1.5em !important;
+  width: 1.5em;
 }
 
 /* Headings */
