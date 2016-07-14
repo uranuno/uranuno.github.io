@@ -41,7 +41,7 @@ defaults:
     values:
       layout: list
   - scope:
-      path: "posts/misc"
+      path: "posts/zzz"
       type: posts
     values:
       hidden: true
