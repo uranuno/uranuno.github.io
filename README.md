@@ -1,7 +1,6 @@
 # uranuno.github.io
 
 My personal page.
-http://uranuno.github.io
 
 ## Using
 
