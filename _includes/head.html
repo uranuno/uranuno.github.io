@@ -1,4 +1,5 @@
 <head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta charset="UTF-8">
 
@@ -9,11 +10,9 @@
   {% if page.title == "Home" %}
   <title>{{ site.title }}</title>
   {% else %}
-  <title>
   {% assign list-id = "/" | append: page.categories[1] %}
   {% assign list = site.lists | where:"id", list-id | first %}
-  {% if list and list.head %}[{{ list.head }}] {% endif %}{{ page.title }} - {{ site.title }}
-  </title>
+  <title>{% if list and list.head %}[{{ list.head }}] {% endif %}{{ page.title }} - {{ site.title }}</title>
   {% endif %}
   <meta name="description" content="{{ site.description }}">
   <meta name="author" content="{{ site.author.name }}">
@@ -31,7 +30,7 @@
   <link rel="shortcut icon" href="{{ site.baseurl }}assets/icons/favicon.ico">
 
   <!-- RSS -->
-  <link rel="alternate" type="application/rss+xml" title="RSS" href="/atom.xml">
+  <link rel="alternate" type="application/rss+xml" title="RSS" href="/feed.xml">
 
   <!-- GA -->
   <script>

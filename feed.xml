@@ -6,7 +6,7 @@ layout: null
 <feed xmlns="http://www.w3.org/2005/Atom">
 
  <title>{{ site.title }}</title>
- <link href="{{ site.url }}/atom.xml" rel="self"/>
+ <link href="{{ site.url }}/feed.xml" rel="self"/>
  <link href="{{ site.url }}/"/>
  <updated>{{ site.time | date_to_xmlschema }}</updated>
  <id>{{ site.url }}</id>
@@ -15,9 +15,11 @@ layout: null
    <email>{{ site.author.email }}</email>
  </author>
 
- {% for post in site.posts %}
+ {% for post in site.posts limit:site.paginate %}
  <entry>
-   <title>{{ post.title }}</title>
+   {% assign list-id = "/" | append: post.categories[1] %}
+   {% assign list = site.lists | where:"id", list-id | first %}
+   <title>{% if list and list.head %}[{{ list.head }}] {% endif %}{{ post.title }}</title>
    <link href="{{ site.url }}{{ post.url }}"/>
    <updated>{{ post.date | date_to_xmlschema }}</updated>
    <id>{{ site.url }}{{ post.id }}</id>

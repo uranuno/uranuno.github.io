@@ -14,7 +14,7 @@ author:
 # Outputting
 permalink: /:year/:month/:day/:title/
 excerpt_separator: "<!-- more -->"
-paginate: 5
+paginate: 10
 
 # Gems
 gems:
