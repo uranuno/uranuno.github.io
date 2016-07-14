@@ -15,6 +15,9 @@ commits:
     id   : 0fc6780159e1d1caf6f65a20051acd12bb2a8d1a
 ---
 
+[MinMaxSlider といういい感じのEditorGUI]({{ page.refs[1].url }}) があります。  
+[一定の値の範囲からランダムな値を取得したいとき](http://docs.unity3d.com/ScriptReference/Random.Range.html)なんかに、このスライダーをつかって範囲を調整できたらいいな〜と思ったので、構造体 + PropertyDrawer をつくりました。  
+
 ![Min Max Range Attribute](https://uranuno.github.io/MyUnityUtils/minmaxrange.gif "がんばってつくったGIF")
 
 ```csharp
@@ -24,22 +27,20 @@ MinMax randomDelayRange;
 float delay;
 float accum;
 
-void Update () {
-	accum += Time.deltaTime;
-
-	if (accum >= delay) {
-		Debug.Log ("Fire!");
-		accum = 0;
-		delay = randomDelayRange.randomValue;
-	}
+void Update ()
+{
+  accum += Time.deltaTime;
+  if (accum >= delay)
+  {
+    Debug.Log ("Fire!");
+    accum = 0;
+    delay = randomDelayRange.randomValue;
+  }
 }
 ```
 
-Unity には、[MinMaxSlider というすてきなEditorGUI](http://docs.unity3d.com/ScriptReference/EditorGUI.MinMaxSlider.html) があります。  
-[一定の値の範囲からランダムな値を取得したいとき](http://docs.unity3d.com/ScriptReference/Random.Range.html)なんかに、このスライダーをつかって範囲を調整できたらいいな〜と思っていたので、構造体 + PropertyDrawer をつくりました。  
-
-[uranuno/MyUnityUtils #MinMax](https://github.com/uranuno/MyUnityUtils#min-max)  
-↑自作のUtility系をまとめたリポジトリをつくってみました。
+[{{ page.refs[0].title[0] }}]({{ page.refs[0].url }})  
+↑自作のUtility系をまとめたリポジトリをつくりました。
 
 <!-- more -->
 
@@ -55,4 +56,4 @@ MinMax randomDelayRange;
 public float otherValue;
 ```
 
-![With Other Value](https://uranuno.github.io/MyUnityUtils/minmaxrange-othervalue.png)
+![With Other Value](https://uranuno.github.io/MyUnityUtils/minmaxrange-othervalue.png "並べてもきれい")

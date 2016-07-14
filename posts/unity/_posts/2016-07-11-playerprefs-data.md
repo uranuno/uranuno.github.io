@@ -9,11 +9,12 @@ refs:
     url  : 'https://docs.unity3d.com/ScriptReference/JsonUtility.html'
 ---
 
-```csharp
+[PlayerPrefs]({{ page.refs[1].url }}) をちょっとだけ拡張して、:point_down:みたいな書き方ができるようになる[PlayerPrefsData.cs]({{ page.refs[0].url }}) という汎用クラスをつくりました。  
 
+```csharp
 // 端末に保存したいデータのクラス（例: 音量の設定）
 public class AudioSettings
-  : PlayerPrefsData<AudioSettings> //←これをつくりました
+  : PlayerPrefsData<AudioSettings> //←これをつくった
 {
   public float bgmVolume = 1f; //デフォルト値も入れられる
   public float seVolume  = 1f;
@@ -54,22 +55,22 @@ public class PlayerPrefsDataExample : MonoBehaviour
 }
 ```
 
-Unityの[PlayerPrefs]({{ page.refs[1].url }}) をちょっとだけ拡張して、上みたいな書き方ができるようになる[PlayerPrefsData]({{ page.refs[0].url }})という汎用クラスをつくってみました。  
-
-:point_up:を継承したデータクラスをつくって、端末に保存したい値をもたせておけば、あとは `Load()` `Save()` を呼ぶだけ、素で書くよりはラク！というものです。
+`PlayerPrefsData` を継承したデータクラスをつくって、端末に保存したい値をもたせておけば、あとは `Load()` `Save()` を呼ぶだけ、素で書くよりはラク！というもの。
 
 <!-- more -->
 
 PlayerPrefs は端末にデータをさくっと保存できて便利ですが、
 
-* `int` `float` `string` タイプしか無い。それ以外は自分で変換しないといけない
+* `int` `float` `string` タイプしか無い。それ以外は自分で変換しないといけない（大体 `bool` を `0,1` にする）
 * データを読み込むとき、データが存在しなかったら、データを新しくつくって・・・みたいな分岐を書かないといけない
 * 保存キーが文字列なのでどこかで管理しないといけない
 
-この辺の処理を入れたラッパーを毎回つくるのが面倒で、シンプルな汎用クラスがほしいな・・・と思ってました。  
-[Unity5.3〜 のJsonUtility]({{ page.refs[2].url }}) を使えば簡単につくれる気がする！と思い、つくってみたのがこれです。
+この辺の処理を入れたラッパーを毎回つくるのが面倒・・・  
+処理をまとめるにしても、保存したい値全部入りのデータベースみたいなクラスをつくってしまうと、プロジェクトごとに作り直しになるので、それも面倒・・・
 
-ミソは、保存キーにクラス名を使うので、文字列で定義しなくてよいところです。  
-1クラス1データになるけど、複数保存したいときは配列をもたせたクラスをつくってそれを保存すればいいかなと思います。
+[Unity5.3〜 のJsonUtility]({{ page.refs[2].url }}) を使えば、Json文字列化が簡単にできるから、全部string 扱いで一緒に処理できるかも、と思ってつくってみたのがこれです。
 
-個人的には満足:smile:
+ミソは、保存キーにクラス名を使うので、自分で定義しなくてよいところです。  
+1クラス1データになるけど、複数保存したいデータは、それを配列にもたせたデータクラスをつくって保存すればいいかなと思います。
+
+ジェネリック便利、個人的には満足:smile:
