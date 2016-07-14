@@ -1,13 +1,15 @@
 ---
 title: アニメGIF用の連番キャプチャを撮るエディタ拡張
 refs:
-  - title: "Unity の画面を Animated GIF に変換して Tumblr にアップする - keijiro's Gists"
+  - title: ['uranuno/PlayRecorder', 'GitHub']
+    url  : 'https://github.com/uranuno/PlayRecorder'
+  - title: ['Unity の画面を Animated GIF に変換して Tumblr にアップする', "keijiro's Gists"]
     url  : 'https://gist.github.com/keijiro/3330732'
-  - title: 'QuickTime PlayerでスクリーンキャプチャしたMOVからベターなアニメーションGIFを作る - Genji App Blog'
+  - title: ['QuickTime PlayerでスクリーンキャプチャしたMOVからベターなアニメーションGIFを作る', 'Genji App Blog']
     url  : 'http://genjiapp.com/blog/2014/06/04/'
-  - title: 'Scripting API: EditorWindow.Update() - Unity'
+  - title: ['Scripting API: EditorWindow.Update()', 'Unity']
     url  : 'https://docs.unity3d.com/ScriptReference/EditorWindow.Update.html'
-  - title: 'Scripting API: Time.captureFramerate - Unity'
+  - title: ['Scripting API: Time.captureFramerate', 'Unity']
     url  : 'https://docs.unity3d.com/ScriptReference/Time-captureFramerate.html'
 ---
 

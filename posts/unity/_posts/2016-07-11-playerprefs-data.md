@@ -1,11 +1,11 @@
 ---
 title: PlayerPrefs をちょっとだけ拡張
 refs:
-  - title: 'uranuno/MyUnityUtils/PlayerPrefsData.cs - GitHub'
+  - title: ['uranuno/MyUnityUtils/PlayerPrefsData.cs', 'GitHub']
     url  : 'https://github.com/uranuno/MyUnityUtils/blob/master/Assets/Utils/PlayerPrefsData.cs'
-  - title: 'Scripting API: PlayerPrefs - Unity'
+  - title: ['Scripting API: PlayerPrefs', 'Unity']
     url  : 'https://docs.unity3d.com/ScriptReference/PlayerPrefs.html'
-  - title: 'Scripting API: JsonUtility - Unity'
+  - title: ['Scripting API: JsonUtility', 'Unity']
     url  : 'https://docs.unity3d.com/ScriptReference/JsonUtility.html'
 ---
 

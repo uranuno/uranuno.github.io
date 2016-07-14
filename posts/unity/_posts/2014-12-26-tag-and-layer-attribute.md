@@ -1,10 +1,14 @@
 ---
 title: Tag とLayer を楽に入力するPropertyDrawer
 refs:
-  - title: 'anchan828/property-drawer-collection - GitHub'
-    url  : 'https://github.com/anchan828/property-drawer-collection'
-  - title: 'Scripting API: PropertyDrawer - Unity'
-    url  : 'https://docs.unity3d.com/ScriptReference/PropertyDrawer.html'
+  - title: ['uranuno/MyUnityUtils #TagAndLayerAttribute', 'GitHub']
+    url  : 'https://github.com/uranuno/MyUnityUtils#tag-and-layer-attribute'
+  - title: ['anchan828/namecreator', 'GitHub']
+    url  : 'https://github.com/anchan828/namecreator'
+  - title: ['Scripting API: EditorGUI.TagField', 'Unity']
+    url  : 'https://docs.unity3d.com/ScriptReference/EditorGUI.TagField.html'
+  - title: ['Scripting API: EditorGUI.LayerField', 'Unity']
+    url  : 'https://docs.unity3d.com/ScriptReference/EditorGUI.LayerField.html'
 ---
 
 ![Tag and Layer Attribute](https://uranuno.github.io/MyUnityUtils/tagandlayer.png)
