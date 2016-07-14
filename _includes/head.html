@@ -12,7 +12,7 @@
   <title>
   {% assign list-id = "/" | append: page.categories[1] %}
   {% assign list = site.lists | where:"id", list-id | first %}
-  {% if list and list.head %}[{{ list.head }}]{% endif %}{{ page.title }} - {{ site.title }}
+  {% if list and list.head %}[{{ list.head }}] {% endif %}{{ page.title }} - {{ site.title }}
   </title>
   {% endif %}
   <meta name="description" content="{{ site.description }}">

@@ -1,4 +1,6 @@
 {% assign post = include.param %}
+<!-- Date Time -->
+<time datetime="{% if post.commits %}{{ post.commits[0].date }}{% else %}{{ post.date | date: "%Y-%m-%d" }}{% endif %}"></time>
 <span class="post-date">
   <!-- Date -->
   <i class="fa fa-clock-o fa-fw"></i>{{ post.date | date: "%Y-%m-%d" }}
