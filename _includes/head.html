@@ -7,12 +7,12 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
 
   <!-- Info -->
-  {% if page.title == "Home" %}
-  <title>{{ site.title }}</title>
-  {% else %}
+  {% if page.id %}
   {% assign list-id = "/" | append: page.categories[1] %}
   {% assign list = site.lists | where:"id", list-id | first %}
   <title>{% if list and list.head %}[{{ list.head }}] {% endif %}{{ page.title }} - {{ site.title }}</title>
+  {% else %}
+  <title>{{ site.title }}</title>
   {% endif %}
   <meta name="description" content="{{ site.description }}">
   <meta name="author" content="{{ site.author.name }}">
@@ -31,6 +31,27 @@
 
   <!-- RSS -->
   <link rel="alternate" type="application/rss+xml" title="RSS" href="/feed.xml">
+
+  {% if list %}
+  <!-- Structure -->
+  <script type="application/ld+json">
+  {
+    "@context": "http://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "item":
+        {
+          "@id": "{{ site.url }}{{ list.url }}",
+          "name": "{{ list.title }}"
+        }
+      }
+    ]
+  }
+  </script>
+  {% endif %}
 
   <!-- GA -->
   <script>
