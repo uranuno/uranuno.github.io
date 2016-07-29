@@ -3,7 +3,6 @@ host: 0.0.0.0
 baseurl: /
 
 # Setup
-url: http://uranuno.github.io/
 title: nunomemo
 description: 開発メモです。
 author: "yumi nunoura"

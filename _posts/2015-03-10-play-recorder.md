@@ -4,7 +4,7 @@ title: Unity のゲーム画面からAnimated GIF をつくるための連番キ
 tag: [unity3d]
 ---
 
-![PlayRecorder Result](http://uranuno.github.io/PlayRecorder/out.gif "Cubeくん")
+![PlayRecorder Result](https://uranuno.github.io/PlayRecorder/out.gif "Cubeくん")
 
 [Unity の画面を Animated GIF に変換して Tumblr にアップする - keijiro's Gists][UnityAnimeGif]  
 ↑これをやりたい！
@@ -14,7 +14,7 @@ Tumblr じゃないけど、せっかくブログを始めようと思うので�
 
 [uranuno/PlayRecorder :octocat:](https://github.com/uranuno/PlayRecorder)
 
-![PlayRecorder](http://uranuno.github.io/PlayRecorder/playrecorder.png)
+![PlayRecorder](https://uranuno.github.io/PlayRecorder/playrecorder.png)
 
 <!-- more -->
 
@@ -27,7 +27,7 @@ Tumblr じゃないけど、せっかくブログを始めようと思うので�
 Delay は[ImageMagick](http://www.imagemagick.org/) に設定する値と同じもの（1/100秒）を入れられるようにしました。  
 
 ### パスの指定
-![Edit Path](http://uranuno.github.io/PlayRecorder/save_capture.png)
+![Edit Path](https://uranuno.github.io/PlayRecorder/save_capture.png)
 
 ファイル名はDateTime をフォーマットするように。  
 というわけで連番というのはウソなのですが、ミリ秒まで含めれば重複しないしImage Magick 動くしいいか、と思いました・・・

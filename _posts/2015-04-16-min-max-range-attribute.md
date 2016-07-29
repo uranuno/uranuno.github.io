@@ -9,7 +9,7 @@ Vector2をやめて、`min`と`max`をプロパティに持つ[MinMax構造体](
 
 ***
 
-![Min Max Range Attribute](http://uranuno.github.io/MyUnityUtils/minmaxrange.gif "がんばってつくったGIF")
+![Min Max Range Attribute](https://uranuno.github.io/MyUnityUtils/minmaxrange.gif "がんばってつくったGIF")
 
 ```csharp
 [SerializeField, MinMaxRange(0,10f)]
@@ -49,7 +49,7 @@ MinMax randomDelayRange;
 public float otherValue;
 ```
 
-![With Other Value](http://uranuno.github.io/MyUnityUtils/minmaxrange-othervalue.png)
+![With Other Value](https://uranuno.github.io/MyUnityUtils/minmaxrange-othervalue.png)
 
 
 参考
