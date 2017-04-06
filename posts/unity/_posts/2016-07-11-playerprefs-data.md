@@ -9,7 +9,7 @@ refs:
     url  : 'https://docs.unity3d.com/ScriptReference/JsonUtility.html'
 ---
 
-[PlayerPrefs]({{ page.refs[1].url }}) をちょっとだけ拡張して、:point_down:みたいな書き方ができるようになる[PlayerPrefsData.cs]({{ page.refs[0].url }}) という汎用クラスをつくりました。  
+[PlayerPrefs]({{ page.refs[1].url }}){:target="_blank"} をちょっとだけ拡張して、:point_down:みたいな書き方ができるようになる[PlayerPrefsData.cs]({{ page.refs[0].url }}){:target="_blank"} という汎用クラスをつくりました。  
 
 ```csharp
 // 端末に保存したいデータのクラス（例: 音量の設定）
@@ -68,7 +68,7 @@ PlayerPrefs は端末にデータをさくっと保存できて便利ですが�
 この辺の処理を入れたラッパーを毎回つくるのが面倒・・・  
 処理をまとめるにしても、保存したい値全部入りのデータベースみたいなクラスをつくってしまうと、プロジェクトごとに作り直しになるので、それも面倒・・・
 
-[Unity5.3〜 のJsonUtility]({{ page.refs[2].url }}) を使えば、Json文字列化が簡単にできるから、全部string 扱いで一緒に処理できるかも、と思ってつくってみたのがこれです。
+[Unity5.3〜 のJsonUtility]({{ page.refs[2].url }}){:target="_blank"} を使えば、Json文字列化が簡単にできるから、全部string 扱いで一緒に処理できるかも、と思ってつくってみたのがこれです。
 
 ミソは、保存キーにクラス名を使うので、自分で定義しなくてよいところです。  
 1クラス1データになるけど、複数保存したいデータは、それを配列にもたせたデータクラスをつくって保存すればいいかなと思います。

@@ -38,14 +38,14 @@ img.emoji {
 .page-title img.emoji {
   vertical-align: baseline;
 }
-a[href^="https://github.com/uranuno/"]:not([href*="uranuno.github.io"]):after {
-  content: '';
-  background: url(https://assets.github.com/images/icons/emoji/octocat.png);
-  background-size: contain;
-  display: inline-block;
-  width: 20px;
-  height: 20px;
-  vertical-align: sub;
+.post a[href^="https://github.com/uranuno/"]:after {
+  content: "\f113";
+  font: normal normal normal 1em/1 FontAwesome;
+  margin-left: 0.1em;
+}
+.post a[target="_blank"]:not([href^="https://github.com/uranuno/"]):after {
+  content: "\f08e";
+  font: normal normal normal 0.9em/1 FontAwesome;
   margin-left: 0.1em;
 }
 

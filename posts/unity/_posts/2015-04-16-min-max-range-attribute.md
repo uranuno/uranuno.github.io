@@ -11,8 +11,8 @@ refs:
     url  : 'https://unity3d.com/learn/tutorials/modules/intermediate/live-training-archive/property-drawers-custom-inspectors'
 ---
 
-[MinMaxSlider といういい感じのEditorGUI]({{ page.refs[1].url }}) があります。  
-[一定の値の範囲からランダムな値を取得したいとき](http://docs.unity3d.com/ScriptReference/Random.Range.html)なんかに、このスライダーをつかって範囲を調整できたらいいな〜と思ったので、構造体 + PropertyDrawer をつくりました。  
+[MinMaxSlider といういい感じのEditorGUI]({{ page.refs[1].url }}){:target="_blank"} があります。  
+[一定の値の範囲からランダムな値を取得したいとき](http://docs.unity3d.com/ScriptReference/Random.Range.html){:target="_blank"} なんかに、このスライダーをつかって範囲を調整できたらいいな〜と思ったので、構造体 + PropertyDrawer をつくりました。  
 
 ![Min Max Range Attribute](https://uranuno.github.io/MyUnityUtils/minmaxrange.gif "がんばってつくったGIF")
 
@@ -35,7 +35,7 @@ void Update ()
 }
 ```
 
-[{{ page.refs[0].title[0] }}]({{ page.refs[0].url }})  
+[{{ page.refs[0].title[0] }}]({{ page.refs[0].url }}){:target="_blank"}  
 ↑自作のUtility系をまとめたリポジトリをつくりました。
 
 <!-- more -->

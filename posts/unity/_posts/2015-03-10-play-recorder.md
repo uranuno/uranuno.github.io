@@ -15,13 +15,13 @@ refs:
 
 ![PlayRecorder Result](https://uranuno.github.io/PlayRecorder/out.gif "Cubeくん")
 
-[{{ page.refs[1].title[0] }}]({{ page.refs[1].url }})  
+[{{ page.refs[1].title[0] }}]({{ page.refs[1].url }}){:target="_blank"}  
 ↑これをやりたい！
 
 Tumblr じゃないけど、せっかくブログを始めようと思うので、UnityのキャプチャをGIFアニメで載せたりして、それっぽくしたいです。  
 上記に方法が載っていますが、元になる連番キャプチャをもっと簡単に撮りたくなったので、エディタ拡張をつくりました。
 
-[{{ page.refs[0].title[0] }}]({{ page.refs[0].url }})
+[{{ page.refs[0].title[0] }}]({{ page.refs[0].url }}){:target="_blank"}
 
 ![PlayRecorder](https://uranuno.github.io/PlayRecorder/playrecorder.png)
 
@@ -32,7 +32,7 @@ Tumblr じゃないけど、せっかくブログを始めようと思うので�
 .unitypackage をインポートして、PlayRecorder プレハブをScene に置いて使います。  
 ゲームの再生中に「Record」ボタンを押すとキャプチャ開始、指定したパスにファイルがぞろぞろ保存されます。
 
-Delay は[ImageMagick](http://www.imagemagick.org/) に設定する値と同じもの（1/100秒）を入れられるようにしました。  
+Delay は[ImageMagick](http://www.imagemagick.org/){:target="_blank"} に設定する値と同じもの（1/100秒）を入れられるようにしました。  
 
 ### パスの指定
 ![Edit Path](https://uranuno.github.io/PlayRecorder/save_capture.png)
@@ -47,4 +47,4 @@ Delay は[ImageMagick](http://www.imagemagick.org/) に設定する値と同じ�
 いまいちなところ
 ----------------
 いちいちScene に置かないと使えないのがちょっと面倒・・・  
-[公式リファレンスのEditorWindow.Update() に載っているサンプルコード]({{ page.refs[3].url }})を参考にEditorWindow 版をつくってみたりしたのですが、EditorWindow のフレームレートとGameView 内のフレームレートが違っていて、キャプチャのタイミングが調整しづらかったので、仕方なくそうしています、、
+[公式リファレンスのEditorWindow.Update() に載っているサンプルコード]({{ page.refs[3].url }}){:target="_blank"}を参考にEditorWindow 版をつくってみたりしたのですが、EditorWindow のフレームレートとGameView 内のフレームレートが違っていて、キャプチャのタイミングが調整しづらかったので、仕方なくそうしています、、

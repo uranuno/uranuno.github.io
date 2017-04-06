@@ -23,7 +23,7 @@ public int targetLayer;
 
 Unity で、Tag とLayer をInspector から楽に入力できるように、PropertyDrawer をつくりました。
 
-[{{ page.refs[0].title[0] }}]({{ page.refs[0].url }})
+[{{ page.refs[0].title[0] }}]({{ page.refs[0].url }}){:target="_blank"}
 
 <!-- more -->
 
@@ -53,7 +53,7 @@ void OnTriggerEnter (Collider other)
 }
 ```
 
-Unityがもっている文字列情報から、静的クラスを自動生成してくれるという[NameCreator]({{ page.refs[1].url }}) というのを試してみました。  
+Unityがもっている文字列情報から、静的クラスを自動生成してくれるという[NameCreator]({{ page.refs[1].url }}){:target="_blank"} というのを試してみました。  
 これでタイプミスもしないし、補完も出るしいい感じ。
 
 
@@ -71,12 +71,12 @@ void OnTriggerEnter (Collider other)
 ```
 
 いまさらですが、Inspector で値を入力するのがすきです。（タイプミスが、補完が、とか言ってたのに・・・）  
-Editorから静的クラスのプロパティが取得できたので、[NameCreator用のPropertyDrawerを自作](https://gist.github.com/uranuno/8be43847015f5e25cf17)してみたりしました。
+Editorから静的クラスのプロパティが取得できたので、[NameCreator用のPropertyDrawerを自作](https://gist.github.com/uranuno/8be43847015f5e25cf17){:target="_blank"}してみたりしました。
 
 
 Editor からTag とLayer が取得できた
 -----------------------------------
-ところがこんなもの（[EditorGUI.TagField]({{ page.refs[2].url }})）を発見・・・  
+ところがこんなもの（[EditorGUI.TagField]({{ page.refs[2].url }}){:target="_blank"}）を発見・・・  
 あれ？Editor のクラスに、Tag を表示する関数あったの？  
 静的クラスつくらなくても、表示できるの？
 
@@ -84,7 +84,7 @@ Editor からTag とLayer が取得できた
 
 というわけでPropertyDrawerをつくりなおしました。
 
-ついでに、[EditorGUI.LayerField]({{ page.refs[3].url }}) というのもあったので入れました。  
+ついでに、[EditorGUI.LayerField]({{ page.refs[3].url }}){:target="_blank"} というのもあったので入れました。  
 下記のように値に属性をつけるだけで、Inspector で楽に入力できるようになります。
 
 ```csharp
