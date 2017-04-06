@@ -26,9 +26,12 @@ public class PlayerPrefsDataExample : MonoBehaviour
   [SerializeField] Slider m_BgmVolumeSlider;
   [SerializeField] Slider m_SeVolumeSlider;
 
-  void OnEnable  ()                    { LoadData (); }
-  void OnDisable ()                    { SaveData (); }
-  void OnApplicationPause (bool pause) { if (pause) SaveData (); }
+  void OnEnable  () { LoadData (); }
+  void OnDisable () { SaveData (); }
+  void OnApplicationPause (bool pause)
+  {
+    if (pause) SaveData ();
+  }
 
   // データ読み込み
   void LoadData ()
