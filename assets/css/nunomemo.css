@@ -96,12 +96,7 @@ a:hover small {
 }
 .sidebar-nav-item {
   line-height: 1.5;
-}
-@media (min-width: 48em) {
-  .sidebar-nav ul {
-    padding-left: 1.25em;
-    list-style-type: disc;
-  }
+  display: inline-block;
 }
 
 /* Accounts */
