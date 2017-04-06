@@ -2,14 +2,14 @@
 {% assign limit = include.limit | pluralize: include.limit, post.size %}
 <ul class="related-posts">
   {% for post in posts limit:limit %}
-  <li>
-    <h3>
   {% if post.hidden != true or include.showhidden %}
+  <li>
+      <h3>
       <a href="{{ post.url }}">
-        <small>{{ post.date | date: "%Y-%m-%d" }}</small>
         {{ post.title }}
+        <small>{{ post.date | date: "%Y-%m-%d" }}</small>
       </a>
-    </h3>
+      </h3>
   </li>
   {% endif %}
   {% endfor %}
