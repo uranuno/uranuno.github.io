@@ -9,10 +9,6 @@ refs:
     url  : 'https://docs.unity3d.com/Manual/editor-PropertyDrawers.html'
   - title: ['Tutorial: Property Drawers & Custom Inspectors', 'Unity']
     url  : 'https://unity3d.com/learn/tutorials/modules/intermediate/live-training-archive/property-drawers-custom-inspectors'
-commits:
-  - date : 2015-10-27
-    title: 'Vector2 -> MinMax構造体'
-    id   : 0fc6780159e1d1caf6f65a20051acd12bb2a8d1a
 ---
 
 [MinMaxSlider といういい感じのEditorGUI]({{ page.refs[1].url }}) があります。  

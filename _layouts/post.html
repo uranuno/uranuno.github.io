@@ -7,20 +7,6 @@ layout: default
   <h1 class="post-title">{{ page.title }}</h1>
   <!-- Meta -->
   {% include post-meta.html param = page %}
-  
-  {% if page.commits.size > 0 %}
-  <!-- Updates -->
-  <aside class="post-updates">
-  <h3><i class="fa fa-wrench fa-fw"></i>Commits</h3>
-  <dl>
-    {% for commit in page.commits %}
-    <a href="https://github.com/uranuno/uranuno.github.io/commit/{{ commit.id }}" target="_blank">
-    <dt><small>{{ commit.date }}</small></dt><dd>{{ commit.title }}</dd>
-    </a>
-    {% endfor %}
-  </dl>
-  </aside>
-  {% endif %}
 
   <!-- Content -->
   {{ content | replace:site.excerpt_separator, '<p><i class="fa fa-ellipsis-h fa-fw" id="more"></i></p>' }}
