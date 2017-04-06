@@ -13,7 +13,7 @@ layout: default
   
   {% if page.refs.size > 0 %}
   <!-- References -->
-  <h2><i class="fa fa-external-link fa-fw"></i>Links</h2>
+  <h2 class="refs-title"><i class="fa fa-book fa-fw"></i>References</h2>
   <ul>
     {% for reference in page.refs %}
     <li><a href="{{ reference.url }}" target="_blank">{{ reference.title[0] }} - {{ reference.title[1] }}</a></li>

@@ -124,6 +124,9 @@ a:hover small {
 .post-detail {
   margin-bottom: 1em;
 }
+.refs-title {
+  padding-top: 1rem;
+}
 
 /* Date and Tag and ReadMore*/
 .post-date {
