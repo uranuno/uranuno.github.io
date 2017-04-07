@@ -10,7 +10,7 @@
     <nav class="sidebar-nav">
     <ul>
       {% for group in site.groups %}
-      <li><i class="fa fa-tags fa-fw"></i><a class="sidebar-nav-item{% if page.url == group.url %} active{% endif %}" href="{{ group.url }}">{{ group.title }}</a></li>
+      <li><i class="fa fa-{{ group.icon }} fa-fw"></i><a class="sidebar-nav-item{% if page.url == group.url %} active{% endif %}" href="{{ group.url }}">{{ group.title }}</a></li>
       {% endfor %}
     </ul>
     </nav>

@@ -3,7 +3,7 @@ layout: default
 ---
 
 <div class="page">
-<h1 class="page-title"><i class="fa fa-tags fa-fw"></i>{{ page.title }}</h1>
+<h1 class="page-title"><i class="fa fa-{{ page.icon }} fa-fw"></i>{{ page.title }}</h1>
 <div class="related">
   {% assign list-id = page.id | split:'/' | last %}
   {% assign posts = site.categories[list-id] %}

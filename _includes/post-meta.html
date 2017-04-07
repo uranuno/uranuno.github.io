@@ -8,6 +8,6 @@
   <span class="post-tags">
   {% assign group-id = "/" | append: post.categories[0] %}
   {% assign group = site.groups | where:"id", group-id | first %}
-  <i class="fa fa-tag fa-fw"></i><a href="{{ group.url }}">{{ group.title }}</a>
+  <i class="fa fa-{{ group.icon }} fa-fw"></i><a href="{{ group.url }}">{{ group.title }}</a>
   </span>
 </span>
