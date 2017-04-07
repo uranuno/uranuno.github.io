@@ -53,6 +53,10 @@ img.emoji {
   content: "\f113";
   font-size: 1em;
 }
+.post .post-date a::after {
+  content: none;
+  width: 0;
+}
 
 /* Font Awesome */
 .fa-fw {

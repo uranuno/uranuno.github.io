@@ -1,10 +1,14 @@
 {% assign post = include.param %}
 <!-- Date Time -->
-<time datetime="{% if post.commits %}{{ post.commits[0].date }}{% else %}{{ post.date | date: "%Y-%m-%d" }}{% endif %}"></time>
+<time datetime="{% if post.commit %}{{ post.commit.date }}{% else %}{{ post.date | date: "%Y-%m-%d" }}{% endif %}"></time>
 <span class="post-date">
   <!-- Date -->
   <i class="fa fa-clock-o fa-fw"></i>{{ post.date | date: "%Y-%m-%d" }}
-  <!-- Tags -->
+  <!-- Commit -->
+  {% if post.commit %}
+  <i class="fa fa-history fa-fw"></i><a href="https://github.com/uranuno/uranuno.github.io/commit/{{ post.commit.id }}" target="_blank">{{ post.commit.date }}</a>
+  {% endif %}
+  <!-- Group -->
   <span class="post-tags">
   {% assign group-id = "/" | append: post.categories[0] %}
   {% assign group = site.groups | where:"id", group-id | first %}
