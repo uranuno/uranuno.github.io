@@ -8,9 +8,9 @@
 
   <!-- Info -->
   {% if page.id %}
-  {% assign list-id = "/" | append: page.categories[1] %}
-  {% assign list = site.lists | where:"id", list-id | first %}
-  <title>{% if list and list.head %}[{{ list.head }}] {% endif %}{{ page.title }} - {{ site.title }}</title>
+  {% assign group-id = "/" | append: page.categories[0] %}
+  {% assign group = site.groups | where:"id", group-id | first %}
+  <title>{% if group and group.head %}[{{ group.head }}] {% endif %}{{ page.title }} - {{ site.title }}</title>
   {% else %}
   <title>{{ site.title }}</title>
   {% endif %}

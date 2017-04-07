@@ -6,8 +6,8 @@
   <i class="fa fa-clock-o fa-fw"></i>{{ post.date | date: "%Y-%m-%d" }}
   <!-- Tags -->
   <span class="post-tags">
-  {% assign list-id = "/" | append: post.categories[1] %}
-  {% assign list = site.lists | where:"id", list-id | first %}
-  <i class="fa fa-tag fa-fw"></i><a href="{{ list.url }}">{{ list.title }}</a>
+  {% assign group-id = "/" | append: post.categories[0] %}
+  {% assign group = site.groups | where:"id", group-id | first %}
+  <i class="fa fa-tag fa-fw"></i><a href="{{ group.url }}">{{ group.title }}</a>
   </span>
 </span>
