@@ -38,15 +38,20 @@ img.emoji {
 .page-title img.emoji {
   vertical-align: baseline;
 }
-.post a[href^="https://github.com/uranuno/"]:after {
-  content: "\f113";
+.post a::after {
+  display: inline-block;
   font: normal normal normal 1em/1 FontAwesome;
-  margin-left: 0.1em;
+  width: 1.25em;
+  text-align: center;
+  text-rendering: auto;
 }
-.post a[target="_blank"]:not([href^="https://github.com/uranuno/"]):after {
+.post a[target="_blank"]::after {
   content: "\f08e";
-  font: normal normal normal 0.9em/1 FontAwesome;
-  margin-left: 0.1em;
+  font-size: 0.9em;
+}
+.post a[href^="https://github.com/uranuno/"]::after {
+  content: "\f113";
+  font-size: 1em;
 }
 
 /* Font Awesome */
