@@ -7,6 +7,10 @@ refs:
     url  : 'https://docs.unity3d.com/ScriptReference/PlayerPrefs.html'
   - title: ['Scripting API: JsonUtility', 'Unity']
     url  : 'https://docs.unity3d.com/ScriptReference/JsonUtility.html'
+commit:
+  date : 2017-04-10
+  title: 'PlayerPrefsData.cs をstatic に'
+  id   : 65024b8
 ---
 
 [PlayerPrefs]({{ page.refs[1].url }}){:target="_blank"}をちょっとだけ拡張して、:point_down:みたいな書き方ができるようになる汎用クラスをつくりました。
