@@ -1,50 +1,45 @@
 ---
 title: PlayerPrefs をちょっとだけ拡張
 refs:
-  - title: ['uranuno/MyUnityUtils/PlayerPrefsData.cs', 'GitHub']
-    url  : 'https://github.com/uranuno/MyUnityUtils/blob/master/Assets/Utils/PlayerPrefsData.cs'
+  - title: ['uranuno/MyUnityUtils #PlayerPrefsData', 'GitHub']
+    url  : 'https://github.com/uranuno/MyUnityUtils#playerprefs-data'
   - title: ['Scripting API: PlayerPrefs', 'Unity']
     url  : 'https://docs.unity3d.com/ScriptReference/PlayerPrefs.html'
   - title: ['Scripting API: JsonUtility', 'Unity']
     url  : 'https://docs.unity3d.com/ScriptReference/JsonUtility.html'
 ---
 
-[PlayerPrefs]({{ page.refs[1].url }}){:target="_blank"} をちょっとだけ拡張して、:point_down:みたいな書き方ができるようになる[PlayerPrefsData.cs]({{ page.refs[0].url }}){:target="_blank"} という汎用クラスをつくりました。  
+[PlayerPrefs]({{ page.refs[1].url }}){:target="_blank"}をちょっとだけ拡張して、:point_down:みたいな書き方ができるようになる汎用クラスをつくりました。
+
+![PlayerPrefs Data](https://uranuno.github.io/MyUnityUtils/playerprefsdata.png "とりあえずのView")
 
 ```csharp
 // 端末に保存したいデータのクラス（例: 音量の設定）
 public class AudioSettings
-  : PlayerPrefsData<AudioSettings> //←これをつくった
 {
-  public float bgmVolume = 1f; //デフォルト値も入れられる
+  public float bgmVolume = 1f;
   public float seVolume  = 1f;
 }
+```
 
+```csharp
 // 使い方
 public class PlayerPrefsDataExample : MonoBehaviour
 {
-  [SerializeField] Slider m_BgmVolumeSlider;
-  [SerializeField] Slider m_SeVolumeSlider;
+  /* 中略 */
 
-  void OnEnable  () { LoadData (); }
-  void OnDisable () { SaveData (); }
-  void OnApplicationPause (bool pause)
-  {
-    if (pause) SaveData ();
-  }
-
-  // データ読み込み
   void LoadData ()
   {
-    // 保存データの読込
-    // ※なければデフォ値の入った新規データを取得する（保存もされる）
-    var data = AudioSettings.Load ();
+    // データの読込
+    var data = PlayerPrefsData.Load<AudioSettings> (
+      //データが未保存の場合のデフォルト値を指定できる
+      new AudioSettings ()
+    );
     // UIに反映
     m_BgmVolumeSlider.value = data.bgmVolume;
     m_SeVolumeSlider.value = data.seVolume;
   }
 
-  // データ書き込み
   void SaveData ()
   {
     // 新規データを作成
@@ -52,20 +47,29 @@ public class PlayerPrefsDataExample : MonoBehaviour
     // UIから値を取得
     data.bgmVolume = m_BgmVolumeSlider.value;
     data.seVolume = m_SeVolumeSlider.value;
-    // 保存
-    data.Save ();
+    // データの保存
+    PlayerPrefsData.Save<AudioSettings> (data);
+  }
+
+  // データのリセット
+  void ResetData ()
+  {
+    // データの削除
+    PlayerPrefsData.Delete<AudioSettings> ();
+    // データの再読み込み（未保存状態のため、デフォルト値になる）
+    LoadData ();
   }
 }
 ```
+[{{ page.refs[0].title[0] }}]({{ page.refs[0].url }}){:target="_blank"}
 
-`PlayerPrefsData` を継承したデータクラスをつくって、端末に保存したい値をもたせておけば、あとは `Load()` `Save()` を呼ぶだけ、素で書くよりはラク！というもの。
+端末に保存したいデータのクラスをつくって、あとは `Load<T>()` `Save<T>()` などを呼ぶだけ、素で書くよりはラク！というもの。
 
 <!-- more -->
 
 PlayerPrefs は端末にデータをさくっと保存できて便利ですが、
 
 * `int` `float` `string` タイプしか無い。それ以外は自分で変換しないといけない（大体 `bool` を `0,1` にする）
-* データを読み込むとき、データが存在しなかったら、データを新しくつくって・・・みたいな分岐を書かないといけない
 * 保存キーが文字列なのでどこかで管理しないといけない
 
 この辺の処理を入れたラッパーを毎回つくるのが面倒・・・  
