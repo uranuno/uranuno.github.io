@@ -42,7 +42,7 @@ defaults:
     values:
       layout: group
   - scope:
-      path: "posts/zzz"
+      path: "zzz"
       type: posts
     values:
       hidden: true
