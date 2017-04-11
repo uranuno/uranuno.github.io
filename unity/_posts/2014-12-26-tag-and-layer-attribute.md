@@ -1,8 +1,8 @@
 ---
 title: Tag とLayer を楽に入力するPropertyDrawer
 refs:
-  - title: ['uranuno/MyUnityUtils #TagAndLayerAttribute', 'GitHub']
-    url  : 'https://github.com/uranuno/MyUnityUtils#tag-and-layer-attribute'
+  - title: ['uranuno/UnityUtils #TagAndLayerAttribute', 'GitHub']
+    url  : 'https://github.com/uranuno/UnityUtils#tag-and-layer-attribute'
   - title: ['anchan828/namecreator', 'GitHub']
     url  : 'https://github.com/anchan828/namecreator'
   - title: ['Scripting API: EditorGUI.TagField', 'Unity']
@@ -11,7 +11,7 @@ refs:
     url  : 'https://docs.unity3d.com/ScriptReference/EditorGUI.LayerField.html'
 ---
 
-![Tag and Layer Attribute](https://uranuno.github.io/MyUnityUtils/tagandlayer.png)
+![Tag and Layer Attribute](https://uranuno.github.io/UnityUtils/tagandlayer.png)
 
 ```csharp
 [Tag]
@@ -102,7 +102,7 @@ void OnTriggerEnter (Collider other)
 }
 ```
 
-![Tag Attribute](https://uranuno.github.io/MyUnityUtils/tagandlayer-tag.png)
-![Layer Attribute](https://uranuno.github.io/MyUnityUtils/tagandlayer-layer.png)
+![Tag Attribute](https://uranuno.github.io/UnityUtils/tagandlayer-tag.png)
+![Layer Attribute](https://uranuno.github.io/UnityUtils/tagandlayer-layer.png)
 
 静的クラス生成方式は結構大掛かりなので、TagとLayerのみでいい、Inspectorで入力するからコード補完もいらない、という場合はこれだけでいいのかも。

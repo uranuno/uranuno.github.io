@@ -1,8 +1,8 @@
 ---
 title: PlayerPrefs をちょっとだけ拡張
 refs:
-  - title: ['uranuno/MyUnityUtils #PlayerPrefsData', 'GitHub']
-    url  : 'https://github.com/uranuno/MyUnityUtils#playerprefs-data'
+  - title: ['uranuno/UnityUtils #PlayerPrefsData', 'GitHub']
+    url  : 'https://github.com/uranuno/UnityUtils#playerprefs-data'
   - title: ['Scripting API: PlayerPrefs', 'Unity']
     url  : 'https://docs.unity3d.com/ScriptReference/PlayerPrefs.html'
   - title: ['Scripting API: JsonUtility', 'Unity']
@@ -15,7 +15,7 @@ commit:
 
 [PlayerPrefs]({{ page.refs[1].url }}){:target="_blank"}をちょっとだけ拡張して、:point_down:みたいな書き方ができるようになる汎用クラスをつくりました。
 
-![PlayerPrefs Data](https://uranuno.github.io/MyUnityUtils/playerprefsdata.png "とりあえずのView")
+![PlayerPrefs Data](https://uranuno.github.io/UnityUtils/playerprefsdata.png "とりあえずのView")
 
 ```csharp
 // 端末に保存したいデータのクラス（例: 音量の設定）

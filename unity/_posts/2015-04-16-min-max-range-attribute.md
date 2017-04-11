@@ -1,8 +1,8 @@
 ---
 title: 値の最小値と最大値をいい感じに入力するPropertyDrawer
 refs:
-  - title: ['uranuno/MyUnityUtils #MinMax', 'GitHub']
-    url  : 'https://github.com/uranuno/MyUnityUtils#min-max'
+  - title: ['uranuno/UnityUtils #MinMax', 'GitHub']
+    url  : 'https://github.com/uranuno/UnityUtils#min-max'
   - title: ['Scripting API: EditorGUI.MinMaxSlider', 'Unity']
     url  : 'https://docs.unity3d.com/ScriptReference/EditorGUI.MinMaxSlider.html'
   - title: ['Manual: Property Drawers', 'Unity']
@@ -18,7 +18,7 @@ commit:
 [MinMaxSlider といういい感じのEditorGUI]({{ page.refs[1].url }}){:target="_blank"} があります。  
 [一定の値の範囲からランダムな値を取得したいとき](http://docs.unity3d.com/ScriptReference/Random.Range.html){:target="_blank"} なんかに、このスライダーをつかって範囲を調整できたらいいな〜と思ったので、構造体 + PropertyDrawer をつくりました。  
 
-![Min Max Range Attribute](https://uranuno.github.io/MyUnityUtils/minmaxrange.gif "がんばってつくったGIF")
+![Min Max Range Attribute](https://uranuno.github.io/UnityUtils/minmaxrange.gif "がんばってつくったGIF")
 
 ```csharp
 [SerializeField, MinMaxRange(0,10f)]
@@ -56,4 +56,4 @@ MinMax randomDelayRange;
 public float otherValue;
 ```
 
-![With Other Value](https://uranuno.github.io/MyUnityUtils/minmaxrange-othervalue.png "並べてもきれい")
+![With Other Value](https://uranuno.github.io/UnityUtils/minmaxrange-othervalue.png "並べてもきれい")
