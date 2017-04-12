@@ -4,6 +4,7 @@ title: 連番キャプチャを書き出すエディタ拡張
 refs:
   - title: ['uranuno/PlayRecorder', 'GitHub']
     url  : 'https://github.com/uranuno/PlayRecorder'
+    class: github
   - title: ['Unity の画面を Animated GIF に変換して Tumblr にアップする', "keijiro's Gists"]
     url  : 'https://gist.github.com/keijiro/3330732'
   - title: ['QuickTime PlayerでスクリーンキャプチャしたMOVからベターなアニメーションGIFを作る', 'Genji App Blog']
@@ -22,7 +23,7 @@ refs:
 Tumblr じゃないけど、せっかくブログを始めようと思うので、UnityのキャプチャをGIFアニメで載せたりして、それっぽくしたいです。  
 上記に方法が載っていますが、元になる連番キャプチャをもっと簡単に撮りたくなったので、エディタ拡張をつくりました。
 
-[{{ page.refs[0].title[0] }}]({{ page.refs[0].url }}){:target="_blank"}
+[{{ page.refs[0].title[0] }}]({{ page.refs[0].url }}){:target="_blank" class="{{ page.refs[0].class }}"}
 
 ![PlayRecorder](https://uranuno.github.io/PlayRecorder/playrecorder.png)
 

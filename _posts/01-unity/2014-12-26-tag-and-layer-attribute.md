@@ -4,6 +4,7 @@ title: Tag とLayer を楽に入力するPropertyDrawer
 refs:
   - title: ['uranuno/UnityUtils #TagAndLayerAttribute', 'GitHub']
     url  : 'https://github.com/uranuno/UnityUtils#tag-and-layer-attribute'
+    class: github
   - title: ['anchan828/namecreator', 'GitHub']
     url  : 'https://github.com/anchan828/namecreator'
   - title: ['Scripting API: EditorGUI.TagField', 'Unity']
@@ -24,7 +25,7 @@ public int targetLayer;
 
 Unity で、Tag とLayer をInspector から楽に入力できるように、PropertyDrawer をつくりました。
 
-[{{ page.refs[0].title[0] }}]({{ page.refs[0].url }}){:target="_blank"}
+[{{ page.refs[0].title[0] }}]({{ page.refs[0].url }}){:target="_blank" class="{{ page.refs[0].class }}"}
 
 <!-- more -->
 

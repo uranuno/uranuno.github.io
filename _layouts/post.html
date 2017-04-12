@@ -16,7 +16,7 @@ layout: default
   <h2 class="refs-title"><i class="fa fa-book fa-fw"></i>References</h2>
   <ul>
     {% for reference in page.refs %}
-    <li><a href="{{ reference.url }}" target="_blank">{{ reference.title[0] }} - {{ reference.title[1] }}</a></li>
+    <li><a href="{{ reference.url }}" target="_blank" class="{{ reference.class }}">{{ reference.title[0] }} - {{ reference.title[1] }}</a></li>
     {% endfor %}
   </ul>
   {% endif %}

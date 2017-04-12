@@ -4,6 +4,7 @@ title: PlayerPrefs をちょっとだけ拡張
 refs:
   - title: ['uranuno/UnityUtils #PlayerPrefsData', 'GitHub']
     url  : 'https://github.com/uranuno/UnityUtils#playerprefs-data'
+    class: github
   - title: ['Scripting API: PlayerPrefs', 'Unity']
     url  : 'https://docs.unity3d.com/ScriptReference/PlayerPrefs.html'
   - title: ['Scripting API: JsonUtility', 'Unity']
@@ -66,7 +67,7 @@ public class PlayerPrefsDataExample : MonoBehaviour
   }
 }
 ```
-[{{ page.refs[0].title[0] }}]({{ page.refs[0].url }}){:target="_blank"}
+[{{ page.refs[0].title[0] }}]({{ page.refs[0].url }}){:target="_blank" class="{{ page.refs[0].class }}"}
 
 端末に保存したいデータのクラスをつくって、あとは `Load<T>()` `Save<T>()` などを呼ぶだけ、素で書くよりはラク！というもの。
 

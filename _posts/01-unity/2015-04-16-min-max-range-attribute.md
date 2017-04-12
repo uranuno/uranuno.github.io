@@ -4,6 +4,7 @@ title: 値の最小値と最大値をいい感じに入力するPropertyDrawer
 refs:
   - title: ['uranuno/UnityUtils #MinMax', 'GitHub']
     url  : 'https://github.com/uranuno/UnityUtils#min-max'
+    class: github
   - title: ['Scripting API: EditorGUI.MinMaxSlider', 'Unity']
     url  : 'https://docs.unity3d.com/ScriptReference/EditorGUI.MinMaxSlider.html'
   - title: ['Manual: Property Drawers', 'Unity']
@@ -40,7 +41,7 @@ void Update ()
 }
 ```
 
-[{{ page.refs[0].title[0] }}]({{ page.refs[0].url }}){:target="_blank"}  
+[{{ page.refs[0].title[0] }}]({{ page.refs[0].url }}){:target="_blank" class="{{ page.refs[0].class }}"}  
 ↑自作のUtility系をまとめたリポジトリをつくりました。
 
 <!-- more -->
