@@ -17,9 +17,8 @@
 
   <!-- Info -->
   {% if page.id %}
-  {% assign group-id = "/" | append: page.categories[0] %}
-  {% assign group = site.groups | where:"id", group-id | first %}
-  <title>{% if group and group.head %}[{{ group.head }}] {% endif %}{{ page.title }} - {{ site.title }}</title>
+  {% assign group = site.groups | where:"category", page.categories[0] | first %}
+  <title>{% if group and group.head and group.url != page.url %}[{{ group.head }}] {% endif %}{{ page.title }} - {{ site.title }}</title>
   {% else %}
   <title>{{ site.title }}</title>
   {% endif %}

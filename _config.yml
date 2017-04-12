@@ -27,7 +27,7 @@ gems:
 collections:
   groups:
     output: true
-    permalink: /:path/
+    permalink: /:categories/
 
 # Defaults
 defaults:

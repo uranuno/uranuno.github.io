@@ -28,6 +28,7 @@ layout: default
 {% if page.hidden != true %}
 <div class="related">
   <h2><i class="fa fa-pencil fa-fw"></i>Related Posts</h2>
-  {% include related-posts.html posts = site.related_posts limit = 4 %}
+  {% assign related_posts = site.related_posts | where:"category", page.categories[0] %}
+  {% include related-posts.html posts = related_posts limit = 4 %}
 </div>
 {% endif %}
