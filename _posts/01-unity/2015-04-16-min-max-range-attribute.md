@@ -1,4 +1,5 @@
 ---
+category: unity
 title: 値の最小値と最大値をいい感じに入力するPropertyDrawer
 refs:
   - title: ['uranuno/UnityUtils #MinMax', 'GitHub']

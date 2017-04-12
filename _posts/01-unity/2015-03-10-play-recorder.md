@@ -1,4 +1,5 @@
 ---
+category: unity
 title: 連番キャプチャを書き出すエディタ拡張
 refs:
   - title: ['uranuno/PlayRecorder', 'GitHub']

@@ -1,4 +1,5 @@
 ---
+category: unity
 title: PlayerPrefs をちょっとだけ拡張
 refs:
   - title: ['uranuno/UnityUtils #PlayerPrefsData', 'GitHub']

@@ -1,4 +1,5 @@
 ---
+category: unity
 title: Tag とLayer を楽に入力するPropertyDrawer
 refs:
   - title: ['uranuno/UnityUtils #TagAndLayerAttribute', 'GitHub']
