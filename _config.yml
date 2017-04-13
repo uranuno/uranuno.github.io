@@ -41,8 +41,3 @@ defaults:
       type: groups
     values:
       layout: group
-  - scope:
-      path: "zzz"
-      type: posts
-    values:
-      hidden: true

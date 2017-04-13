@@ -25,10 +25,10 @@ layout: default
   {% include sharebuttons.html %}
 </div>
 <!-- Related Posts -->
-{% if page.hidden != true %}
+{% assign related_posts = site.related_posts | where:"category", page.categories[0] %}
+{% if related_posts.size > 0 %}
 <div class="related">
   <h2><i class="fa fa-pencil fa-fw"></i>Related Posts</h2>
-  {% assign related_posts = site.related_posts | where:"category", page.categories[0] %}
   {% include related-posts.html posts = related_posts limit = 4 %}
 </div>
 {% endif %}
