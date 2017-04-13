@@ -37,7 +37,7 @@ public class PlayerPrefsDataExample : MonoBehaviour
   void LoadData ()
   {
     // データの読込
-    var data = PlayerPrefsData.Load<AudioSettings> (
+    var data = PlayerPrefsData<AudioSettings>.Load (
       //データが未保存の場合のデフォルト値を指定できる
       new AudioSettings ()
     );
@@ -54,14 +54,14 @@ public class PlayerPrefsDataExample : MonoBehaviour
     data.bgmVolume = m_BgmVolumeSlider.value;
     data.seVolume = m_SeVolumeSlider.value;
     // データの保存
-    PlayerPrefsData.Save<AudioSettings> (data);
+    PlayerPrefsData<AudioSettings>.Save (data);
   }
 
   // データのリセット
   void ResetData ()
   {
     // データの削除
-    PlayerPrefsData.Delete<AudioSettings> ();
+    PlayerPrefsData<AudioSettings>.Delete ();
     // データの再読み込み（未保存状態のため、デフォルト値になる）
     LoadData ();
   }
@@ -69,7 +69,7 @@ public class PlayerPrefsDataExample : MonoBehaviour
 ```
 [{{ page.refs[0].title[0] }}]({{ page.refs[0].url }}){:target="_blank" class="{{ page.refs[0].class }}"}
 
-端末に保存したいデータのクラスをつくって、あとは `Load<T>()` `Save<T>()` などを呼ぶだけ、素で書くよりはラク！というもの。
+端末に保存したいデータのクラスをつくって、あとは `PlayerPrefsData<T>.Load()` `PlayerPrefsData<T>.Save()` などを呼ぶだけ、素で書くよりはラク！というもの。
 
 <!-- more -->
 
@@ -86,4 +86,4 @@ PlayerPrefs は端末にデータをさくっと保存できて便利ですが�
 ミソは、保存キーにクラス名を使うので、自分で定義しなくてよいところです。  
 1クラス1データになるけど、複数保存したいデータは、それを配列にもたせたデータクラスをつくって保存すればいいかなと思います。
 
-ジェネリック便利、個人的には満足:smile:
+ジェネリックすごく便利、個人的には満足:smile:
