@@ -6,7 +6,6 @@ html {
   font-family: "PT Sans", "Helvetica Neue", "Yu Gothic", YuGothic, Arial, sans-serif;
   font-weight: 500;
   font-size: 100%;
-  line-height: 1.8em;
 }
 .lead,
 .masthead-title small {
@@ -59,17 +58,10 @@ img.emoji {
 
 /* Headings */
 h1, h2, h3, h4, h5, h6 {
-  line-height: 1.5;
   margin-bottom: 1rem;
 }
 h1 {
-  font-size: 1.5rem;
-}
-h2 {
-  font-size: 1.25rem;
-}
-h3, h4, h5, h6 {
-  font-size: 1rem;
+  font-size: 1.75rem;
 }
 
 /* Small */
@@ -89,10 +81,6 @@ a:hover small {
 }
 
 /* Sidebar nav */
-.sidebar-nav {
-  font-size: 1rem;
-  margin-bottom: 0.5rem;
-}
 .sidebar-nav ul {
   padding-left: 0;
   list-style-type: none;
