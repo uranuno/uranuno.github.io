@@ -16,6 +16,9 @@ html {
     font-size: 14px;
   }
 }
+ul, ol {
+  padding-left: 1.5em;
+}
 
 /* Emoji */
 img.emoji {
@@ -86,7 +89,6 @@ a:hover small {
   list-style-type: none;
 }
 .sidebar-nav-item {
-  line-height: 1.5;
   display: inline-block;
 }
 
