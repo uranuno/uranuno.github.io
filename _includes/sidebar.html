@@ -19,7 +19,12 @@
 
     <ul class="accounts">
       {% for account in site.data.accounts %}
-        <li><a href="{{ account.url }}" target="_blank"><i class="fa fa-{{ account.icon }} fa-fw" alt="{{ account.name }}"></i></a></li>
+      <li><a href="{{ account.url }}" title="{{ account.name }}" target="_blank">
+        <span class="fa-stack">
+          <i class="fa fa-circle-thin fa-stack-2x"></i>
+          <i class="fa fa-{{ account.icon }} fa-stack-1x"></i>
+        </span>
+      </a></li>
       {% endfor %}
     </ul>
   </div>

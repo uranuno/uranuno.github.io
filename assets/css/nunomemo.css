@@ -95,13 +95,16 @@ a:hover small {
 
 /* Accounts */
 .accounts {
-  font-size: 1.5rem;
   margin-bottom: 0.5rem;
   padding: 0;
 }
 .accounts li {
   list-style-type: none;
   display: inline-block;
+  margin-left: 0.5em;
+}
+.accounts li:first-child {
+  margin-left: 0;
 }
 
 /* copy */
