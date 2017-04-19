@@ -25,7 +25,8 @@ img.emoji {
   display: inline-block;
   margin: 0;
   border-radius: 0;
-  vertical-align: text-top;
+  vertical-align: text-bottom;
+  object-fit: contain;
 }
 .page-title img.emoji {
   vertical-align: baseline;
