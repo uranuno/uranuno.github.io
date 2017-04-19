@@ -40,15 +40,12 @@ img.emoji {
 }
 .post a[target="_blank"]::after {
   content: "\f08e";
-  font-size: 0.9em;
 }
 .post a.github::after {
   content: "\f113";
-  font-size: 1em;
 }
 .post a.other-post::after {
   content: "\f14b";
-  font-size: 0.95em;
 }
 .post .post-date a::after {
   content: none;
