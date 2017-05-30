@@ -17,15 +17,12 @@
 
     <p class="copy">&copy; {{ site.time | date: '%Y' }}. all rights reserved.</p>
 
-    <ul class="accounts">
+    <div class="accounts">
       {% for account in site.data.accounts %}
-      <li><a href="{{ account.url }}" title="{{ account.name }}" target="_blank">
-        <span class="fa-stack">
-          <i class="fa fa-circle-thin fa-stack-2x"></i>
-          <i class="fa fa-{{ account.icon }} fa-stack-1x"></i>
-        </span>
-      </a></li>
+      <a href="{{ account.url }}" title="{{ account.name }}" target="_blank">
+        <i class="fa fa-{{ account.icon }} fa-fw"></i>
+      </a>
       {% endfor %}
-    </ul>
+    </div>
   </div>
 </div>
