@@ -179,6 +179,9 @@ a:hover small {
 }
 
 /* Related Posts */
+.related {
+  padding-top: 1rem;
+}
 .related-posts li a:hover,
 .related-posts li a:focus {
   text-decoration: underline;

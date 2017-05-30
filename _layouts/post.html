@@ -13,7 +13,7 @@ layout: default
   
   {% if page.refs.size > 0 %}
   <!-- References -->
-  <h2 class="refs-title"><i class="fa fa-book fa-fw"></i>References</h2>
+  <h2 class="refs-title">参考</h2>
   <ul>
     {% for reference in page.refs %}
     <li><a href="{{ reference.url }}" target="_blank" class="{{ reference.class }}">{{ reference.title[0] }}{% if reference.title.size > 1 %} - {{ reference.title[1] }}{% endif %}</a></li>
@@ -28,7 +28,7 @@ layout: default
 {% assign related_posts = site.related_posts | where:"category", page.categories[0] %}
 {% if related_posts.size > 0 %}
 <div class="related">
-  <h2><i class="fa fa-pencil fa-fw"></i>Related Posts</h2>
+  <h2>関連記事</h2>
   {% include related-posts.html posts = related_posts limit = 4 %}
 </div>
 {% endif %}
