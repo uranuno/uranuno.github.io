@@ -109,7 +109,7 @@ a:hover small {
   justify-content: center;
   -webkit-align-items: center;
   align-items: center;
-  margin: 0 0.3rem;
+  margin: 0 0.4rem;
 }
 @media (min-width: 48em) {
   /*左にサイドバーがある時は左寄せにする*/
