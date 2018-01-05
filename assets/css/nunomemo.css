@@ -93,30 +93,26 @@ a:hover small {
 /* Accounts */
 .accounts {
   margin-bottom: 0.5rem;
-  display: -webkit-flex;
-  display: flex;
-  -webkit-justify-content: center;
-  justify-content: center;
 }
-.accounts a {
+.accounts i.fa {
   width: 1.6rem;
   height: 1.6rem;
+  line-height: 1.6em;
   border-radius: 0.8rem;
   border: 1px solid #515151;
-  display: -webkit-flex;
-  display: flex;
-  -webkit-justify-content: center;
-  justify-content: center;
-  -webkit-align-items: center;
-  align-items: center;
-  margin: 0 0.4rem;
+}
+.accounts a {
+  margin: 0 0.25rem;
+}
+.accounts a:hover,
+.accounts a:focus {
+  text-decoration: none;
+}
+.accounts a:hover i.fa,
+.accounts a:focus i.fa {
+  border-style: dashed;
 }
 @media (min-width: 48em) {
-  /*左にサイドバーがある時は左寄せにする*/
-  .accounts {
-    -webkit-justify-content: flex-start;
-    justify-content: flex-start;
-  }
   /*左端のマージンを消す*/
   .accounts a:first-child {
     margin-left: 0;
