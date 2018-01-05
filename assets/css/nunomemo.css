@@ -210,3 +210,17 @@ a:hover small {
 @keyframes all {
   100% { background-position: 0 -288px; }
 }
+
+/* Layout */
+@media (min-width: 48em) {
+  .sidebar {
+    width: 27.5%;
+  }
+  .content {
+    width: 72.5%;
+    margin-left: 27.5%;
+    margin-right: 0;
+    max-width: initial;
+    max-width: auto;
+  }
+}
