@@ -188,8 +188,15 @@ a:hover small {
 }
 
 /* My theme */
-.theme-nunomemo .sidebar {
+body.theme-nunomemo {
   background-color: #f6f6f6;
+}
+.theme-nunomemo .sidebar {
+  background-color: transparent;
+}
+.theme-nunomemo .content {
+  background-color: #fff;
+  border-radius: 5px;
 }
 .theme-nunomemo .sidebar,
 .theme-nunomemo .sidebar a,
@@ -220,7 +227,6 @@ a:hover small {
     width: 72.5%;
     margin-left: 27.5%;
     margin-right: 0;
-    max-width: initial;
-    max-width: auto;
+    max-width: none;
   }
 }
