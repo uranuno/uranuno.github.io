@@ -3,14 +3,12 @@
 <time datetime="{% if post.commit %}{{ post.commit.date }}{% else %}{{ post.date | date: "%Y-%m-%d" }}{% endif %}"></time>
 <span class="post-date">
   <!-- Date -->
-  <i class="fa fa-clock-o fa-fw"></i>{{ post.date | date: "%Y-%m-%d" }}
+  <i class="fas fa-clock fa-fw"></i> {{ post.date | date: "%Y-%m-%d" }}
   <!-- Commit -->
   {% if post.commit %}
-  <i class="fa fa-history fa-fw"></i><a href="https://github.com/uranuno/uranuno.github.io/commit/{{ post.commit.id }}" target="_blank">{{ post.commit.date }}</a>
+  <i class="fas fa-history fa-fw"></i> <a href="https://github.com/uranuno/uranuno.github.io/commit/{{ post.commit.id }}" target="_blank">{{ post.commit.date }}</a>
   {% endif %}
   <!-- Group -->
-  <span class="post-tags">
   {% assign group = site.groups | where:"category", post.categories[0] | first %}
-  <i class="fa fa-{{ group.icon }} fa-fw"></i><a href="{{ group.url }}">{{ group.title }}</a>
-  </span>
+  <i class="fas fa-{{ group.icon }} fa-fw"></i> <a href="{{ group.url }}">{{ group.title }}</a>
 </span>

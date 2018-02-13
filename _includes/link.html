@@ -1,0 +1,21 @@
+<span>{% case include.type %}
+{% when 'external' %}
+{% assign icon='fas fa-external-link-square-alt' %}{% assign blank=1 %}
+{% when 'source' %}
+{% assign icon='fab fa-github-square' %}{% assign blank=1 %}
+{% when 'post' %}
+{% assign icon='fas fa-pen-square' %}
+{% else %}
+{% assign icon='fas fa-square' %}
+{% endcase %}</span>
+<span>{% if include.title %}
+{% assign title = include.title %}
+{% else %}
+{% capture title %}{{ include.param.title[0] }} - {{ include.param.title[1] }}{% endcapture %}
+{% endif %}</span>
+<span>{% if include.url %}
+{% assign url = include.url %}
+{% else %}
+{% assign url = include.param.url %}
+{% endif %}</span>
+<a href="{{ url }}" {% if blank %}target="_blank"{% endif %}>{{ title }}<i class="{{ icon }} fa-fw"></i></a>

@@ -10,16 +10,14 @@
     <nav class="sidebar-nav">
     <ul>
       {% for group in site.groups %}
-      <li><i class="fa fa-{{ group.icon }} fa-fw"></i><a class="sidebar-nav-item{% if page.url == group.url %} active{% endif %}" href="{{ group.url }}">{{ group.title }}</a></li>
+      <li><i class="fas fa-{{ group.icon }} fa-fw"></i> <a class="sidebar-nav-item{% if page.url == group.url %} active{% endif %}" href="{{ group.url }}">{{ group.title }}</a></li>
       {% endfor %}
     </ul>
     </nav>
 
-    <div class="accounts">
+    <div class="accounts fa-2x">
       {% for account in site.data.accounts %}
-      <a href="{{ account.url }}" title="{{ account.name }}" target="_blank">
-        <i class="fa fa-{{ account.icon }} fa-fw"></i>
-      </a>
+      <a href="{{ account.url }}" title="{{ account.name }}" target="_blank"><i class="fab fa-{{ account.icon }}" data-fa-transform="shrink-6" data-fa-mask="fas fa-circle"></i></a>
       {% endfor %}
     </div>
 

@@ -2,6 +2,10 @@
  * nunomemo.css
  */
 
+html, body {
+  height: 100%;
+}
+
 html {
   font-family: "PT Sans", "Helvetica Neue", "Yu Gothic", YuGothic, Arial, sans-serif;
   font-weight: 500;
@@ -9,7 +13,7 @@ html {
 }
 .lead,
 .masthead-title small {
-  font-weight: 500;
+  font-weight: bold;
 }
 @media (max-width: 38em) {
   html {
@@ -30,31 +34,6 @@ img.emoji {
 }
 .page-title img.emoji {
   vertical-align: baseline;
-}
-.post a::after {
-  display: inline-block;
-  font: normal normal normal 1em/1 FontAwesome;
-  width: 1.5em;
-  text-align: center;
-  text-rendering: auto;
-}
-.post a[target="_blank"]::after {
-  content: "\f08e";
-}
-.post a.github::after {
-  content: "\f113";
-}
-.post a.other-post::after {
-  content: "\f14b";
-}
-.post .post-date a::after {
-  content: none;
-  width: 0;
-}
-
-/* Font Awesome */
-.fa-fw {
-  width: 1.5em;
 }
 
 /* Headings */
@@ -93,29 +72,20 @@ a:hover small {
 /* Accounts */
 .accounts {
   margin-bottom: 0.5rem;
+  display: flex;
+  justify-content: center;
 }
-.accounts i.fa {
-  width: 1.6rem;
-  height: 1.6rem;
-  line-height: 1.6em;
-  border-radius: 0.8rem;
-  border: 1px solid #515151;
-}
-.accounts a {
-  margin: 0 0.25rem;
+.accounts a:not(:first-child) {
+  margin-left: 0.4em;
 }
 .accounts a:hover,
 .accounts a:focus {
   text-decoration: none;
 }
-.accounts a:hover i.fa,
-.accounts a:focus i.fa {
-  border-style: dashed;
-}
 @media (min-width: 48em) {
-  /*左端のマージンを消す*/
-  .accounts a:first-child {
-    margin-left: 0;
+  /* 左寄せ */
+  .accounts {
+    justify-content: flex-start;
   }
 }
 
@@ -128,7 +98,7 @@ a:hover small {
 .post-detail {
   margin-bottom: 1em;
 }
-.refs-title {
+.info-title {
   padding-top: 1rem;
 }
 
@@ -140,8 +110,8 @@ a:hover small {
 .readmore {
   color: #9a9a9a;
 }
-.post-tags {
-  margin-left: 0.25em;
+.post-date .svg-inline--fa:not(:first-child) {
+  margin-left: 0.5em;
 }
 
 /* Updates */
@@ -215,6 +185,9 @@ body.theme-nunomemo {
 }
 
 /* Layout */
+.content {
+  min-height: 0;
+}
 @media (min-width: 48em) {
   .sidebar {
     width: 27.5%;
@@ -224,5 +197,6 @@ body.theme-nunomemo {
     margin-left: 27.5%;
     margin-right: 0;
     max-width: none;
+    min-height: 100%;
   }
 }
