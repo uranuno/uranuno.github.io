@@ -1,10 +1,10 @@
 ---
 category: unity
 title: Tag とLayer を楽に入力するPropertyDrawer
+source:
+  title: ['uranuno/UnityUtils #TagAndLayerAttribute', 'GitHub']
+  url  : 'https://github.com/uranuno/UnityUtils#tag-and-layer-attribute'
 refs:
-  - title: ['uranuno/UnityUtils #TagAndLayerAttribute', 'GitHub']
-    url  : 'https://github.com/uranuno/UnityUtils#tag-and-layer-attribute'
-    class: github
   - title: ['anchan828/namecreator', 'GitHub']
     url  : 'https://github.com/anchan828/namecreator'
   - title: ['Scripting API: EditorGUI.TagField', 'Unity']
@@ -25,7 +25,7 @@ public int targetLayer;
 
 Unity で、Tag とLayer をInspector から楽に入力できるように、PropertyDrawer をつくりました。
 
-[{{ page.refs[0].title[0] }}]({{ page.refs[0].url }}){:target="_blank" class="{{ page.refs[0].class }}"}
+{% assign source=page.source %}{% include link.html param=source type='source' %}
 
 <!-- more -->
 
@@ -55,7 +55,8 @@ void OnTriggerEnter (Collider other)
 }
 ```
 
-Unityがもっている文字列情報から、静的クラスを自動生成してくれるという[NameCreator]({{ page.refs[1].url }}){:target="_blank"} というのを試してみました。  
+{% assign ref = page.refs[0] %}
+Unityがもっている文字列情報から、静的クラスを自動生成してくれるという{% include link.html param=ref title="NameCreator" type='external' %}というのを試してみました。  
 これでタイプミスもしないし、補完も出るしいい感じ。
 
 
@@ -73,12 +74,13 @@ void OnTriggerEnter (Collider other)
 ```
 
 いまさらですが、Inspector で値を入力するのがすきです。（タイプミスが、補完が、とか言ってたのに・・・）  
-Editorから静的クラスのプロパティが取得できたので、[NameCreator用のPropertyDrawerを自作](https://gist.github.com/uranuno/8be43847015f5e25cf17){:target="_blank"}してみたりしました。
+Editorから静的クラスのプロパティが取得できたので、{% include link.html title="NameCreator用のPropertyDrawerを自作" url="https://gist.github.com/uranuno/8be43847015f5e25cf17" type='external' %}してみたりしました。
 
 
 Editor からTag とLayer が取得できた
 -----------------------------------
-ところがこんなもの（[EditorGUI.TagField]({{ page.refs[2].url }}){:target="_blank"}）を発見・・・  
+{% assign ref = page.refs[1] %}
+ところがこんなもの（{% include link.html param=ref title="EditorGUI.TagField" type='external' %}）を発見・・・  
 あれ？Editor のクラスに、Tag を表示する関数あったの？  
 静的クラスつくらなくても、表示できるの？
 
@@ -86,7 +88,8 @@ Editor からTag とLayer が取得できた
 
 というわけでPropertyDrawerをつくりなおしました。
 
-ついでに、[EditorGUI.LayerField]({{ page.refs[3].url }}){:target="_blank"} というのもあったので入れました。  
+{% assign ref = page.refs[2] %}
+ついでに、{% include link.html param=ref title="EditorGUI.LayerField" type='external' %}というのもあったので入れました。  
 下記のように値に属性をつけるだけで、Inspector で楽に入力できるようになります。
 
 ```csharp

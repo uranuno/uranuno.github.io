@@ -1,10 +1,10 @@
 ---
 category: unity
 title: 連番キャプチャを書き出すエディタ拡張
+source:
+  title: ['uranuno/PlayRecorder', 'GitHub']
+  url  : 'https://github.com/uranuno/PlayRecorder'
 refs:
-  - title: ['uranuno/PlayRecorder', 'GitHub']
-    url  : 'https://github.com/uranuno/PlayRecorder'
-    class: github
   - title: ['Unity の画面を Animated GIF に変換して Tumblr にアップする', "keijiro's Gists"]
     url  : 'https://gist.github.com/keijiro/3330732'
   - title: ['QuickTime PlayerでスクリーンキャプチャしたMOVからベターなアニメーションGIFを作る', 'Genji App Blog']
@@ -17,13 +17,14 @@ refs:
 
 ![PlayRecorder Result](https://uranuno.github.io/PlayRecorder/out.gif "Cubeくん")
 
-[{{ page.refs[1].title[0] }}]({{ page.refs[1].url }}){:target="_blank"}  
+{% assign ref=page.refs[0] %}
+{% include link.html param=ref type='external' %}  
 ↑これをやりたい！
 
 Tumblr じゃないけど、せっかくブログを始めようと思うので、UnityのキャプチャをGIFアニメで載せたりして、それっぽくしたいです。  
 上記に方法が載っていますが、元になる連番キャプチャをもっと簡単に撮りたくなったので、エディタ拡張をつくりました。
 
-[{{ page.refs[0].title[0] }}]({{ page.refs[0].url }}){:target="_blank" class="{{ page.refs[0].class }}"}
+{% assign source=page.source %}{% include link.html param=source type='source' %}
 
 ![PlayRecorder](https://uranuno.github.io/PlayRecorder/playrecorder.png)
 
@@ -34,7 +35,7 @@ Tumblr じゃないけど、せっかくブログを始めようと思うので�
 .unitypackage をインポートして、PlayRecorder プレハブをScene に置いて使います。  
 ゲームの再生中に「Record」ボタンを押すとキャプチャ開始、指定したパスにファイルがぞろぞろ保存されます。
 
-Delay は[ImageMagick](http://www.imagemagick.org/){:target="_blank"} に設定する値と同じもの（1/100秒）を入れられるようにしました。  
+Delay は{% include link.html title="ImageMagick" url="http://www.imagemagick.org/" type='external' %}に設定する値と同じもの（1/100秒）を入れられるようにしました。  
 
 ### パスの指定
 ![Edit Path](https://uranuno.github.io/PlayRecorder/save_capture.png)
@@ -49,4 +50,4 @@ Delay は[ImageMagick](http://www.imagemagick.org/){:target="_blank"} に設定�
 いまいちなところ
 ----------------
 いちいちScene に置かないと使えないのがちょっと面倒・・・  
-[公式リファレンスのEditorWindow.Update() に載っているサンプルコード]({{ page.refs[3].url }}){:target="_blank"}を参考にEditorWindow 版をつくってみたりしたのですが、EditorWindow のフレームレートとGameView 内のフレームレートが違っていて、キャプチャのタイミングが調整しづらかったので、仕方なくそうしています、、
+{% assign ref=page.refs[2] %}{% include link.html param=ref title="公式リファレンスのEditorWindow.Update() に載っているサンプルコード" type='external' %}を参考にEditorWindow 版をつくってみたりしたのですが、EditorWindow のフレームレートとGameView 内のフレームレートが違っていて、キャプチャのタイミングが調整しづらかったので、仕方なくそうしています、、

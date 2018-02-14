@@ -1,10 +1,10 @@
 ---
 category: unity
 title: 値の最小値と最大値をいい感じに入力するPropertyDrawer
+source:
+  title: ['uranuno/UnityUtils #MinMax', 'GitHub']
+  url  : 'https://github.com/uranuno/UnityUtils#min-max'
 refs:
-  - title: ['uranuno/UnityUtils #MinMax', 'GitHub']
-    url  : 'https://github.com/uranuno/UnityUtils#min-max'
-    class: github
   - title: ['Scripting API: EditorGUI.MinMaxSlider', 'Unity']
     url  : 'https://docs.unity3d.com/ScriptReference/EditorGUI.MinMaxSlider.html'
   - title: ['Manual: Property Drawers', 'Unity']
@@ -17,8 +17,9 @@ commit:
   id   : 0fc6780
 ---
 
-[MinMaxSlider といういい感じのEditorGUI]({{ page.refs[1].url }}){:target="_blank"} があります。  
-[一定の値の範囲からランダムな値を取得したいとき](http://docs.unity3d.com/ScriptReference/Random.Range.html){:target="_blank"} なんかに、このスライダーをつかって範囲を調整できたらいいな〜と思ったので、構造体 + PropertyDrawer をつくりました。  
+{% assign ref=page.refs[0] %}
+{% include link.html param=ref title="MinMaxSlider といういい感じのEditorGUI" type='external' %}があります。  
+{% include link.html title="一定の値の範囲からランダムな値を取得したいとき" url="http://docs.unity3d.com/ScriptReference/Random.Range.html" type='external' %}なんかに、このスライダーをつかって範囲を調整できたらいいな〜と思ったので、構造体 + PropertyDrawer をつくりました。  
 
 ![Min Max Range Attribute](https://uranuno.github.io/UnityUtils/minmaxrange.gif "がんばってつくったGIF")
 
@@ -41,7 +42,7 @@ void Update ()
 }
 ```
 
-[{{ page.refs[0].title[0] }}]({{ page.refs[0].url }}){:target="_blank" class="{{ page.refs[0].class }}"}  
+{% assign source=page.source %}{% include link.html param=source type='source' %}  
 ↑自作のUtility系をまとめたリポジトリをつくりました。
 
 <!-- more -->

@@ -1,10 +1,10 @@
 ---
 category: unity
 title: PlayerPrefs をちょっとだけ拡張
+source:
+  title: ['uranuno/UnityUtils #PlayerPrefsData', 'GitHub']
+  url  : 'https://github.com/uranuno/UnityUtils#playerprefs-data'
 refs:
-  - title: ['uranuno/UnityUtils #PlayerPrefsData', 'GitHub']
-    url  : 'https://github.com/uranuno/UnityUtils#playerprefs-data'
-    class: github
   - title: ['Scripting API: PlayerPrefs', 'Unity']
     url  : 'https://docs.unity3d.com/ScriptReference/PlayerPrefs.html'
   - title: ['Scripting API: JsonUtility', 'Unity']
@@ -15,7 +15,8 @@ commit:
   id   : 65024b8
 ---
 
-[PlayerPrefs]({{ page.refs[1].url }}){:target="_blank"}をちょっとだけ拡張して、:point_down:みたいな書き方ができるようになる汎用クラスをつくりました。
+{% assign ref = page.refs[0] %}
+{% include link.html param=ref title="PlayerPrefs" type='external' %}をちょっとだけ拡張して、:point_down:みたいな書き方ができるようになる汎用クラスをつくりました。
 
 ![PlayerPrefs Data](https://uranuno.github.io/UnityUtils/playerprefsdata.png "とりあえずのView")
 
@@ -67,7 +68,7 @@ public class PlayerPrefsDataExample : MonoBehaviour
   }
 }
 ```
-[{{ page.refs[0].title[0] }}]({{ page.refs[0].url }}){:target="_blank" class="{{ page.refs[0].class }}"}
+{% assign source=page.source %}{% include link.html param=source type='source' %}
 
 端末に保存したいデータのクラスをつくって、あとは `PlayerPrefsData<T>.Load()` `PlayerPrefsData<T>.Save()` などを呼ぶだけ、素で書くよりはラク！というもの。
 
@@ -81,7 +82,8 @@ PlayerPrefs は端末にデータをさくっと保存できて便利ですが�
 この辺の処理を入れたラッパーを毎回つくるのが面倒・・・  
 処理をまとめるにしても、保存したい値全部入りのデータベースみたいなクラスをつくってしまうと、プロジェクトごとに作り直しになるので、それも面倒・・・
 
-[Unity5.3〜 のJsonUtility]({{ page.refs[2].url }}){:target="_blank"} を使えば、Json文字列化が簡単にできるから、全部string 扱いで一緒に処理できるかも、と思ってつくってみたのがこれです。
+{% assign ref=page.refs[1] %}
+{% include link.html param=ref title="Unity5.3〜 のJsonUtility" type='external' %} を使えば、Json文字列化が簡単にできるから、全部string 扱いで一緒に処理できるかも、と思ってつくってみたのがこれです。
 
 ミソは、保存キーにクラス名を使うので、自分で定義しなくてよいところです。  
 1クラス1データになるけど、複数保存したいデータは、それを配列にもたせたデータクラスをつくって保存すればいいかなと思います。
