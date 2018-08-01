@@ -10,6 +10,8 @@ author:
   name: "yumi nunoura"
   email: "uranuno@gmail.com"
 
+repository: uranuno/uranuno.github.io
+
 # Outputting
 permalink: pretty
 excerpt_separator: "<!-- more -->"
@@ -18,6 +20,7 @@ paginate: 10
 # Gems
 plugins:
   - jekyll-feed
+  - jekyll-github-metadata
   - jekyll-paginate
   - jekyll-sitemap
   - jemoji

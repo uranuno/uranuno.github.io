@@ -6,7 +6,11 @@
   <i class="fas fa-clock fa-fw"></i> {{ post.date | date: "%Y-%m-%d" }}
   <!-- Commit -->
   {% if post.commit %}
-  <i class="fas fa-history fa-fw"></i> <a href="https://github.com/uranuno/uranuno.github.io/commit/{{ post.commit.id }}" target="_blank">{{ post.commit.date }}</a>
+  {% if post.commit.id %}
+  <i class="fas fa-history fa-fw"></i> <a href="{{ site.github.repository_url }}/commit/{{ post.commit.id }}" target="_blank">{{ post.commit.date }}</a>
+  {% else %}
+  <i class="fas fa-history fa-fw"></i> <a href="{{ site.github.repository_url }}/commits/master/{{ post.path }}" target="_blank">{{ post.commit.date }}</a>
+  {% endif %}
   {% endif %}
   <!-- Group -->
   {% assign group = site.groups | where:"category", post.categories[0] | first %}
