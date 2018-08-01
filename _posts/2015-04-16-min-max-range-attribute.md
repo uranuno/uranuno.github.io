@@ -18,8 +18,8 @@ commit:
 ---
 
 {% assign ref=page.refs[0] %}
-{% include link.html param=ref title="MinMaxSlider といういい感じのEditorGUI" type='external' %}があります。  
-{% include link.html title="一定の値の範囲からランダムな値を取得したいとき" url="http://docs.unity3d.com/ScriptReference/Random.Range.html" type='external' %}なんかに、このスライダーをつかって範囲を調整できたらいいな〜と思ったので、構造体 + PropertyDrawer をつくりました。  
+{% include link.html param=ref title="MinMaxSlider といういい感じのEditorGUI" blank=1 %}があります。  
+{% include link.html title="一定の値の範囲からランダムな値を取得したいとき" url="http://docs.unity3d.com/ScriptReference/Random.Range.html" blank=1 %}なんかに、このスライダーをつかって範囲を調整できたらいいな〜と思ったので、構造体 + PropertyDrawer をつくりました。  
 
 ![Min Max Range Attribute](https://uranuno.github.io/UnityUtils/minmaxrange.gif "がんばってつくったGIF")
 
@@ -42,7 +42,7 @@ void Update ()
 }
 ```
 
-{% assign source=page.source %}{% include link.html param=source type='source' %}  
+{% assign source=page.source %}{% include link.html param=source blank=1 %}  
 ↑自作のUtility系をまとめたリポジトリをつくりました。
 
 <!-- more -->

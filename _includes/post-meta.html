@@ -7,12 +7,12 @@
   <!-- Commit -->
   {% if post.commit %}
   {% if post.commit.id %}
-  <i class="fas fa-history fa-fw"></i> <a href="{{ site.github.repository_url }}/commit/{{ post.commit.id }}" target="_blank">{{ post.commit.date }}</a>
+  <a href="{{ site.github.repository_url }}/commit/{{ post.commit.id }}" target="_blank"><i class="fas fa-history fa-fw"></i> {{ post.commit.date }}</a>
   {% else %}
-  <i class="fas fa-history fa-fw"></i> <a href="{{ site.github.repository_url }}/commits/master/{{ post.path }}" target="_blank">{{ post.commit.date }}</a>
+  <a href="{{ site.github.repository_url }}/commits/master/{{ post.path }}" target="_blank"><i class="fas fa-history fa-fw"></i> {{ post.commit.date }}</a>
   {% endif %}
   {% endif %}
   <!-- Group -->
   {% assign group = site.groups | where:"category", post.categories[0] | first %}
-  <i class="fas fa-{{ group.icon }} fa-fw"></i> <a href="{{ group.url }}">{{ group.title }}</a>
+  <a href="{{ group.url }}"><i class="fas fa-hashtag fa-fw"></i> {{ group.title }}</a>
 </span>

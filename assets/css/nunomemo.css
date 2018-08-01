@@ -11,6 +11,9 @@ html {
   font-weight: 500;
   font-size: 100%;
 }
+.container {
+  max-width: 42rem;
+}
 .lead,
 .masthead-title small {
   font-weight: bold;
@@ -60,13 +63,17 @@ a:hover small {
   margin-bottom: 0;
 }
 
-/* Sidebar nav */
-.sidebar-nav ul {
+/* Link List */
+.link-list {
   padding-left: 0;
   list-style-type: none;
 }
-.sidebar-nav-item {
+.link-list-item {
   display: inline-block;
+}
+.link-list li a:hover,
+.link-list li a:focus {
+  text-decoration: underline;
 }
 
 /* Accounts */
@@ -76,7 +83,7 @@ a:hover small {
   justify-content: center;
 }
 .accounts a:not(:first-child) {
-  margin-left: 0.5em;
+  margin-left: 0.75em;
 }
 .accounts a:hover,
 .accounts a:focus {
@@ -110,7 +117,7 @@ a:hover small {
 .readmore {
   color: #9a9a9a;
 }
-.post-date .svg-inline--fa:not(:first-child) {
+.post-date a:not(:first-child) {
   margin-left: 0.5em;
 }
 

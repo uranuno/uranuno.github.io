@@ -13,16 +13,18 @@ layout: default
 
   <!-- Source -->
   {% if page.source %}
-  <h2 class="info-title">Source code</h2>
-  <p>{% assign source=page.source %}{% include link.html param=source type='source' %}</p>
+  <h2 class="info-title">Code</h2>
+  <ul class="link-list">
+    <li>{% assign source=page.source %}{% include link.html param=source icon='fas fa-heart fa-sm' blank=1 %}</li>
+  </ul>
   {% endif %}
 
   {% if page.refs.size > 0 %}
   <!-- References -->
   <h2 class="info-title">参考</h2>
-  <ul>
+  <ul class="link-list">
     {% for ref in page.refs %}
-    <li>{% include link.html param=ref type='external' %}</li>
+    <li>{% include link.html param=ref icon='fas fa-paperclip fa-sm' blank=1 %}</li>
     {% endfor %}
   </ul>
   {% endif %}
@@ -34,7 +36,7 @@ layout: default
 {% assign related_posts = site.related_posts | where:"category", page.categories[0] %}
 {% if related_posts.size > 0 %}
 <div class="related">
-  <h2>関連記事</h2>
+  <h2>関連</h2>
   {% include related-posts.html posts = related_posts limit = 4 %}
 </div>
 {% endif %}

@@ -8,19 +8,19 @@
     </div>
 
     <nav class="sidebar-nav">
-    <ul>
+    <ul class="link-list">
       {% for group in site.groups %}
-      <li><i class="fas fa-{{ group.icon }} fa-fw"></i> <a class="sidebar-nav-item{% if page.url == group.url %} active{% endif %}" href="{{ group.url }}">{{ group.title }}</a></li>
+      <li><a class="sidebar-nav-item link-list-item{% if page.url == group.url %} active{% endif %}" href="{{ group.url }}"><i class="fas fa-hashtag fa-fw fa-sm"></i> {{ group.title }}</a></li>
       {% endfor %}
     </ul>
     </nav>
 
-    <div class="accounts fa-2x">
+    <div class="accounts fa-lg">
       {% for account in site.data.accounts %}
-      <a href="{{ account.url }}" title="{{ account.name }}" target="_blank"><i class="fab fa-{{ account.icon }}" data-fa-transform="shrink-6" data-fa-mask="fas fa-square"></i></a>
+      <a href="{{ account.url }}" title="{{ account.name }}" target="_blank"><i class="fab fa-{{ account.icon }}"></i></a>
       {% endfor %}
     </div>
 
-    <p class="copy">&copy; {{ site.posts.last.date | date: '%Y' }} - {{ site.time | date: '%Y' }}</p>
+    <p class="copy">&copy; {{ site.posts.last.date | date: '%Y' }} - {{ site.time | date: '%Y' }} {{ site.author.id }}</p>
   </div>
 </div>

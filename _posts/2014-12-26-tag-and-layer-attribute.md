@@ -25,7 +25,7 @@ public int targetLayer;
 
 Unity で、Tag とLayer をInspector から楽に入力できるように、PropertyDrawer をつくりました。
 
-{% assign source=page.source %}{% include link.html param=source type='source' %}
+{% assign source=page.source %}{% include link.html param=source blank=1 %}
 
 <!-- more -->
 
@@ -56,7 +56,7 @@ void OnTriggerEnter (Collider other)
 ```
 
 {% assign ref = page.refs[0] %}
-Unityがもっている文字列情報から、静的クラスを自動生成してくれるという{% include link.html param=ref title="NameCreator" type='external' %}というのを試してみました。  
+Unityがもっている文字列情報から、静的クラスを自動生成してくれるという{% include link.html param=ref title="NameCreator" blank=1 %}というのを試してみました。  
 これでタイプミスもしないし、補完も出るしいい感じ。
 
 
@@ -74,13 +74,13 @@ void OnTriggerEnter (Collider other)
 ```
 
 いまさらですが、Inspector で値を入力するのがすきです。（タイプミスが、補完が、とか言ってたのに・・・）  
-Editorから静的クラスのプロパティが取得できたので、{% include link.html title="NameCreator用のPropertyDrawerを自作" url="https://gist.github.com/uranuno/8be43847015f5e25cf17" type='external' %}してみたりしました。
+Editorから静的クラスのプロパティが取得できたので、{% include link.html title="NameCreator用のPropertyDrawerを自作" url="https://gist.github.com/uranuno/8be43847015f5e25cf17" blank=1 %}してみたりしました。
 
 
 Editor からTag とLayer が取得できた
 -----------------------------------
 {% assign ref = page.refs[1] %}
-ところがこんなもの（{% include link.html param=ref title="EditorGUI.TagField" type='external' %}）を発見・・・  
+ところがこんなもの（{% include link.html param=ref title="EditorGUI.TagField" blank=1 %}）を発見・・・  
 あれ？Editor のクラスに、Tag を表示する関数あったの？  
 静的クラスつくらなくても、表示できるの？
 
@@ -89,7 +89,7 @@ Editor からTag とLayer が取得できた
 というわけでPropertyDrawerをつくりなおしました。
 
 {% assign ref = page.refs[2] %}
-ついでに、{% include link.html param=ref title="EditorGUI.LayerField" type='external' %}というのもあったので入れました。  
+ついでに、{% include link.html param=ref title="EditorGUI.LayerField" blank=1 %}というのもあったので入れました。  
 下記のように値に属性をつけるだけで、Inspector で楽に入力できるようになります。
 
 ```csharp
