@@ -9,13 +9,13 @@ layout: default
   {% include post-meta.html param = page %}
 
   <!-- Content -->
-  {{ content | replace:site.excerpt_separator, '<p><i class="fas fa-ellipsis-h fa-fw" id="more"></i></p>' }}
+  {{ content | replace:site.excerpt_separator, '<p><i class="fas fa-ellipsis-h fa-fw fa-sm" id="more"></i></p>' }}
 
   <!-- Source -->
   {% if page.source %}
   <h2 class="info-title">Code</h2>
   <ul class="link-list">
-    <li>{% assign source=page.source %}{% include link.html param=source icon='fas fa-heart fa-sm' blank=1 %}</li>
+    <li>{% assign source=page.source %}{% include link.html param=source icon='fas fa-heart' blank=1 %}</li>
   </ul>
   {% endif %}
 
@@ -24,7 +24,7 @@ layout: default
   <h2 class="info-title">参考</h2>
   <ul class="link-list">
     {% for ref in page.refs %}
-    <li>{% include link.html param=ref icon='fas fa-paperclip fa-sm' blank=1 %}</li>
+    <li>{% include link.html param=ref icon='fas fa-paperclip' blank=1 %}</li>
     {% endfor %}
   </ul>
   {% endif %}

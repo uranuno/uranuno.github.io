@@ -8,4 +8,4 @@
 {% else %}
 {% assign url = include.param.url %}
 {% endif %}</span>
-<a href="{{ url }}" {% if include.blank %}target="_blank"{% endif %} class="link-list-item">{% if include.icon %}<i class="{{ include.icon }} fa-fw"></i> {% endif %}{{ title }}</a>
+<a href="{{ url }}" {% if include.blank %}target="_blank"{% endif %} class="link-list-item">{% if include.icon %}<i class="{{ include.icon }} fa-fw fa-sm"></i> {% endif %}{{ title }}</a>

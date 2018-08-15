@@ -3,7 +3,7 @@ layout: default
 ---
 
 <div class="page">
-<h2 class="page-title"><i class="fas fa-hashtag fa-fw"></i> {{ page.title }}</h2>
+<h2 class="page-title"><i class="fas fa-hashtag fa-fw fa-sm"></i> {{ page.title }}</h2>
 <div class="related">
   {% assign posts = site.categories[page.category] %}
   {% include related-posts.html posts = posts showhidden = true %}
