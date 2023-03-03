@@ -1,27 +1,13 @@
 ---
-category: unity
+category: Unity
 title: 値の最小値と最大値をいい感じに入力するPropertyDrawer
-source:
-  title: ['uranuno/UnityUtils #MinMax', 'GitHub']
-  url  : 'https://github.com/uranuno/UnityUtils#min-max'
-refs:
-  - title: ['Scripting API: EditorGUI.MinMaxSlider', 'Unity']
-    url  : 'https://docs.unity3d.com/ScriptReference/EditorGUI.MinMaxSlider.html'
-  - title: ['Manual: Property Drawers', 'Unity']
-    url  : 'https://docs.unity3d.com/Manual/editor-PropertyDrawers.html'
-  - title: ['Tutorial: Property Drawers & Custom Inspectors', 'Unity']
-    url  : 'https://unity3d.com/learn/tutorials/modules/intermediate/live-training-archive/property-drawers-custom-inspectors'
-commit:
-  date : 2015-10-27
-  title: 'Vector2 -> MinMax構造体'
-  id   : 0fc6780
+modified_date: 2015-10-27
 ---
 
-{% assign ref=page.refs[0] %}
-{% include link.html param=ref title="MinMaxSlider といういい感じのEditorGUI" blank=1 %}があります。  
-{% include link.html title="一定の値の範囲からランダムな値を取得したいとき" url="http://docs.unity3d.com/ScriptReference/Random.Range.html" blank=1 %}なんかに、このスライダーをつかって範囲を調整できたらいいな〜と思ったので、構造体 + PropertyDrawer をつくりました。  
+[MinMaxSlider といういい感じのEditorGUI][MinMaxSliderRef] があります。  
+[一定の値の範囲からランダムな値を取得したいとき][RandomRangeRef]なんかに、このスライダーをつかって範囲を調整できたらいいな〜と思ったので、構造体 + PropertyDrawer をつくりました。  
 
-![Min Max Range Attribute](https://uranuno.github.io/UnityUtils/minmaxrange.gif "がんばってつくったGIF")
+![がんばってつくったGIF][MinMaxView]{:standalone width="400" height="200"}
 
 ```csharp
 [SerializeField, MinMaxRange(0,10f)]
@@ -42,7 +28,8 @@ void Update ()
 }
 ```
 
-{% assign source=page.source %}{% include link.html param=source blank=1 %}  
+[**uranuno/UnityUtils #MinMax**][UnityUtilsMinMax]
+
 ↑自作のUtility系をまとめたリポジトリをつくりました。
 
 <!-- more -->
@@ -59,4 +46,19 @@ MinMax randomDelayRange;
 public float otherValue;
 ```
 
-![With Other Value](https://uranuno.github.io/UnityUtils/minmaxrange-othervalue.png "並べてもきれい")
+![並べてもきれい][WithOtherValue]
+
+他参考
+------
+- [Unity - Manual: Property Drawers][PropertyDrawersManual]
+
+
+[MinMaxSliderRef]: https://docs.unity3d.com/ScriptReference/EditorGUI.MinMaxSlider.html
+[RandomRangeRef]: http://docs.unity3d.com/ScriptReference/Random.Range.html
+
+[MinMaxView]: https://uranuno.github.io/UnityUtils/minmaxrange.gif
+[UnityUtilsMinMax]: https://github.com/uranuno/UnityUtils#min-max
+
+[WithOtherValue]: https://uranuno.github.io/UnityUtils/minmaxrange-othervalue.png
+
+[PropertyDrawersManual]: https://docs.unity3d.com/Manual/editor-PropertyDrawers.html

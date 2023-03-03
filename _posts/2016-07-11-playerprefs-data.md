@@ -1,24 +1,10 @@
 ---
-category: unity
+category: Unity
 title: PlayerPrefs をちょっとだけ拡張
-source:
-  title: ['uranuno/UnityUtils #PlayerPrefsData', 'GitHub']
-  url  : 'https://github.com/uranuno/UnityUtils#playerprefs-data'
-refs:
-  - title: ['Scripting API: PlayerPrefs', 'Unity']
-    url  : 'https://docs.unity3d.com/ScriptReference/PlayerPrefs.html'
-  - title: ['Scripting API: JsonUtility', 'Unity']
-    url  : 'https://docs.unity3d.com/ScriptReference/JsonUtility.html'
-commit:
-  date : 2017-04-10
-  title: 'PlayerPrefsData.cs をstatic に'
-  id   : 65024b8
+modified_date: 2017-04-10
 ---
 
-{% assign ref = page.refs[0] %}
-{% include link.html param=ref title="PlayerPrefs" blank=1 %}をちょっとだけ拡張して、:point_down:みたいな書き方ができるようになる汎用クラスをつくりました。
-
-![PlayerPrefs Data](https://uranuno.github.io/UnityUtils/playerprefsdata.png "とりあえずのView")
+[PlayerPrefs][PlayerPrefsRef] をちょっとだけ拡張して、👇みたいな書き方ができるようになる汎用クラスをつくりました。
 
 ```csharp
 // 端末に保存したいデータのクラス（例: 音量の設定）
@@ -68,7 +54,8 @@ public class PlayerPrefsDataExample : MonoBehaviour
   }
 }
 ```
-{% assign source=page.source %}{% include link.html param=source blank=1 %}
+
+![とりあえずのUI][PlayerPrefsDataView]{:standalone width="400" height="400"}
 
 端末に保存したいデータのクラスをつくって、あとは `PlayerPrefsData<T>.Load()` `PlayerPrefsData<T>.Save()` などを呼ぶだけ、素で書くよりはラク！というもの。
 
@@ -76,16 +63,25 @@ public class PlayerPrefsDataExample : MonoBehaviour
 
 PlayerPrefs は端末にデータをさくっと保存できて便利ですが、
 
-* `int` `float` `string` タイプしか無い。それ以外は自分で変換しないといけない（大体 `bool` を `0,1` にする）
-* 保存キーが文字列なのでどこかで管理しないといけない
+- `int` `float` `string` タイプしか無い。それ以外は自分で変換しないといけない（大体 `bool` を `0,1` にする）
+- 保存キーが文字列なのでどこかで管理しないといけない
 
 この辺の処理を入れたラッパーを毎回つくるのが面倒・・・  
 処理をまとめるにしても、保存したい値全部入りのデータベースみたいなクラスをつくってしまうと、プロジェクトごとに作り直しになるので、それも面倒・・・
 
-{% assign ref=page.refs[1] %}
-{% include link.html param=ref title="Unity5.3〜 のJsonUtility" blank=1 %} を使えば、Json文字列化が簡単にできるから、全部string 扱いで一緒に処理できるかも、と思ってつくってみたのがこれです。
+[Unity5.3〜 のJsonUtility][JsonUtilityRef] を使えば、Json文字列化が簡単にできるから、全部string 扱いで一緒に処理できるかも、と思ってつくってみたのがこれです。
 
-ミソは、保存キーにクラス名を使うので、自分で定義しなくてよいところです。  
+保存キーにクラス名を使うので、自分で定義しなくていいのが良いところです。  
 1クラス1データになるけど、複数保存したいデータは、それを配列にもたせたデータクラスをつくって保存すればいいかなと思います。
 
-ジェネリックすごく便利、個人的には満足:smile:
+ジェネリックすごく便利、個人的には満足😄
+
+[**uranuno/UnityUtils #PlayerPrefsData**][UnityUtilsPlayerPrefsData]
+
+
+[PlayerPrefsRef]: https://docs.unity3d.com/ScriptReference/PlayerPrefs.html
+[PlayerPrefsDataView]: https://uranuno.github.io/UnityUtils/playerprefsdata.png
+
+[JsonUtilityRef]: https://docs.unity3d.com/ScriptReference/JsonUtility.html
+
+[UnityUtilsPlayerPrefsData]: https://github.com/uranuno/UnityUtils#playerprefs-data

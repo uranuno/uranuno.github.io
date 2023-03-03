@@ -1,8 +1,6 @@
-# Serving
-host: 0.0.0.0
-
 # Setup
 url: https://uranuno.github.io
+lang: "ja"
 title: '@uranuno'
 description: 開発などのメモです
 author:
@@ -10,36 +8,24 @@ author:
   name: "yumi nunoura"
   email: "uranuno@gmail.com"
 
-repository: uranuno/uranuno.github.io
-
 # Outputting
 permalink: pretty
-excerpt_separator: "<!-- more -->"
-paginate: 10
+# excerpt_separator: "<!-- more -->"
 
 # Gems
 plugins:
   - jekyll-feed
-  - jekyll-github-metadata
-  - jekyll-paginate
   - jekyll-sitemap
-  - jemoji
 
-# Collections
-collections:
-  groups:
-    output: true
-    permalink: /:categories/
+# Theme
+remote_theme: jekyll/minima
 
-# Defaults
-defaults:
-  - scope:
-      path: ""
-      type: posts
-    values:
-      layout: post
-  - scope:
-      path: ""
-      type: groups
-    values:
-      layout: group
+minima:
+  skin: solarized
+
+  date_format: "%b %d, %Y"
+
+  social_links:
+    - { platform: github, user_url: "https://github.com/uranuno" }
+    - { platform: twitter, user_url: "https://twitter.com/uranuno" }
+    - { platform: instagram, user_url: "https://www.instagram.com/uranuno" }
