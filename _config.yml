@@ -3,10 +3,6 @@ url: https://uranuno.github.io
 lang: "ja"
 title: '@uranuno'
 description: 開発などのメモです
-author:
-  id: uranuno
-  name: "yumi nunoura"
-  email: "uranuno@gmail.com"
 
 # Outputting
 permalink: pretty
@@ -15,6 +11,7 @@ permalink: pretty
 # Gems
 plugins:
   - jekyll-feed
+  - jekyll-seo-tag
   - jekyll-sitemap
 
 # Theme
