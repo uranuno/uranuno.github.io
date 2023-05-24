@@ -1,0 +1,22 @@
+// Placeholder to allow defining custom styles that override everything else.
+// (Use `_sass/minima/custom-variables.scss` to override variable defaults)
+
+// Anim
+$anim-size: 72px;
+$anim-path: '../anim.svg';
+.anim {
+  display: block;
+  width: $anim-size;
+  height: $anim-size;
+  background-color: $site-title-color;
+  -webkit-mask: url($anim-path) left top / $anim-size no-repeat;
+  mask: url($anim-path) left top / $anim-size no-repeat;
+  animation: all 0.5s steps(4) infinite;
+}
+
+@keyframes all {
+  100% {
+    -webkit-mask-position: 0 $anim-size * -4;
+    mask-position: 0 $anim-size * -4;
+  }
+}
