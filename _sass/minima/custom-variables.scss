@@ -4,3 +4,48 @@
 $base-font-family: "Sono", "Zen Maru Gothic", system-ui, sans-serif;
 $code-font-family: "Sono", "Zen Maru Gothic", monospace;
 $base-line-height: 1.9;
+$spacing-unit: 36px;
+
+$content-width: 720px;
+$on-palm: 576px;
+$on-laptop: 768px;
+
+$on-medium: $on-palm;
+$on-large: $on-laptop;
+
+// Override Theme
+$link-base-color: $link-hover-color;
+$link-visited-color: $link-hover-color;
+
+// Custom
+$spacing-unit-2: $spacing-unit * .5;
+$spacing-unit-3: $spacing-unit * 33.3333333333 * .01;
+$spacing-unit-4: $spacing-unit * .25;
+$spacing-unit-6: $spacing-unit * 16.6666666667 * .01;
+
+$tab-size:       $spacing-unit * 66.6666666667 * .01;
+
+@mixin card {
+  position: relative;
+  border: 2px solid $border-color-03;
+  border-radius: $spacing-unit-4;
+  padding: $spacing-unit-2;
+}
+
+@mixin p-card {
+  @include card;
+  line-height: 1.7;
+}
+
+@mixin font-mono {
+  font-variation-settings: 'MONO' 1;
+  letter-spacing: -.02em;
+}
+
+@mixin dashed-border {
+  height: 4px;
+  max-width: 100%;
+  background-color: $border-color-03;
+  -webkit-mask: url('../line.svg') left center / 100px 4px repeat-x;
+  mask: url('../line.svg') left center / 100px 4px repeat-x;
+}
