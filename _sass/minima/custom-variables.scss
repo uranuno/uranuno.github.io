@@ -28,8 +28,9 @@ $tab-size:       $spacing-unit * 66.6666666667 * .01;
 @mixin card {
   position: relative;
   border: 2px solid $border-color-03;
-  border-radius: $spacing-unit-4;
+  border-radius: $spacing-unit-3;
   padding: $spacing-unit-2;
+  overflow: hidden;
 }
 
 @mixin p-card {

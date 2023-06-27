@@ -34,7 +34,7 @@ a {
 
 img {
   background-color: $code-background-color;
-  border-radius: $spacing-unit-4;
+  border-radius: $spacing-unit-3;
   height: auto;
   object-fit: cover;
 
@@ -48,12 +48,12 @@ figure {
   width: fit-content;
 
   > img {
-    border-radius: $spacing-unit-4 $spacing-unit-4 0 0;
+    border-radius: $spacing-unit-3 $spacing-unit-3 0 0;
   }
 
   > figcaption {
     background-color: $code-background-color;
-    border-radius: 0 0 $spacing-unit-4 $spacing-unit-4;
+    border-radius: 0 0 $spacing-unit-3 $spacing-unit-3;
     width: 0;
     min-width: 100%;
     padding: $spacing-unit-6 $spacing-unit-4;
@@ -206,7 +206,7 @@ blockquote {
 #markdown-toc {
   @include card;
   border-top-width: $spacing-unit-2;
-  border-radius: $spacing-unit-4 $spacing-unit-4 $spacing-unit-6 $spacing-unit-6;
+  border-radius: $spacing-unit-2 $spacing-unit-2 $spacing-unit-6 $spacing-unit-6;
   margin-top: $spacing-unit;
   padding-left: 0;
 
@@ -223,8 +223,9 @@ blockquote {
 // リンクカード
 p:has(a strong) {
   @include p-card;
-  border-left-width: $spacing-unit-4;
-  padding: 0 $spacing-unit-3;
+  padding-top: 0;
+  padding-bottom: 0;
+  padding-left: 0;
   height: $spacing-unit * 3;
 
   a {
@@ -232,6 +233,8 @@ p:has(a strong) {
     flex-flow: column;
     justify-content: center;
     height: 100%;
+    border-left: $spacing-unit-6 solid $border-color-03;
+    padding-left: $spacing-unit-3;
 
     // line-clamp
     strong {
