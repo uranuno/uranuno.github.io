@@ -1,18 +1,27 @@
-{% assign post = include.param %}
-<!-- Date Time -->
-<time datetime="{% if post.commit %}{{ post.commit.date }}{% else %}{{ post.date | date: "%Y-%m-%d" }}{% endif %}"></time>
-<span class="post-date">
-  <!-- Date -->
-  <i class="fas fa-clock fa-fw fa-sm"></i> {{ post.date | date: "%Y-%m-%d" }}
-  <!-- Commit -->
-  {% if post.commit %}
-  {% if post.commit.id %}
-  <a href="{{ site.github.repository_url }}/commit/{{ post.commit.id }}" target="_blank"><i class="fas fa-history fa-fw fa-sm"></i> {{ post.commit.date }}</a>
-  {% else %}
-  <a href="{{ site.github.repository_url }}/commits/master/{{ post.path }}" target="_blank"><i class="fas fa-history fa-fw fa-sm"></i> {{ post.commit.date }}</a>
-  {% endif %}
-  {% endif %}
-  <!-- Group -->
-  {% assign group = site.groups | where:"category", post.categories[0] | first %}
-  <a href="{{ group.url }}"><i class="fas fa-hashtag fa-fw fa-sm"></i> {{ group.title }}</a>
+<span class="post-meta">
+  {%- assign post = include.content -%}
+  {%- assign date_format = site.minima.date_format | default: "%b %-d, %Y" -%}
+  <time class="dt-published" datetime="{{ post.date | date_to_xmlschema }}" itemprop="datePublished">
+    {{ post.date | date: date_format }}
+  </time>
+  {%- if include.modified_date and post.modified_date -%}
+    &raquo;
+    {%- assign mdate = post.modified_date | date_to_xmlschema -%}
+    <time class="dt-modified" datetime="{{ mdate }}" itemprop="dateModified">
+      {{ mdate | date: date_format }}
+    </time>
+  {%- endif -%}
+  {%- if post.author -%}
+    • {% for author in post.author %}
+      <span itemprop="author" itemscope itemtype="http://schema.org/Person">
+        <span class="p-author h-card" itemprop="name">{{ author }}</span></span>
+        {%- if forloop.last == false %}, {% endif -%}
+    {% endfor %}
+  {%- endif -%}
+  {% comment %}post.category 表示追加{% endcomment %}
+  {%- if post.category -%}
+    <span class="post-category">
+      {{ post.category }}
+    </span>
+  {%- endif -%}
 </span>

@@ -1,0 +1,297 @@
+// Placeholder to allow defining custom styles that override everything else.
+// (Use `_sass/minima/custom-variables.scss` to override variable defaults)
+
+* {
+  font-synthesis: none;
+  box-sizing: border-box;
+}
+
+body {
+  @include relative-font-size(0.9375);
+  padding: 0 $spacing-unit-2;
+  min-height: 0;
+
+  @media screen and (min-width: $on-large) {
+    @include relative-font-size(1);
+    padding: 0; // 幅がlarge以上だったらpadding なくす
+  }
+
+  font-variation-settings: 'MONO' 0;
+  letter-spacing: .04em;
+}
+
+a {
+  text-decoration-line: underline;
+  text-decoration-color: $border-color-01;
+  text-decoration-thickness: 2px;
+  text-underline-offset: 0.3em;
+
+  &:hover {
+    text-decoration-thickness: 2px;
+    text-decoration-color: $link-hover-color;
+  }
+}
+
+img {
+  background-color: $code-background-color;
+  border-radius: $spacing-unit-3;
+  height: auto;
+  object-fit: cover;
+
+  &.top, .top & {object-position: center top;}
+  // 画像のアス比指定
+  &.rt-4-3, .rt-4-3 & {aspect-ratio: 4 / 3;}
+  &.rt-3-2, .rt-3-2 & {aspect-ratio: 3 / 2;}
+}
+
+figure {
+  width: fit-content;
+
+  > img {
+    border-radius: $spacing-unit-3 $spacing-unit-3 0 0;
+  }
+
+  > figcaption {
+    background-color: $code-background-color;
+    border-radius: 0 0 $spacing-unit-3 $spacing-unit-3;
+    width: 0;
+    min-width: 100%;
+    padding: $spacing-unit-6 $spacing-unit-4;
+    line-height: 1.5;
+  }
+}
+
+li::marker {
+  color: $brand-color;
+}
+
+pre,
+code {
+  @include font-mono;
+  border: none;
+  line-height: 1.7;
+}
+
+pre,
+code,
+.highlight {
+  border-radius: $spacing-unit-6;
+}
+
+blockquote {
+  font-size: 1em;
+}
+
+.site-header,
+.site-footer {
+  border: none;
+}
+
+.site-header {
+  padding: $spacing-unit-2 0;
+}
+
+.site-title {
+  line-height: 1.15;
+  letter-spacing: inherit;
+  text-decoration-line: none;
+
+  &:hover {color: $link-hover-color;}
+  &:hover .anim {background-color: $link-hover-color;}
+}
+
+.page-content {
+  display: flex;
+  padding: 0;
+
+  // 角丸で囲む
+  .wrapper {
+    flex-grow: 1;
+    min-width: 0;
+    padding-top: $spacing-unit;
+    padding-bottom: $spacing-unit;
+    border-radius: $spacing-unit-2;
+    border: 2px solid $border-color-03;
+  }
+}
+
+.post-meta {
+  @include font-mono;
+  font-size: 1em;
+  line-height: 1.5;
+  word-spacing: -.4ch;
+
+  .post-category {
+    font-size: $small-font-size;
+    background: $border-color-03;
+    color: $background-color;
+    border-radius: 100vh;
+    display: inline-block;
+    margin-left: $spacing-unit-6;
+    padding: 0 $spacing-unit-6;
+  }
+}
+
+.post-link {
+  @include relative-font-size(1.125);
+  line-height: 1.7;
+
+  @media screen and (min-width: $on-large) {
+    @include relative-font-size(1.25);
+  }
+}
+
+.post-title,
+.post-content h1 {
+  @include relative-font-size(1.5);
+  letter-spacing: inherit;
+  line-height: 1.5;
+  margin-bottom: $spacing-unit-4;
+
+  @media screen and (min-width: $on-large) {
+    @include relative-font-size(1.625);
+  }
+}
+
+.post-content {
+  h2 {
+    @include relative-font-size(1.375);
+    line-height: 1.5;
+
+    @media screen and (min-width: $on-large) {
+      @include relative-font-size(1.5);
+    }
+
+    // 丸い破線
+    position: relative;
+    &:before {
+      content: '';
+      position: absolute;
+      left: 0;
+      bottom: -4px;
+      width: 100%;
+      @include dashed-border;
+    }
+
+    &:target:after { content: ' ☜'; }
+  }
+
+  h3 {
+    @include relative-font-size(1.25);
+    line-height: 1.5;
+
+    @media screen and (min-width: $on-large) {
+      @include relative-font-size(1.375);
+    }
+  }
+
+  ul {
+    margin-left: $tab-size;
+    list-style-type: "—";
+
+    li {
+      padding-inline-start: $spacing-unit-3;
+    }
+  }
+
+  hr {
+    border: none;
+    margin-left: auto;
+    margin-right: auto;
+    width: 24px;
+    @include dashed-border;
+  }
+}
+
+#markdown-toc {
+  @include card;
+  border-top-width: $spacing-unit-2;
+  border-radius: $spacing-unit-2 $spacing-unit-2 $spacing-unit-6 $spacing-unit-6;
+  margin-top: $spacing-unit;
+  padding-left: 0;
+
+  margin-left: 0;
+  > li { margin-left: $spacing-unit; }
+}
+
+.note {
+  @include p-card;
+  border-color: $sol-yellow;
+  background-color: rgba($sol-yellow, 0.1);
+}
+
+// リンクカード
+p:has(a strong) {
+  @include p-card;
+  padding-top: 0;
+  padding-bottom: 0;
+  padding-left: 0;
+  height: $spacing-unit * 3;
+
+  a {
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    height: 100%;
+    border-left: $spacing-unit-6 solid $border-color-03;
+    padding-left: $spacing-unit-2;
+
+    // line-clamp
+    strong {
+      display: -webkit-box;
+      -webkit-box-orient: vertical;
+      -webkit-line-clamp: 2;
+      overflow: hidden;
+    }
+
+    &:after {
+      content: attr(href);
+      font-size: $small-font-size;
+      color: $brand-color;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+  }
+}
+
+.social-media-list {
+  margin: 0 0;
+  li {
+    a {
+      line-height: 1.5;
+      border-radius: $spacing-unit-2;
+      border: 2px solid $border-color-01;
+      background-color: $border-color-01;
+      .svg-icon { color: $border-color-03; }
+
+      &:hover { border-color: $link-hover-color; }
+      &:hover .svg-icon { color: $link-hover-color; }
+    }
+  }
+}
+
+.svg-icon {
+  width: 1.25rem;
+  height: 1.25rem;
+}
+
+// Anim
+$anim-size: 72px;
+$anim-path: '../anim.svg';
+.anim {
+  display: block;
+  width: $anim-size;
+  height: $anim-size;
+  background-color: $site-title-color;
+  -webkit-mask: url($anim-path) left top / $anim-size no-repeat;
+  mask: url($anim-path) left top / $anim-size no-repeat;
+  animation: all 0.5s steps(4) infinite;
+}
+
+@keyframes all {
+  100% {
+    -webkit-mask-position: 0 $anim-size * -4;
+    mask-position: 0 $anim-size * -4;
+  }
+}
