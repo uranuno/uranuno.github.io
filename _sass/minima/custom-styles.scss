@@ -34,7 +34,7 @@ a {
 
 img {
   background-color: $code-background-color;
-  border-radius: $spacing-unit-4;
+  border-radius: $spacing-unit-3;
   height: auto;
   object-fit: cover;
 
@@ -48,12 +48,12 @@ figure {
   width: fit-content;
 
   > img {
-    border-radius: $spacing-unit-4 $spacing-unit-4 0 0;
+    border-radius: $spacing-unit-3 $spacing-unit-3 0 0;
   }
 
   > figcaption {
     background-color: $code-background-color;
-    border-radius: 0 0 $spacing-unit-4 $spacing-unit-4;
+    border-radius: 0 0 $spacing-unit-3 $spacing-unit-3;
     width: 0;
     min-width: 100%;
     padding: $spacing-unit-6 $spacing-unit-4;
@@ -110,7 +110,7 @@ blockquote {
     min-width: 0;
     padding-top: $spacing-unit;
     padding-bottom: $spacing-unit;
-    border-radius: $spacing-unit-3;
+    border-radius: $spacing-unit-2;
     border: 2px solid $border-color-03;
   }
 }
@@ -206,7 +206,7 @@ blockquote {
 #markdown-toc {
   @include card;
   border-top-width: $spacing-unit-3;
-  border-radius: $spacing-unit-4 $spacing-unit-4 $spacing-unit-6 $spacing-unit-6;
+  border-radius: $spacing-unit-3 $spacing-unit-3 $spacing-unit-6 $spacing-unit-6;
   margin-top: $spacing-unit;
   padding-left: 0;
 
@@ -260,7 +260,7 @@ p:has(a strong) {
   li {
     a {
       line-height: 1.5;
-      border-radius: $spacing-unit-3;
+      border-radius: $spacing-unit-2;
       border: 2px solid $border-color-01;
       background-color: $border-color-01;
       .svg-icon { color: $border-color-03; }
