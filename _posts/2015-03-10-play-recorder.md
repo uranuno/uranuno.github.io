@@ -7,7 +7,7 @@ title: 連番キャプチャを書き出すエディタ拡張
 追記: Unity2018 くらいからは  
 [Unity Recorder][UnityRecorderPackage] という公式package があります！
 
-![Cubeくん][Cube-kun]{:standalone width="400" .rt-4-3 .top}
+![Cubeくん][Cube-kun]{:standalone width="400" .ar-4-3 .top}
 
 [Unity の画面を Animated GIF に変換して Tumblr にアップする][UnityGIFTumblr]  
 ↑これをやりたい！

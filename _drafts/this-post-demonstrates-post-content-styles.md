@@ -76,7 +76,7 @@ H3 くらいまでは、まあ使うかな？
 
 ![Octocat]{:width="400" height="400"}
 
-![アス比を指定したり、figcaption を書いたりもできます][Octocat]{:standalone width="400" .rt-3-2}
+![アス比を指定したり、figcaption を書いたりもできます][Octocat]{:standalone width="400" .ar-3-2}
 
 [Octocat]: /assets/images/github-pages/octocat.png
 
@@ -85,7 +85,7 @@ H3 くらいまでは、まあ使うかな？
 ![Image]{:width="400" height="400"}
 
 <!-- アス比は固定数値のクラスを作ってあるのでそれを指定します -->
-![キャプション][Image]{:standalone width="400" .rt-3-2}
+![キャプション][Image]{:standalone width="400" .ar-3-2}
 
 [Image]: /assets/images/hogehoge.jpg
 

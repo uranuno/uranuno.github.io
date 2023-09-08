@@ -11,7 +11,7 @@ Unity で、Tag とLayer をInspector から楽に入力できるように、Pro
 [Layer] public int targetLayer;
 ```
 
-![Inspector がこんなかんじに][TagandLayerAttributeView]{:standalone width="400" .rt-3-2 .top}
+![Inspector がこんなかんじに][TagandLayerAttributeView]{:standalone width="400" .ar-3-2 .top}
 
 1. TOC
 {:toc}
@@ -92,9 +92,9 @@ void OnTriggerEnter (Collider other)
 }
 ```
 
-![Tag が選べる :)][TagAttributeView]{:standalone width="400" .rt-3-2 .top}
+![Tag が選べる :)][TagAttributeView]{:standalone width="400" .ar-3-2 .top}
 
-![Layer が選べる :)][LayerAttributeView]{:standalone width="400" .rt-4-3 .top}
+![Layer が選べる :)][LayerAttributeView]{:standalone width="400" .ar-4-3 .top}
 
 静的クラス生成方式は結構大掛かりなので、TagとLayerのみでいい、Inspectorで入力するからコード補完もいらない、という場合はこれだけでいいのかも。
 
