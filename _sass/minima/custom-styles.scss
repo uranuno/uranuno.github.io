@@ -205,8 +205,8 @@ blockquote {
 
 #markdown-toc {
   @include card;
-  border-top-width: $spacing-unit-2;
-  border-radius: $spacing-unit-2 $spacing-unit-2 $spacing-unit-6 $spacing-unit-6;
+  border-top-width: $spacing-unit-3;
+  border-radius: $spacing-unit-3 $spacing-unit-3 $spacing-unit-6 $spacing-unit-6;
   margin-top: $spacing-unit;
   padding-left: 0;
 
@@ -233,7 +233,7 @@ p:has(a strong) {
     flex-flow: column;
     justify-content: center;
     height: 100%;
-    border-left: $spacing-unit-6 solid $border-color-03;
+    border-left: $spacing-unit-9 solid $border-color-03;
     padding-left: $spacing-unit-2;
 
     // line-clamp
