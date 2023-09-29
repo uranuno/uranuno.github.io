@@ -1,18 +1,15 @@
 # Setup
-url: https://uranuno.github.io
-lang: "ja"
-title: '@uranuno'
+lang: ja
+title: "@uranuno"
 description: 開発などのメモです
 
 # Outputting
 permalink: pretty
-# excerpt_separator: "<!-- more -->"
 
 # Gems
 plugins:
   - jekyll-feed
   - jekyll-seo-tag
-  - jekyll-sitemap
 
 # Theme
 remote_theme: jekyll/minima
