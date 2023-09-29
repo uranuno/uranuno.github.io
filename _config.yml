@@ -27,6 +27,10 @@ minima:
 # GA
 google_analytics: G-9EE9W1BJPQ
 
+# SEO
+twitter:
+  card: summary
+
 # Defaults
 defaults:
   - scope:
