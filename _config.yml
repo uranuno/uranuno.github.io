@@ -21,7 +21,7 @@ minima:
 
   social_links:
     - { platform: github, user_url: "https://github.com/uranuno" }
-    - { platform: twitter, user_url: "https://twitter.com/uranuno" }
+    - { platform: x, user_url: "https://x.com/uranuno" }
     - { platform: instagram, user_url: "https://www.instagram.com/uranuno" }
 
 # GA
