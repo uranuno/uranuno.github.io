@@ -206,11 +206,14 @@ blockquote {
 }
 
 .post-footer {
+  margin-top: $spacing-unit * 1.5;
+
   ul {
     display: flex;
     list-style-type: none;
     margin: 0;
     justify-content: center;
+    flex-wrap: wrap;
   }
 
   li {
