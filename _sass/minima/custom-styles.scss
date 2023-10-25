@@ -18,6 +18,8 @@ body {
 
   font-variation-settings: 'MONO' 0;
   letter-spacing: .04em;
+
+  scroll-behavior: smooth;
 }
 
 a {
@@ -200,6 +202,19 @@ blockquote {
     margin-right: auto;
     width: 24px;
     @include dashed-border;
+  }
+}
+
+.post-footer {
+  ul {
+    display: flex;
+    list-style-type: none;
+    margin: 0;
+    justify-content: center;
+  }
+
+  li {
+    margin-right: 10px;
   }
 }
 
