@@ -119,6 +119,10 @@ blockquote {
 }
 
 // Site footer
+.footer-col {
+  margin-bottom: $spacing-unit;
+}
+
 @media screen and (min-width: $on-medium) {
   .footer-col-wrapper {
     justify-content: space-between;
@@ -295,6 +299,7 @@ p:has(a strong) {
   margin: 0 0;
   li {
     margin-top: 0;
+    margin-bottom: 10px;
     a {
       line-height: 1.5;
       border-radius: $spacing-unit-2;
