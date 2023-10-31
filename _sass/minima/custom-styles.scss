@@ -206,7 +206,8 @@ blockquote {
 }
 
 .post-footer {
-  margin-top: $spacing-unit * 1.5;
+  @include font-mono;
+  margin-top: $spacing-unit * 2;
 
   ul {
     display: flex;
