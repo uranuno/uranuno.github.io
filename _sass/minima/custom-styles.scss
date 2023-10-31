@@ -89,6 +89,7 @@ blockquote {
   border: none;
 }
 
+// Site header
 .site-header {
   padding: $spacing-unit-2 0;
 }
@@ -114,6 +115,22 @@ blockquote {
     padding-bottom: $spacing-unit;
     border-radius: $spacing-unit-2;
     border: 2px solid $border-color-03;
+  }
+}
+
+// Site footer
+@media screen and (min-width: $on-medium) {
+  .footer-col-wrapper {
+    justify-content: space-between;
+  }
+
+  .footer-col {
+    width: auto;
+
+    &:first-child,
+    &:last-child {
+      padding: 0;
+    }
   }
 }
 
@@ -277,6 +294,7 @@ p:has(a strong) {
 .social-media-list {
   margin: 0 0;
   li {
+    margin-top: 0;
     a {
       line-height: 1.5;
       border-radius: $spacing-unit-2;
