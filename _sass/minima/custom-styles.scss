@@ -6,6 +6,10 @@
   box-sizing: border-box;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   @include relative-font-size(0.9375);
   padding: 0 $spacing-unit-2;
@@ -18,8 +22,6 @@ body {
 
   font-variation-settings: 'MONO' 0;
   letter-spacing: .04em;
-
-  scroll-behavior: smooth;
 }
 
 a {
