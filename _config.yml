@@ -12,7 +12,7 @@ plugins:
   - jekyll-seo-tag
 
 # Theme
-remote_theme: jekyll/minima
+remote_theme: "jekyll/minima@a9ef7b2"
 
 minima:
   skin: solarized-light
