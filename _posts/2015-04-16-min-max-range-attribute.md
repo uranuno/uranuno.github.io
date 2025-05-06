@@ -1,13 +1,20 @@
 ---
 category: Unity
 title: 値の最小値と最大値をいい感じに入力するPropertyDrawer
+description: Random.Range とかの範囲をスライダーで入力できるようにしたいです。
 modified_date: 2015-10-27
 ---
 
 [MinMaxSlider といういい感じのEditorGUI][MinMaxSliderRef] があります。  
 [一定の値の範囲からランダムな値を取得したいとき][RandomRangeRef]なんかに、このスライダーをつかって範囲を調整できたらいいな〜と思ったので、構造体 + PropertyDrawer をつくりました。  
 
-![がんばってつくったGIF][MinMaxView]{:standalone width="400" height="200"}
+[MinMaxSliderRef]: https://docs.unity3d.com/ScriptReference/EditorGUI.MinMaxSlider.html
+[RandomRangeRef]: http://docs.unity3d.com/ScriptReference/Random.Range.html
+
+<figure>
+  <img src="https://uranuno.github.io/UnityUtils/minmaxrange.gif" alt="Unity Inspector上で範囲スライダーを動かして数値を変えるアニメGIF" width="400" />
+  <figcaption>がんばってつくったGIF</figcaption>
+</figure>
 
 ```csharp
 [SerializeField, MinMaxRange(0,10f)]
@@ -28,14 +35,16 @@ void Update ()
 }
 ```
 
-[**uranuno/UnityUtils #MinMax**][UnityUtilsMinMax]
+**uranuno/UnityUtils #MinMax**  
+<https://github.com/uranuno/UnityUtils#min-max>
 
 ↑自作のUtility系をまとめたリポジトリをつくりました。
 
 <!-- more -->
 
-地味にこだわったところ
---------------------
+
+## 地味にこだわったところ
+
 元から用意されている`Range` 属性をつけた値と並べたときにきれいになるよう大きさを揃えました・・・
 
 ```csharp
@@ -46,19 +55,9 @@ MinMax randomDelayRange;
 public float otherValue;
 ```
 
-![並べてもきれい][WithOtherValue]
-
-他参考
-------
-- [Unity - Manual: Property Drawers][PropertyDrawersManual]
+<img src="https://uranuno.github.io/UnityUtils/minmaxrange-othervalue.png" alt="並べてもスライダーの長さが揃ってきれい" width="400" />
 
 
-[MinMaxSliderRef]: https://docs.unity3d.com/ScriptReference/EditorGUI.MinMaxSlider.html
-[RandomRangeRef]: http://docs.unity3d.com/ScriptReference/Random.Range.html
+## 他参考
 
-[MinMaxView]: https://uranuno.github.io/UnityUtils/minmaxrange.gif
-[UnityUtilsMinMax]: https://github.com/uranuno/UnityUtils#min-max
-
-[WithOtherValue]: https://uranuno.github.io/UnityUtils/minmaxrange-othervalue.png
-
-[PropertyDrawersManual]: https://docs.unity3d.com/Manual/editor-PropertyDrawers.html
+- [Unity - Manual: Property Drawers](https://docs.unity3d.com/Manual/editor-PropertyDrawers.html)

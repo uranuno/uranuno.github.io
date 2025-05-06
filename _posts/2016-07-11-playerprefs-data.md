@@ -6,6 +6,8 @@ modified_date: 2017-04-10
 
 [PlayerPrefs][PlayerPrefsRef] をちょっとだけ拡張して、👇みたいな書き方ができるようになる汎用クラスをつくりました。
 
+[PlayerPrefsRef]: https://docs.unity3d.com/ScriptReference/PlayerPrefs.html
+
 ```csharp
 // 端末に保存したいデータのクラス（例: 音量の設定）
 public class AudioSettings
@@ -55,7 +57,10 @@ public class PlayerPrefsDataExample : MonoBehaviour
 }
 ```
 
-![とりあえずのUI][PlayerPrefsDataView]{:standalone width="400" height="400"}
+<figure>
+  <img src="https://uranuno.github.io/UnityUtils/playerprefsdata.png" alt="BGMとSEのボリュームを調整するスライダーとリセットボタンが並んだUI" width="400" />
+  <figcaption>とりあえずのUI</figcaption>
+</figure>
 
 端末に保存したいデータのクラスをつくって、あとは `PlayerPrefsData<T>.Load()` `PlayerPrefsData<T>.Save()` などを呼ぶだけ、素で書くよりはラク！というもの。
 
@@ -71,17 +76,12 @@ PlayerPrefs は端末にデータをさくっと保存できて便利ですが�
 
 [Unity5.3〜 のJsonUtility][JsonUtilityRef] を使えば、Json文字列化が簡単にできるから、全部string 扱いで一緒に処理できるかも、と思ってつくってみたのがこれです。
 
+[JsonUtilityRef]: https://docs.unity3d.com/ScriptReference/JsonUtility.html
+
 保存キーにクラス名を使うので、自分で定義しなくていいのが良いところです。  
 1クラス1データになるけど、複数保存したいデータは、それを配列にもたせたデータクラスをつくって保存すればいいかなと思います。
 
 ジェネリックすごく便利、個人的には満足😄
 
-[**uranuno/UnityUtils #PlayerPrefsData**][UnityUtilsPlayerPrefsData]
-
-
-[PlayerPrefsRef]: https://docs.unity3d.com/ScriptReference/PlayerPrefs.html
-[PlayerPrefsDataView]: https://uranuno.github.io/UnityUtils/playerprefsdata.png
-
-[JsonUtilityRef]: https://docs.unity3d.com/ScriptReference/JsonUtility.html
-
-[UnityUtilsPlayerPrefsData]: https://github.com/uranuno/UnityUtils#playerprefs-data
+**uranuno/UnityUtils #PlayerPrefsData**  
+<https://github.com/uranuno/UnityUtils#playerprefs-data>
