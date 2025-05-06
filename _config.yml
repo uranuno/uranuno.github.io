@@ -1,7 +1,7 @@
 # Setup
 lang: ja
 title: "@uranuno"
-description: 開発などのメモです
+description: "開発などのメモです"
 
 # Outputting
 permalink: pretty
@@ -12,17 +12,19 @@ plugins:
   - jekyll-seo-tag
 
 # Theme
-remote_theme: "jekyll/minima@a9ef7b2"
+remote_theme: "jekyll/minima@eec5a0b"
 
 minima:
-  skin: solarized-light
-
-  date_format: "%b %d, %Y"
-
   social_links:
-    - { platform: github, user_url: "https://github.com/uranuno" }
-    - { platform: x, user_url: "https://x.com/uranuno" }
-    - { platform: instagram, user_url: "https://www.instagram.com/uranuno" }
+    - title: GitHub
+      icon: github-alt
+      url: "https://github.com/uranuno"
+    - title: X
+      icon: x-twitter
+      url: "https://x.com/uranuno"
+    - title: Instagram
+      icon: instagram
+      url: "https://www.instagram.com/uranuno"
 
 # GA
 google_analytics: G-9EE9W1BJPQ
